@@ -1,4 +1,7 @@
-<?php include('core/init.php') ?>
+<?php 
+    include_once('core/init.php');
+    include_once('class/class.php');
+ ?>
 
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
@@ -35,22 +38,29 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+         <!-- jQuery 1.10.2 -->
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     </head>
     <body>
 
+        <!-- NAV -->
+        <?php include('inc/menu.php'); ?>
+        <!-- END NAV -->
 
-        <p>TEST</p>
-        <!-- Add your site or application content here -->
+        <!-- CONTENT -->
+        <div id="content">
+
+            <?php include('pages/projet.php'); ?>
+            <?php include('pages/tache.php'); ?>
+            <?php include('pages/commentaire.php'); ?>
+            <?php include('pages/addProjet.php'); ?>
+
+        </div>
+        <!-- END CONTENT -->
 
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-            s.parentNode.insertBefore(g,s)}(document,"script"));
-        </script>
     </body>
 </html>

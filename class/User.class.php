@@ -1,6 +1,6 @@
 <?php 
 
-class Commentaire{
+class User{
 	
 	private $id;
 	private $date;
@@ -9,4 +9,4 @@ class Commentaire{
 
 	}//End function test
 
-} //End class Commentaire
+} //End class User
