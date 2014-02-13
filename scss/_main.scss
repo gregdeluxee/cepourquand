@@ -69,6 +69,80 @@ textarea {
 
 
 
+*{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+body, html{
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+
+}
+
+#container{
+	//overflow: hidden;
+	header{
+		height: 50px;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 15;
+		background: blue;
+		-webkit-transition: all .4s ease-in-out;
+		nav{
+			ul{
+				li{
+					float: left;
+					background: yellow;
+					padding: 5px;
+					margin: 10px;
+				}
+			}
+		}
+	}
+	#menu{
+		height: 80%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 5;
+		background: red;
+		nav{
+			ul{
+				li{
+					background: yellow;
+					padding: 5px;
+					margin: 10px;
+				}
+			}
+		}
+	}
+	#content{
+		position: relative;
+		width: 100%;
+		width: 100%;
+		z-index: 10;
+		display: block;
+		background: green;
+
+		-webkit-transition: all .4s ease-in-out;
+		section{
+
+		}
+	}
+}
+.menu_actif{
+	-webkit-transform:translate3d(80%,0,0);
+}
+
 
 
 
@@ -168,6 +242,7 @@ textarea[contenteditable] {
     width: auto;
 }
 
+
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
@@ -214,3 +289,4 @@ textarea[contenteditable] {
        only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
 }
+

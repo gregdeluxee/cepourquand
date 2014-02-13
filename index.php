@@ -36,8 +36,7 @@
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
          <!-- jQuery 1.10.2 -->
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -61,6 +60,7 @@
         <!-- END CONTENT -->
 
         <script src="js/vendor/zepto.min.js"></script>
+        <script src="js/helper.js"></script>
         <script src="js/helper.js"></script>
 
     </body>
