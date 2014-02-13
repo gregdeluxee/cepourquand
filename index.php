@@ -1,9 +1,7 @@
 <?php
-    include_once('core/init.php');
-    include_once('class/class.php');
+    //include_once('core/init.php');
+    //include_once('class/class.php');
  ?>
-<!-- SUPERLAMBI
- -->
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
@@ -13,8 +11,11 @@
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="cleartype" content="on">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--         <meta name="viewport" content="width=device-width, initial-scale=1">
+ -->        <meta http-equiv="cleartype" content="on">
+
+
 
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
@@ -39,7 +40,7 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
          <!-- jQuery 1.10.2 -->
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+       <!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     </head>
     <body>
@@ -51,6 +52,7 @@
         <!-- CONTENT -->
         <div id="content">
 
+            <?php include('pages/login.php'); ?>
             <?php include('pages/projet.php'); ?>
             <?php include('pages/tache.php'); ?>
             <?php include('pages/commentaire.php'); ?>
@@ -61,7 +63,5 @@
 
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
-        <script src="js/helper.js"></script>
-
     </body>
 </html>
