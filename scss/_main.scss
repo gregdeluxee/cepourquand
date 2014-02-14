@@ -265,58 +265,109 @@ body{
 			float: left;
 			padding:25px 0;
 			box-shadow: inset 0px 0px 1px 0px $liBaseColor;
-			.jours{
+			.projetsClose{
+				width: 100%;
 				float: left;
-				height: 100%;
-				width: 20%;
-				margin-right: 6%;
-				span{
-					color: $redMenu;
-					font-family: $latohairline;
-					font-size: 31px;
-					text-align: right;
-					float: right;
-					line-height: 2.7;
-					.nbr_jours{
+				.jours{
+					float: left;
+					height: 100%;
+					width: 20%;
+					margin-right: 6%;
+					span{
+						color: $redMenu;
+						font-family: $latohairline;
+						font-size: 31px;
+						text-align: right;
+						float: right;
+						line-height: 2.7;
+						.nbr_jours{
+							float: left;
+							font-family: $latolight;
+							font-size: 60px;
+							-webkit-font-smoothing: antialiased;
+							font-smoothing: antialiased;
+							line-height: 1;
+						}
+					}
+				}
+				.projetContent{
+					float: left;
+					height: 100%;
+					width: 68%;
+					margin-right: 6%;
+					color: #fff;
+					font-family: $latolight;
+					-webkit-font-smoothing: antialiased;
+					font-smoothing: antialiased;
+					h1{
+						font-size: 32px;
+						width: 100%;
 						float: left;
-						font-family: $latolight;
-						font-size: 60px;
-						-webkit-font-smoothing: antialiased;
-						font-smoothing: antialiased;
-						line-height: 1;
+						margin-top: -5px;
+
+					}
+					.projetProf{
+						font-size: 10px;
+						width: 50%;
+						float: left;
+
+
+					}
+					.projetCreat{
+						font-size: 10px;
+						//font-family: $latohairline;
+						width: 50%;
+						float: left;
+						text-align: right;
+
 					}
 				}
 			}
-			.projetContent{
+			.projetsOpen{
+				width: 100%;
+				background: red;
 				float: left;
-				height: 100%;
-				width: 68%;
-				margin-right: 6%;
-				color: #fff;
-				font-family: $latolight;
-				-webkit-font-smoothing: antialiased;
-				font-smoothing: antialiased;
-				h1{
-					font-size: 32px;
+				ul{
+					background: #fff;
+					float: left;
+					width: 100%;
+					li{
+						font-family: $latohairline;
+						font-size: 18px;
+						width: 100%;
+						height:100%;
+						background: #efefef;
+						float: left;
+						padding: 0;
+						.projetJoursTache{
+							font-family: $latohairline;
+							font-size: 36px;
+							float: left;
+							width: 20%;
+							margin-right: 6%;
+							display: block;
+							text-align: right;
+						}
+						p{
+							float: right;
+							width: 68%;
+							margin-right: 6%;
+							display: block;
+							padding: 13px 0;
+
+						}
+					}
+				}
+				nav{
+					height: 85px;
 					width: 100%;
 					float: left;
-					margin-top: -5px;
+					background: green;
+					ul{
+						li{
 
-				}
-				.projetProf{
-					font-size: 10px;
-					width: 50%;
-					float: left;
-
-
-				}
-				.projetCreat{
-					font-size: 10px;
-					//font-family: $latohairline;
-					width: 50%;
-					float: left;
-					text-align: right;
-
+						}
+					}
 				}
 			}
 		}
@@ -332,10 +383,6 @@ body{
 	transform: translateX(150%);
 
 }
-//.displayBlock{
-//	display: block;
-//}
-
 
 #login{
 	background: #3c3c3c;
@@ -381,6 +428,10 @@ body{
 		::-webkit-input-placeholder {
 			color: #9f9f9f;
 		}
+		input:focus::-webkit-input-placeholder {
+			opacity: 0;
+		}
+
 		input[type="submit"]{
 			width: 100%;
 			height: 90px;

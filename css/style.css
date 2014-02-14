@@ -295,13 +295,17 @@ body, html {
   padding: 25px 0;
   box-shadow: inset 0px 0px 1px 0px #1a1a1a;
 }
-#projets ul li .jours {
+#projets ul li .projetsClose {
+  width: 100%;
+  float: left;
+}
+#projets ul li .projetsClose .jours {
   float: left;
   height: 100%;
   width: 20%;
   margin-right: 6%;
 }
-#projets ul li .jours span {
+#projets ul li .projetsClose .jours span {
   color: #d14746;
   font-family: "latohairline", Arial, Helvetica, sans-serif;
   font-size: 31px;
@@ -309,7 +313,7 @@ body, html {
   float: right;
   line-height: 2.7;
 }
-#projets ul li .jours span .nbr_jours {
+#projets ul li .projetsClose .jours span .nbr_jours {
   float: left;
   font-family: "latolight", Arial, Helvetica, sans-serif;
   font-size: 60px;
@@ -317,7 +321,7 @@ body, html {
   font-smoothing: antialiased;
   line-height: 1;
 }
-#projets ul li .projetContent {
+#projets ul li .projetsClose .projetContent {
   float: left;
   height: 100%;
   width: 68%;
@@ -327,22 +331,63 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#projets ul li .projetContent h1 {
+#projets ul li .projetsClose .projetContent h1 {
   font-size: 32px;
   width: 100%;
   float: left;
   margin-top: -5px;
 }
-#projets ul li .projetContent .projetProf {
+#projets ul li .projetsClose .projetContent .projetProf {
   font-size: 10px;
   width: 50%;
   float: left;
 }
-#projets ul li .projetContent .projetCreat {
+#projets ul li .projetsClose .projetContent .projetCreat {
   font-size: 10px;
   width: 50%;
   float: left;
   text-align: right;
+}
+#projets ul li .projetsOpen {
+  width: 100%;
+  background: red;
+  float: left;
+}
+#projets ul li .projetsOpen ul {
+  background: #fff;
+  float: left;
+  width: 100%;
+}
+#projets ul li .projetsOpen ul li {
+  font-family: "latohairline", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  float: left;
+  padding: 0;
+}
+#projets ul li .projetsOpen ul li .projetJoursTache {
+  font-family: "latohairline", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  float: left;
+  width: 20%;
+  margin-right: 6%;
+  display: block;
+  text-align: right;
+}
+#projets ul li .projetsOpen ul li p {
+  float: right;
+  width: 68%;
+  margin-right: 6%;
+  display: block;
+  padding: 13px 0;
+}
+#projets ul li .projetsOpen nav {
+  height: 85px;
+  width: 100%;
+  float: left;
+  background: green;
 }
 
 .displayNone {
@@ -398,6 +443,9 @@ body, html {
 }
 #login form ::-webkit-input-placeholder {
   color: #9f9f9f;
+}
+#login form input:focus::-webkit-input-placeholder {
+  opacity: 0;
 }
 #login form input[type="submit"] {
   width: 100%;
