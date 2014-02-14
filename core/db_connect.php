@@ -3,10 +3,10 @@ try{
 	
 	$dbHost = 'localhost';
 	$dbName = 'ilab';
-	$dbUser = 'ilabuser';
-	$dbPassword = 'ilab123';
+	$dbUser = 'root';
+	$dbPassword = '';
 
-	$bdd = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUser, $dbPassword);
+	$db = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUser, $dbPassword);
 }
 catch (Exception $e){
 	die('Erreur : ' . $e->getMessage());
