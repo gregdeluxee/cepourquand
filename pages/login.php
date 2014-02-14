@@ -8,6 +8,6 @@
 			<input type="text" placeholder="prénom.nom" name="login" >
 			<input type="password" placeholder="mot de passe" name="pass" >
 		</fieldset>
-		<input type="submit" name="submit" value="CONNEXION" >
+		<input class="loginSubmit" type="submit" name="submit" value="CONNEXION" >
 	</form>
 </div><!-- End login -->

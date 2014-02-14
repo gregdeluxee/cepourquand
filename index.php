@@ -54,14 +54,17 @@
 
             <?php include('pages/login.php'); ?>
             <?php include('pages/projet.php'); ?>
-            <?php include('pages/tache.php'); ?>
-            <?php include('pages/commentaire.php'); ?>
-            <?php include('pages/addProjet.php'); ?>
+            <?php //include('pages/tache.php'); ?>
+            <?php //include('pages/commentaire.php'); ?>
+            <?php //include('pages/addProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->
 
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/fastclick.js"></script>
+
     </body>
 </html>
