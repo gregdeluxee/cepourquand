@@ -70,5 +70,7 @@
 
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/fastclick.js"></script>
     </body>
 </html>
