@@ -46,12 +46,12 @@ class User{
 		}
 	}
 	public function setPrenom_user($prenom_user){
-		if (is_string($prenom_user))		{
+		if (is_string($prenom_user)){
 			$this->_prenom_user = $prenom_user;
 		}
 	}
 	public function setNom_user($nom_user){
-		if (is_string($nom_user))		{
+		if (is_string($nom_user)){
 			$this->_nom_user = $nom_user;
 		}
 	}

@@ -29,6 +29,7 @@ class UserManager
     	$q->bindValue(':url_img_user', $user->url_img_user());
 
     	$q->execute();
+      $q->closeCursor();
   	}
 
   	public function delete(User $user){
@@ -36,12 +37,19 @@ class UserManager
   	}
 
   	public function get($login_user){
-
     	$q = $this->_db->prepare('SELECT id_user, prenom_user, nom_user, classe_user, login_user, password_user, last_login_user, loged_jeton_user, url_img_user FROM user WHERE login_user = :login_user');
       $q->execute(array(':login_user' => $login_user));
       $donnees = $q->fetch(PDO::FETCH_ASSOC);
+      $q->closeCursor();
       return new User($donnees);
   	}
+    public function getByJeton($jeton){
+      $q = $this->_db->prepare('SELECT id_user, prenom_user, nom_user, classe_user, login_user, password_user, last_login_user, loged_jeton_user, url_img_user FROM user WHERE loged_jeton_user = :loged_jeton_user');
+      $q->execute(array(':loged_jeton_user' => $jeton));
+      $donnees = $q->fetch(PDO::FETCH_ASSOC);
+      $q->closeCursor();
+      return new User($donnees);
+    }
 
     public function exists($info){
       if (is_int($info)) // On veut voir si tel personnage ayant pour id $info existe.
