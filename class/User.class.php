@@ -27,10 +27,6 @@ class User{
 		}
 	}
 
-	public function test(){
-		echo "test";
-	}
-
 	// GETTERS
 	public function id_user(){ return $this->_id_user; }
 	public function prenom_user(){ return $this->_prenom_user; }
@@ -64,7 +60,7 @@ class User{
 			$this->_classe_user = $classe_user;
 		}
 	}
-	public function setLogin_user(){
+	public function setLogin_user($login_user){
 		$prenom = $this->prenom_user();
 		$nom = $this->nom_user();
 		$login = strtolower(remove_accents($prenom.'.'.$nom));
@@ -73,19 +69,25 @@ class User{
 	}
 	public function setPassword_user($password_user){
 		if (strlen($password_user) > 5) {
-			$password_user = crypt($password_user);
+			//$password_user = crypt($password_user);
 			$this->_password_user = $password_user;
 		}
 	}
-	public function setLast_login_user(){
-		$date = date('m/d/Y h:i:s a', time());
-		$this->_last_login_user = $date;
+	public function setLast_login_user($last_login_user){
+		//$date = date('m/d/Y h:i:s a', time());
+		$this->_last_login_user = $last_login_user;
 	}
 	public function setLoged_jeton_user($loged_jeton_user){
 		$this->_loged_jeton_user = $loged_jeton_user;
 	}
 	public function setUrl_img_user($url_img_user){
 		$this->_url_img_user = $url_img_user;
+	}
+
+	//hashage password
+	public function passwordHash($password){
+		$hash = hash('sha512', $password);
+		$this->setPassword_user($hash);
 	}
 
 } //End class User

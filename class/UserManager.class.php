@@ -35,14 +35,42 @@ class UserManager
     	$this->_db->exec('DELETE FROM user WHERE id = '.$user->id());
   	}
 
-  	public function get($id_user){
-    	$id_user = (int) $id_user;
+  	public function get($login_user){
 
-    	$q = $this->_db->query('SELECT id_user, prenom_user, nom_user, classe_user, login_user, password_user, last_login_user, loged_jeton_user, url_img_user FROM user WHERE id_user = '.$id_user);
-    	$donnees = $q->fetch(PDO::FETCH_ASSOC);
-
-    	return new User($donnees);
+    	$q = $this->_db->prepare('SELECT id_user, prenom_user, nom_user, classe_user, login_user, password_user, last_login_user, loged_jeton_user, url_img_user FROM user WHERE login_user = :login_user');
+      $q->execute(array(':login_user' => $login_user));
+      $donnees = $q->fetch(PDO::FETCH_ASSOC);
+      return new User($donnees);
   	}
+
+    public function exists($info){
+      if (is_int($info)) // On veut voir si tel personnage ayant pour id $info existe.
+      {
+        return (bool) $this->_db->query('SELECT COUNT(*) FROM user WHERE id_user = '.$info)->fetchColumn();
+      }
+      
+      // Sinon, c'est qu'on veut vérifier que le nom existe ou pas.
+      
+      $q = $this->_db->prepare('SELECT COUNT(*) FROM user WHERE login_user = :login_user');
+      $q->execute(array(':login_user' => $info));
+      
+      return (bool) $q->fetchColumn();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
   	public function getList(){
     	$user = array();

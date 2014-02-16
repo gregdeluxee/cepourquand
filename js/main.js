@@ -1,3 +1,4 @@
+//START JQUERY
 $(function(){
 
   var contentmove = $(".contentmove");
@@ -8,27 +9,22 @@ $(function(){
 		theLi.css("height","324px");// PAS propre a modifier ...
 	});
 
-
+//LOGIN AJAX TREATMENT
 	$("#loginForm").submit(function(e) {
 		e.preventDefault();
 		var donnees = $(this).serialize();
-		console.log(donnees);
+		// LOGINFORM AJAX
 		$.ajax({
 			type: "POST",
 			url: './traitementAjax/traitementLogin.php',
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
-				console.log("success");
            		if (answer == "success") {
-					console.log("successsssss");
-
-           			setTimeout(function(){
-						$("#login").addClass("displayNone");
-					}, 600);
+           			setTimeout(function(){ $("#login").addClass("displayNone");	}, 600);
 					$("#login").addClass("translateX");
 					$("#projets").removeClass("displayNone");
-
+					// PROJET TREATMENT AJAX 
 					$.ajax({
 						type: "POST",
 						url: './pages/projet.php',
@@ -37,25 +33,22 @@ $(function(){
 							$("#content").append(answer);
 						}
 
-					})
+					});// END PROJET TREATMENT AJAX 
 
            		}else if (answer == "failed") {
-
+           			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
            		};
 		    },
 		    error : function(resultat, statut, erreur){
-
+		    	console.log("error")
 		    },
 		    complete : function(resultat, statut){
 
 		    }
-		});
+		});// END LOGINFORM AJAX
 
-	});
-
-
-
-});
+	});// END LOGINFORM SUBMIT
 
 
 
+}); // END JQUERY

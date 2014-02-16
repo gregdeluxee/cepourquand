@@ -1,6 +1,5 @@
 <?php
     //include_once('core/init.php');
-    //include_once('class/class.php');
  ?>
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->

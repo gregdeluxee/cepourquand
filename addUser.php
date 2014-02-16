@@ -49,21 +49,22 @@
 
 <?php
 $user = new User(array(
-  'prenom_user' => 'Adrien',
-  'nom_user' => 'Labigne',
+  'prenom_user' => 'user',
+  'nom_user' => 'prof',
   'classe_user' => '3tid2',
   'password_user' => '123456',
   'url_img_user' => 'test'
 ));
-$user->setLogin_user();
-var_dump($user);
+$user->setLogin_user("test");
+$user->passwordHash($user->password_user());
+
 $manager = new UserManager($db);  
 $manager->add($user);
 ?>
 
         <p>TEST</p>
         <!-- NAV -->
-        <?php include('inc/menu.php'); ?>
+        <?php// include('inc/menu.php'); ?>
         <!-- END NAV -->
 
         <!-- CONTENT 
