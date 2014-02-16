@@ -53,16 +53,16 @@
 
         <p>TEST</p>
         <!-- NAV -->
-        <?php include('inc/menu.php'); ?>
+        <?php //include('inc/menu.php'); ?>
         <!-- END NAV -->
 
         <!-- CONTENT  -->
         <div id="content">
 
-            <?php include('pages/login.php'); ?>
-            <?php include('pages/projet.php'); ?>
-            <?php include('pages/tache.php'); ?>
-            <?php include('pages/commentaire.php'); ?>
+            <?php// include('pages/login.php'); ?>
+            <?php// include('pages/projet.php'); ?>
+            <?php// include('pages/tache.php'); ?>
+            <?php// include('pages/commentaire.php'); ?>
             <?php include('pages/addProjet.php'); ?>
 
         </div>

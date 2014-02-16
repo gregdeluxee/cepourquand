@@ -13,15 +13,15 @@ class ProjetManager{
   	}
 
 
-  	public function addProjet(Projet projet){
+  	public function addProjet(Projet $projet){
   		$sql = 'INSERT INTO projet 
         SET 
         titre_projet = :titre_projet, 
         date_remise_projet = :date_remise_projet,
         auteur_projet = :auteur_projet,
         professeur_projet = :professeur_projet, 
-        cours_projet = :cours_projet
-        briefing_projet = :briefing_projet, '
+        cours_projet = :cours_projet,
+        briefing_projet = :briefing_projet';
 
   		$q = $this->_db->prepare($sql);
     	$q->bindValue(':titre_projet', $projet->titre_projet());
@@ -31,7 +31,7 @@ class ProjetManager{
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
 
-    	$q->execute();
+    	$q->execute() or die(print_r($q->errorInfo()));
       	$q->closeCursor();
   	}
 

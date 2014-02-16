@@ -1,13 +1,13 @@
 <?php 
 
 class Projet{
-	private $id_projet;
-	private $titre_projet;
-	private $date_remise_projet;
-	private $auteur_projet;
-	private $professeur_projet;
-	private $cours_projet;
-	private $briefing_projet;
+	private $_id_projet;
+	private $_titre_projet;
+	private $_date_remise_projet;
+	private $_auteur_projet;
+	private $_professeur_projet;
+	private $_cours_projet;
+	private $_briefing_projet;
 
 	public function __construct(array $donnees){
 		$this->hydrate($donnees);
@@ -24,7 +24,7 @@ class Projet{
 		}
 	}
 
-	
+
 	//GETTERS
 	public function id_projet(){ return $this->_id_projet; }
 	public function titre_projet(){ return $this->_titre_projet; }
@@ -49,7 +49,8 @@ class Projet{
 		$this->_date_remise_projet = $date_remise_projet;
 	}
 	public function setAuteur_projet($auteur_projet){
-		if (is_string($auteur_projet)){
+		$auteur_projet = (int) $auteur_projet;
+		if ($auteur_projet > 0){
 			$this->_auteur_projet = $auteur_projet;
 		}
 	}

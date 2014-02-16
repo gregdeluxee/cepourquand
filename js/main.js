@@ -48,7 +48,32 @@ $(function(){
 		});// END LOGINFORM AJAX
 
 	});// END LOGINFORM SUBMIT
+//ADD PROJET TREATMENT
+	$("#addProjetForm").submit(function(e) {
+		e.preventDefault();
+		var donnees = $(this).serialize();
+		// ADD PROJET TREATMENT AJAX
+		$.ajax({
+			type: "POST",
+			url: './traitementAjax/traitementAjoutProjet.php',
+			data: donnees,
+			dataType : 'text',
+			success : function(answer, statut){
+				console.log(answer);
+				console.log(donnees);
+				if (answer == "success") {
+					console.log("success")
+				}else if (answer == "failed") {
+					console.log("failed")
+           		};
+			},
+		    error : function(resultat, statut, erreur){
+		    	console.log("error")
+		    },
+		    complete : function(resultat, statut){
 
-
+		    }
+		});// END PROJET TREATMENT AJAX
+	});// END PROJET SUBMIT
 
 }); // END JQUERY

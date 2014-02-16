@@ -1,23 +1,25 @@
 <?php 
+
 include('../core/init.php');
-if (isset($_POST['login']) AND isset($_POST['password'])) {
-	$login = $_POST['login'];
-	$password = $_POST['password'];
-	$password = hash('sha512', $password);
-	$userInfos = new UserManager($db);
-	if ($userInfos->exists($login)) {
-		$user = $userInfos->get($login);
-		if ($user->password_user() == $password) {
-			$_SESSION['id_user'] = $user->id_user();
-			echo "success";
-		}else{
-			echo "failed";
-		}
-	}else{
-		echo "failed";
-	}
+$_SESSION['id_user'] = 1;
+if (isset($_POST['titre']) AND isset($_POST['date'])) {
+
+	$projet = new Projet(array(
+	  'titre_projet' => $_POST['titre'],
+	  'date_remise_projet' => $_POST['date'],
+	  'auteur_projet' => $_SESSION['id_user'],
+	  'professeur_projet' =>  $_POST['professeur'],
+	  'cours_projet' =>  $_POST['cours'],
+	  'briefing_projet' =>  $_POST['briefing']
+	));
+	print_r($projet);
+	print_r($_SESSION['id_user']);
+
+	$projetManager = new ProjetManager($db);
+	$projetManager->addProjet($projet);
+	echo "success";
 }
-	
-	
+
+
 
  ?>
