@@ -12,72 +12,131 @@
 					<div class="projetCreat">Antonin lambinet</div>
 				</div>
 			</div>
-		<div class="projetsOpen">
-			<ul>
-				<li>
-					<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
-					<p>Cohérence dsfsdfdsfgd dsgnxvn nfxb ioxfnv cofn cjngvc, ogne dfngld dng ng ijb dingoidhgo  oigndskfns  à revoir.</p>
-				</li>
-				<li>
-					<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
-					<p>Cohérence graphique à revoir.</p>
-				</li>
-			</ul>
-			<nav>
-<!-- 				<ul>
+			<div class="projetsOpen">
+				<ul>
 					<li>
-						<div>
-							<span></span>
-							<span></span>
-						</div>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence dsfsdfdsfgd dsgnxvn nfxb ioxfnv cofn cjngvc, ogne dfngld dng ng ijb dingoidhgo  oigndskfns  à revoir.</p>
 					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+				</ul>
+				<nav>
+					<ul>
+						<li>
+							<div>
+								<span></span>
+								<span></span>
+							</div>
+							<p>Ajouter une tâche</p>
+						</li>
+						<li><div></div><p>Discussion</p></li>
+						<li><div></div><p>Briefing</p></li>
+						<li><div></div><p>Collaborateurs</p></li>
+						<li><div><p>Modifier</p></div></li>
+					</ul>
+				</nav>
+			</div>
+		</li>
 
-					<li></li>
-				</ul> -->
-			</nav>
-		</div>
+		<li>
+			<div class="projetsClose">
+				<div class="jours">
+					<span><span class="nbr_jours">3</span>j</span>
+				</div>
+				<div class="projetContent">
+					<h1>Flowchart Life</h1>
+					<div class="projetProf">DIEU</div>
+					<div class="projetCreat">Antonin lambinet</div>
+				</div>
+			</div>
+			<div class="projetsOpen">
+				<ul>
 
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+				</ul>
+				<nav>
+					<ul>
+						<li>
+							<div>
+								<span></span>
+								<span></span>
+							</div>
+							<p>Ajouter une tâche</p>
+						</li>
+						<li><div></div><p>Discussion</p></li>
+						<li><div></div><p>Briefing</p></li>
+						<li><div></div><p>Collaborateurs</p></li>
+						<li><div><p>Modifier</p></div></li>
+					</ul>
+				</nav>
+			</div>
+		</li>
 
-		</li>
 		<li>
-			<div class="jours">
-				<span><span class="nbr_jours">5</span>j</span>
+			<div class="projetsClose">
+				<div class="jours">
+					<span><span class="nbr_jours">3</span>j</span>
+				</div>
+				<div class="projetContent">
+					<h1>Flowchart Life</h1>
+					<div class="projetProf">DIEU</div>
+					<div class="projetCreat">Antonin lambinet</div>
+				</div>
 			</div>
-			<div class="projetContent">
-				<h1>Luvudi</h1>
-				<div class="projetProf">Gegory</div>
-				<div class="projetCreat">Antoine El Gringo</div>
+			<div class="projetsOpen">
+				<ul>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence dsfsdfdsfgd dsgnxvn nfxb ioxfnv cofn cjngvc, ogne dfngld dng ng ijb dingoidhgo  oigndskfns  à revoir.</p>
+					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+					<li>
+						<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+						<p>Cohérence graphique à revoir.</p>
+					</li>
+				</ul>
+				<nav>
+					<ul>
+						<li>
+							<div>
+								<span></span>
+								<span></span>
+							</div>
+							<p>Ajouter une tâche</p>
+						</li>
+						<li><div></div><p>Discussion</p></li>
+						<li><div></div><p>Briefing</p></li>
+						<li><div></div><p>Collaborateurs</p></li>
+						<li><div><p>Modifier</p></div></li>
+					</ul>
+				</nav>
 			</div>
 		</li>
-		<li>
-			<div class="jours">
-				<span><span class="nbr_jours">12</span>j</span>
-			</div>
-			<div class="projetContent">
-				<h1>Flowchart Life</h1>
-				<div class="projetProf">kirikou</div>
-				<div class="projetCreat">Francois Dieudonner</div>
-			</div>
-		</li>
-		<li>
-			<div class="jours">
-				<span><span class="nbr_jours">99</span>j</span>
-			</div>
-			<div class="projetContent">
-				<h1>Flowchart Life</h1>
-				<div class="projetProf">kiki</div>
-				<div class="projetCreat">A Rat de la Touff</div>
-			</div>
-		</li>
-		<li>
-			<div class="jours">
-				<span><span class="nbr_jours">183</span>j</span>
-			</div>
-			<div class="projetContent">
-				<h1>Flowchart Life</h1>
-				<div class="projetProf">Boble p'tit matelo</div>
-				<div class="projetCreat">BipBoupsBomm</div>
-			</div>
-		</li>
+
 	</ul>
 </div><!-- End projets -->

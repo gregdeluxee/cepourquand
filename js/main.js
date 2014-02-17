@@ -3,10 +3,17 @@ $(function(){
 
   var contentmove = $(".contentmove");
 
+  var kedis = $(".kedis").height();
+  console.log(kedis);
+
+
+
 	$(".projetsClose").click(function(e) {
 		$this = $(this);
 		var theLi = $this.parent("li");
-		theLi.css("height","324px");// PAS propre a modifier ...
+
+
+		theLi.toggleClass("projetsOppenClass");
 	});
 
 //LOGIN AJAX TREATMENT
