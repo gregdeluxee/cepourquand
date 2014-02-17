@@ -3,18 +3,20 @@ $(function(){
 
   var contentmove = $(".contentmove");
 
-  var kedis = $(".kedis").height();
-  console.log(kedis);
 
+	$("#projets").removeClass("displayNone");////AS UPPPP
 
 
 	$(".projetsClose").click(function(e) {
 		$this = $(this);
 		var theLi = $this.parent("li");
-
-
-		theLi.toggleClass("projetsOppenClass");
+		$(".projetsClose").parent("li").removeClass("projetsOppenClass");
+		theLi.addClass("projetsOppenClass");
 	});
+
+
+
+
 
 //LOGIN AJAX TREATMENT
 	$("#loginForm").submit(function(e) {
@@ -31,7 +33,7 @@ $(function(){
            			setTimeout(function(){ $("#login").addClass("displayNone");	}, 600);
 					$("#login").addClass("translateX");
 					$("#projets").removeClass("displayNone");
-					// PROJET TREATMENT AJAX 
+					// PROJET TREATMENT AJAX
 					$.ajax({
 						type: "POST",
 						url: './pages/projet.php',
@@ -40,7 +42,7 @@ $(function(){
 							$("#content").append(answer);
 						}
 
-					});// END PROJET TREATMENT AJAX 
+					});// END PROJET TREATMENT AJAX
 
            		}else if (answer == "failed") {
            			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
