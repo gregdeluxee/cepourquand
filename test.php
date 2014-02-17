@@ -48,7 +48,9 @@
 
 
 <?php
-
+    $tacheManager = new TacheManager($db);
+    $tache = $tacheManager->getTacheByProjetId("1");
+    print_r($tache);
 ?>
 
         <p>TEST</p>
@@ -61,9 +63,9 @@
 
             <?php// include('pages/login.php'); ?>
             <?php// include('pages/projet.php'); ?>
-            <?php// include('pages/tache.php'); ?>
+            <?php include('pages/tache.php'); ?>
             <?php// include('pages/commentaire.php'); ?>
-            <?php include('pages/addProjet.php'); ?>
+            <?php// include('pages/addProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->

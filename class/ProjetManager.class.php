@@ -25,14 +25,14 @@ class ProjetManager{
 
   		$q = $this->_db->prepare($sql);
     	$q->bindValue(':titre_projet', $projet->titre_projet());
-      	$q->bindValue(':date_remise_projet', $projet->date_remise_projet());
-      	$q->bindValue(':auteur_projet', $projet->auteur_projet());
-      	$q->bindValue(':professeur_projet', $projet->professeur_projet());
+      $q->bindValue(':date_remise_projet', $projet->date_remise_projet());
+      $q->bindValue(':auteur_projet', $projet->auteur_projet());
+      $q->bindValue(':professeur_projet', $projet->professeur_projet());
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
 
     	$q->execute() or die(print_r($q->errorInfo()));
-      	$q->closeCursor();
+      $q->closeCursor();
   	}
 
   	public function getProjetByUserId($id_user){
@@ -48,4 +48,4 @@ class ProjetManager{
       	return new User($donnees);
   	}
 
-} //End class Projet
+} //End class ProjetManager
