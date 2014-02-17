@@ -72,6 +72,8 @@ $latolight:'latolight', Arial, Helvetica, sans-serif;
 $latoregular:'latoregular', Arial, Helvetica, sans-serif;
 $latobold:'latobold', Arial, Helvetica, sans-serif;
 
+ $SourceSansPro:'Source Sans Pro', Helvetica,  sans-serif;
+
 $liBaseColor: #1a1a1a;
 $liBaseColorDark: #efefef;
 
@@ -158,6 +160,55 @@ body{
 
 
 
+#menuAddProjet{
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: $redMenu;
+	color: #fff;
+	-webkit-transition:.3s all ease-in-out ;
+	transition: .3s all ease-in-out ;
+	nav{
+		ul{
+			li{
+				padding: 12px 5px;
+				line-height: 1;
+				font-family: $latolight;
+				-webkit-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+			}
+			.menuMenu{
+				position: absolute;
+				left: 0;
+				z-index: 7;
+				font-size: 20px;
+				text-align: left;
+				line-height: 1.7;
+			}
+			.menuTitre{
+				width: 100%;
+				font-size: 32px;
+				text-align: center;
+				position: absolute;
+				z-index: 6;
+				text-transform: uppercase;
+			}
+			.menuAdd{
+				position: absolute;
+				right: 0;
+				z-index: 7;
+				line-height: 1.7;
+				font-size: 20px;
+				text-align: right;
+			}
+		}
+	}
+}
+
 #menu{
 	height: 60px;
 	width: 100%;
@@ -201,6 +252,7 @@ body{
 				text-align: center;
 				position: absolute;
 				z-index: 6;
+				text-transform: uppercase;
 			}
 			.menuAdd{
 				position: absolute;
@@ -222,6 +274,140 @@ body{
 	}
 }
 
+#addProjet{
+	padding-top: 60px;
+	background: lighten($liBaseColor, 0);
+	form{
+		fieldset{
+			.dateName{
+				height: 100px;
+				width: 100%;
+				float: left;
+				background: #282828;
+				label{
+					display:block;
+					background: url(../img/dateaddprojet.png) no-repeat center;
+					background-size: 100%;
+					height: 36px;
+					width: 32px;
+					float: left;
+				}
+				input[type=date]{
+					position: absolute;
+					left: -99999px;
+				}
+				input{
+					float: left;
+					background: #282828;
+					border: none;
+					color: #fff;
+					::-webkit-input-placeholder {
+						color: #8a8a8a;
+					}
+					input:focus::-webkit-input-placeholder {
+						opacity: 0;
+					}
+				}
+			}
+
+
+		}
+		input[type=submit]{
+			display: none;
+		}
+	}
+
+
+
+
+		ul{
+			li{
+				width: 50%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: center;
+				color: #fff;
+				font-size: 14px;
+				line-height: 2.8;
+				box-shadow: none;
+
+				div{
+					height: 40px;
+					width: 40px;
+					float: left;
+
+				}
+				p{
+					float: left;
+					display: inline;
+					padding: 0 0 0 0px;
+					margin: 0;
+					width: 70%;
+
+				}
+			}
+			li:nth-child(1){
+				background: $redMenu;
+				div{
+					padding-top: 19px;
+					span{
+						margin: 0px 8px;
+						background: #fff;
+						width: 25px;
+						height: 1px;
+						display: block;
+					}
+					:last-child{
+						-webkit-transform: rotate(90deg);
+					}
+				}
+			}
+			li:nth-child(2){
+				background: #1d1d1d;
+				div{
+					background: url(../img/discution.png) no-repeat center;
+					background-size: 60%;
+				}
+			}
+			li:nth-child(3){
+				background: #1d1d1d;
+				div{
+					background: url(../img/breif.png) no-repeat center;
+					background-size: 47%;
+				}
+
+			}
+			li:nth-child(4){
+				background: #212121;
+				div{
+					background: url(../img/collabo.png) no-repeat center;
+					background-size: 60%;
+				}
+			}
+			li:nth-child(5){
+				background: #282828;
+				line-height: 3.7;
+				height: 52px;
+				width: 100%;
+				div{
+					height: 52px;
+					width: 98px;
+					background: url(../img/modifier.png) no-repeat left center;
+					background-size: 30%;
+					margin: 0 auto;
+					float: none;
+
+				}
+				p{
+					margin: 0;
+					padding: 0;
+					text-indent: 35px;
+				}
+			}
+		}
+
+}
 
 #projets{
 	padding-top: 60px;

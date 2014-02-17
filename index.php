@@ -12,7 +12,7 @@
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <!--         <meta name="viewport" content="width=device-width, initial-scale=1">
- -->        <meta http-equiv="cleartype" content="on">
+ -->    <meta http-equiv="cleartype" content="on">
 
 
 
@@ -21,6 +21,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
         <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
         <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
@@ -45,17 +46,18 @@
     <body>
 
         <!-- NAV -->
-        <?php include('inc/menu.php'); ?>
+        <?php //include('inc/menu.php'); ?>
+        <?php include('inc/menuAddProjet.php'); ?>
         <!-- END NAV -->
 
         <!-- CONTENT -->
         <div id="content">
 
             <?php //include('pages/login.php'); ?>
-            <?php include('pages/projet.php'); ?>
+            <?php //include('pages/projet.php'); ?>
             <?php //include('pages/tache.php'); ?>
             <?php //include('pages/commentaire.php'); ?>
-            <?php //include('pages/addProjet.php'); ?>
+            <?php include('pages/addProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->
