@@ -24,6 +24,7 @@ function getCookie(sName) {
 //START JQUERY
 $(function(){
 <<<<<<< HEAD
+<<<<<<< HEAD
 	alert(getCookie('loged'));
   var contentmove = $(".contentmove");
 
@@ -32,6 +33,7 @@ $(function(){
 	//	$("#projets").removeClass("displayNone");
 	//	$("#taches").removeClass("displayNone");
 	//};	
+=======
 =======
 
 	var contentmove = $(".contentmove");
@@ -42,10 +44,18 @@ $(function(){
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
 	var filtreCheckParent = $("#filtre input").parent("li");
+>>>>>>> d1d4fa35bad2dfbec3aca146209e62df433dc318
+
+<<<<<<< HEAD
+	var contentmove = $(".contentmove");
+	var filtreCheck = $("#filtre input");
+	var filtreCheckParent = $("#filtre input").parent("li");
 
 <<<<<<< HEAD
 	$("#projets").removeClass("displayNone");////AS UPPPP
 
+=======
+>>>>>>> d1d4fa35bad2dfbec3aca146209e62df433dc318
 =======
 >>>>>>> d1d4fa35bad2dfbec3aca146209e62df433dc318
 	$(".projetsClose").click(function() {
@@ -69,7 +79,19 @@ $(function(){
 	// }else{
 	// 	$this.parent("li").addClass("liBgNo");
 	// }
+<<<<<<< HEAD
+=======
 
+>>>>>>> d1d4fa35bad2dfbec3aca146209e62df433dc318
+
+$('#filtre input').change(function() {
+	$this = $(this);
+	if ($this.is(':checked')) {
+		$this.parent("li").removeClass("liBgNo");
+ 	} else {
+  		$this.parent("li").addClass("liBgNo");
+  }
+});
 
 $('#filtre input').change(function() {
 	$this = $(this);
