@@ -175,6 +175,10 @@ body, html {
   transform: translateX(150%);
 }
 
+.liBgNo {
+  background: none !important;
+}
+
 #menuLateral {
   background: #212121;
   height: 100%;
@@ -444,6 +448,98 @@ body, html {
 }
 #menu nav ul .menuAdd div :last-child {
   -webkit-transform: rotate(90deg);
+}
+
+#menuFiltres {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #d7403f;
+  color: #fff;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+#menuFiltres nav ul li {
+  padding: 12px 5px;
+  line-height: 1;
+  font-family: "latolight", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#menuFiltres nav ul li div span {
+  width: 25px;
+  height: 1px;
+  display: block;
+  background: #fff;
+}
+#menuFiltres nav ul .menuMenu {
+  position: absolute;
+  left: 0;
+  z-index: 7;
+}
+#menuFiltres nav ul .menuMenu div span {
+  margin: 8px;
+}
+#menuFiltres nav ul .menuTitre {
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+  position: absolute;
+  z-index: 6;
+  text-transform: uppercase;
+}
+#menuFiltres nav ul .menuOK {
+  position: absolute;
+  right: 0;
+  z-index: 7;
+  padding: 22px;
+}
+
+#filtre {
+  padding-top: 38px;
+}
+#filtre ul li {
+  width: 100%;
+  height: 50px;
+  float: left;
+  padding: 7px 0 0 11px;
+}
+#filtre ul li input {
+  visibility: hidden;
+  position: absolute;
+}
+#filtre ul li label {
+  display: block;
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+}
+#filtre ul li:nth-child(1) {
+  background: url(../img/valide_filtre.png) no-repeat 96% 50% #3aa642;
+  background-size: 11%;
+}
+#filtre ul li:nth-child(2) {
+  background: url(../img/valide_filtre.png) no-repeat 96% 50% #3cab43;
+  background-size: 11%;
+}
+#filtre ul li:nth-child(3) {
+  background: url(../img/valide_filtre.png) no-repeat 96% 50% #3eb045;
+  background-size: 11%;
+}
+#filtre ul li:nth-child(4) {
+  background: url(../img/valide_filtre.png) no-repeat 96% 50% #3bae42;
+  background-size: 11%;
+}
+#filtre ul li:nth-child(5) {
+  background: url(../img/valide_filtre.png) no-repeat 96% 50% #3fb547;
+  background-size: 11%;
 }
 
 #taches {

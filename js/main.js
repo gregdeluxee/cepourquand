@@ -2,6 +2,8 @@
 $(function(){
 
 	var contentmove = $(".contentmove");
+	var filtreCheck = $("#filtre input");
+	var filtreCheckParent = $("#filtre input").parent("li");
 
 	$("#projets").removeClass("displayNone");////AS UPPPP
 
@@ -21,7 +23,21 @@ $(function(){
 		contentmove.toggleClass("menu_actif");
 	});
 
+	// if ($("#filtre input").is(":checked")) {
+	// 	$this = $(this);
+	// }else{
+	// 	$this.parent("li").addClass("liBgNo");
+	// }
 
+
+$('#filtre input').change(function() {
+	$this = $(this);
+	if ($this.is(':checked')) {
+		$this.parent("li").removeClass("liBgNo");
+ 	} else {
+  		$this.parent("li").addClass("liBgNo");
+  }
+});
 
 //LOGIN AJAX TREATMENT
 	$("#loginForm").submit(function(e) {
