@@ -19,7 +19,6 @@ class ProjetManager{
         titre_projet = :titre_projet, 
         date_remise_projet = :date_remise_projet,
         auteur_projet = :auteur_projet,
-        professeur_projet = :professeur_projet, 
         cours_projet = :cours_projet,
         briefing_projet = :briefing_projet';
 
@@ -27,7 +26,6 @@ class ProjetManager{
     	$q->bindValue(':titre_projet', $projet->titre_projet());
       $q->bindValue(':date_remise_projet', $projet->date_remise_projet());
       $q->bindValue(':auteur_projet', $projet->auteur_projet());
-      $q->bindValue(':professeur_projet', $projet->professeur_projet());
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
 
@@ -42,10 +40,12 @@ class ProjetManager{
   		ON projet_gestion.id_projet = projet.id_projet 
   		WHERE projet_gestion.id_user = :id_user';
   		$q = $this->_db->prepare($sql);
-      	$q->execute(array(':id_user' => $id_user));
-      	$donnees = $q->fetch(PDO::FETCH_ASSOC);
+      	$q->execute(array(':id_user' => $id_user)) or die(print_r($q->errorInfo()));;
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+          $projets[] = new Projet($donnees);
+        }
       	$q->closeCursor();
-      	return new User($donnees);
+      	return $projets;
   	}
 
 } //End class ProjetManager

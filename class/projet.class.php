@@ -5,7 +5,6 @@ class Projet{
 	private $_titre_projet;
 	private $_date_remise_projet;
 	private $_auteur_projet;
-	private $_professeur_projet;
 	private $_cours_projet;
 	private $_briefing_projet;
 
@@ -30,7 +29,6 @@ class Projet{
 	public function titre_projet(){ return $this->_titre_projet; }
 	public function date_remise_projet(){ return $this->_date_remise_projet; }
 	public function auteur_projet(){ return $this->_auteur_projet; }
-	public function professeur_projet(){ return $this->_professeur_projet; }
 	public function cours_projet(){ return $this->_cours_projet; }
 	public function briefing_projet(){ return $this->_briefing_projet; }
 	//SETTERS
@@ -52,11 +50,6 @@ class Projet{
 		$auteur_projet = (int) $auteur_projet;
 		if ($auteur_projet > 0){
 			$this->_auteur_projet = $auteur_projet;
-		}
-	}
-	public function setProfesseur_projet($professeur_projet){
-		if (is_string($professeur_projet)){
-			$this->_professeur_projet = $professeur_projet;
 		}
 	}
 	public function setCours_projet($cours_projet){

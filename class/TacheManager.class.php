@@ -40,11 +40,11 @@ class TacheManager{
   		FROM tache 
   		WHERE id_projet_tache= :id_projet';
   		$q = $this->_db->prepare($sql);
-      	$q->execute(array(':id_projet' => $id_projet));
-      	while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
-	      	$taches[] = new Tache($donnees);
+      $q->execute(array(':id_projet' => $id_projet));
+      while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+	     	$taches[] = new Tache($donnees);
 	    }
-      	$q->closeCursor();
+      $q->closeCursor();
 	    return $taches;
   	}
 

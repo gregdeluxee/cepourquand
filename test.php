@@ -1,4 +1,5 @@
 <?php
+//setcookie('loged', '0', time()+60*60*24*30, null, null, false, true); 
     include_once('core/init.php');
  ?>
 <!DOCTYPE html>
@@ -48,24 +49,37 @@
 
 
 <?php
-    $tacheManager = new TacheManager($db);
-    $tache = $tacheManager->getTacheByProjetId("1");
-    print_r($tache);
+    //$tacheManager = new TacheManager($db);
+    //$tache = $tacheManager->getTacheByProjetId("1");
+    //print_r($tache);
+
+    //$projetManager = new ProjetManager($db);
+    //$projets = $projetManager->getProjetByUserId("1");
+    //print_r($projets);
+
+    echo "<pre>";
+    print_r($_COOKIE);
+    echo "</pre>";
+
 ?>
 
         <p>TEST</p>
         <!-- NAV -->
-        <?php //include('inc/menu.php'); ?>
+        <?php include('inc/menu.php'); ?>
         <!-- END NAV -->
 
         <!-- CONTENT  -->
         <div id="content">
 
-            <?php// include('pages/login.php'); ?>
+            <?php
+            if (!isset($_COOKIE['loged']) OR $_COOKIE['loged'] == "0") {
+                include('pages/login.php'); 
+            }
+            ?>
             <?php// include('pages/projet.php'); ?>
-            <?php include('pages/tache.php'); ?>
+            <?php //include('pages/tache.php'); ?>
             <?php// include('pages/commentaire.php'); ?>
-            <?php// include('pages/addProjet.php'); ?>
+            <?php include('pages/addProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->
