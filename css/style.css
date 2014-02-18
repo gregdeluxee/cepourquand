@@ -499,6 +499,96 @@ body, html {
   padding: 22px;
 }
 
+#menuChat {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #d7403f;
+  color: #fff;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+#menuChat nav ul li {
+  padding: 12px 5px;
+  line-height: 1;
+  font-family: "latolight", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#menuChat nav ul .menuChatRetour {
+  position: absolute;
+  left: 0;
+  z-index: 7;
+  height: 44px;
+  margin: 8px;
+  width: 44px;
+  background: url(../img/arrow_chat.png) no-repeat center;
+}
+#menuChat nav ul .menuTitreChat {
+  width: 100%;
+  font-size: 22px;
+  text-align: right;
+  padding: 19px 20px 0 0;
+  position: absolute;
+  z-index: 6;
+  text-transform: uppercase;
+}
+
+#chat {
+  padding-top: 60px;
+}
+#chat .contentChat {
+  float: left;
+}
+#chat .inputChat {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#chat .inputChat input[type=text] {
+  float: left;
+  width: 75%;
+  height: 100%;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: 0;
+}
+#chat .inputChat ::-webkit-input-placeholder {
+  color: #9f9f9f;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 200;
+}
+#chat .inputChat input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#chat .inputChat input[type=submit] {
+  float: left;
+  width: 25%;
+  height: 50px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: #9f9f9f;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
 #filtre {
   padding-top: 38px;
 }
