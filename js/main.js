@@ -1,31 +1,33 @@
-function setCookie(sName, sValue) {
-    var today = new Date(), expires = new Date();
-    expires.setTime(today.getTime() + (31*24*60*60*1000));
-    document.cookie = sName + "=" + encodeURIComponent(sValue) + ";expires=" + expires.toGMTString();
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
 }
-function getCookie(sName) {
-    var cookContent = document.cookie, cookEnd, i, j;
-    var sName = sName + "=";
 
-    for (i=0, c=cookContent.length; i<c; i++) {
-        j = i + sName.length;
-        if (cookContent.substring(i, j) == sName) {
-            cookEnd = cookContent.indexOf(";", j);
-            if (cookEnd == -1) {
-                    cookEnd = cookContent.length;
-            }
-            return decodeURIComponent(cookContent.substring(j, cookEnd));
-        }
-    }       
-    return null;
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
 }
 
 
 //START JQUERY
 $(function(){
-	alert(getCookie('loged'));
   var contentmove = $(".contentmove");
-
+  console.log(readCookie('loged'));
   	//var logedCookie = $.cookie('loged'); // récupère la valeur du cookie « tutoriel »
 	//if (logedCookie =="1") {
 	//	$("#projets").removeClass("displayNone");
@@ -81,32 +83,35 @@ $('#filtre input').change(function() {
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
+				console.log(statut);
            		if (answer == "success") {
            			setTimeout(function(){ $("#login").addClass("displayNone");	}, 600);
 					$("#login").addClass("translateX");
 					$("#projets").removeClass("displayNone");
-					setCookie('loged','1');
-					console.log(getCookie('loged'));
+					createCookie('loged','1','30');
+					console.log(readCookie('loged'));
 					// PROJET TREATMENT AJAX
 					$.ajax({
 						type: "POST",
 						url: './pages/projet.php',
 						dataType: 'html',
 						success: function(answer, statut){
-							$("#content").append(answer);
+							//$("#content").append(answer);
 						}
 
 					});// END PROJET TREATMENT AJAX
 
            		}else if (answer == "failed") {
+           			console.log('failed');
            			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
            		};
 		    },
 		    error : function(resultat, statut, erreur){
-		    	console.log("error")
+		    	console.log("errorhfgdh")
 		    },
 		    complete : function(resultat, statut){
-
+		    	console.log("complete")
+		    	console.log(resultat);
 		    }
 		});// END LOGINFORM AJAX
 

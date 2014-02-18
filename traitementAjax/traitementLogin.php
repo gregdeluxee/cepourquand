@@ -9,6 +9,8 @@ if (isset($_POST['login']) AND isset($_POST['password'])) {
 		$user = $userInfos->get($login);
 		if ($user->password_user() == $password) {
 			$_SESSION['id_user'] = $user->id_user();
+			//$response = setcookie('loged', '1', time()+60*60*24*30, null, null, false, true);
+			//echo $response.'success';
 			echo "success";
 		}else{
 			echo "failed";
