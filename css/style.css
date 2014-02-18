@@ -163,7 +163,7 @@ body, html {
 }
 
 .menu_actif {
-  -webkit-transform: translate3d(70%, 0, 0);
+  -webkit-transform: translate3d(75%, 0, 0);
 }
 
 .displayNone {
@@ -333,7 +333,7 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuAddTache nav ul .menuAdd {
+#menuAddTache nav ul .menuAddTache {
   position: absolute;
   right: 0;
   z-index: 7;
@@ -447,12 +447,50 @@ body, html {
 }
 
 #taches {
-  padding-top: 60px;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  padding-top: 38px;
 }
 #taches #addTaches {
-  display: none;
+  background: #efefef;
   float: left;
   width: 100%;
+}
+#taches #addTaches input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#taches #addTaches #tacheAddSubmit {
+  display: none;
+}
+#taches #addTaches input {
+  height: 60px;
+  background: #efefef;
+  width: 230px;
+  border-radius: 0;
+  border: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  float: left;
+  color: #000;
+  display: block;
+  line-height: 1.8;
+}
+#taches #addTaches input ::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+#taches #addTaches input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#taches #addTaches label {
+  display: block;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 60%;
+  height: 46px;
+  width: 42px;
+  float: left;
+  margin: 5px 4% 0 6%;
 }
 #taches ul {
   float: left;
@@ -460,18 +498,27 @@ body, html {
   background: #efefef;
 }
 #taches ul li {
-  background: #bcbcbc;
+  background: #aaaaaa;
   float: left;
   width: 100%;
+  box-shadow: inset 0px 0px 1px 0px #d5d5d5;
 }
 #taches ul li .joursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
-  font-size: 36px;
+  font-size: 25px;
   float: left;
   width: 20%;
+  height: 60px;
+  line-height: 1.8;
   margin-right: 6%;
   display: block;
   text-align: right;
+  color: #d7403f;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#taches ul li .joursTache .nbr_jours_tache_tache {
+  font-size: 36px;
 }
 #taches ul li div {
   float: right;
@@ -480,20 +527,46 @@ body, html {
   display: block;
   padding: 13px 0;
 }
+#taches ul li div p {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+}
+#taches ul li div .tacheProjectName {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  color: #d7403f;
+}
 #taches ul li:nth-child(1) {
   background: #efefef;
 }
 #taches ul li:nth-child(2) {
-  background: #e2e2e2;
+  background: #e7e7e7;
 }
 #taches ul li:nth-child(3) {
-  background: #d5d5d5;
+  background: #e0e0e0;
 }
 #taches ul li:nth-child(4) {
-  background: #c9c9c9;
+  background: #d8d8d8;
 }
 #taches ul li:nth-child(5) {
-  background: #bcbcbc;
+  background: #d0d0d0;
+}
+#taches ul li:nth-child(6) {
+  background: #c9c9c9;
+}
+#taches ul li:nth-child(7) {
+  background: #c1c1c1;
+}
+#taches ul li:nth-child(8) {
+  background: #b9b9b9;
+}
+#taches ul li:nth-child(9) {
+  background: #b2b2b2;
+}
+#taches ul li:nth-child(10) {
+  background: #aaaaaa;
 }
 
 #addProjet {

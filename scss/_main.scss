@@ -99,7 +99,7 @@ body{
 
 
 .menu_actif{
-	-webkit-transform:translate3d(70%,0,0);
+	-webkit-transform:translate3d(75%,0,0);
 }
 
 .displayNone{
@@ -288,7 +288,7 @@ body{
 				z-index: 6;
 				text-transform: uppercase;
 			}
-			.menuAdd{
+			.menuAddTache{
 				position: absolute;
 				right: 0;
 				z-index: 7;
@@ -417,30 +417,75 @@ body{
 /// PAGE ///
 
 #taches{
-	padding-top: 60px;
+	-webkit-transition:.3s all ease-in-out ;
+	transition: .3s all ease-in-out ;
+	padding-top: 38px;
 	#addTaches{
-		display: none;
+		background: $liBaseColorDark;
 		float: left;
 		width: 100%;
+		input[type=date]{
+			position: absolute;
+			left: -99999px;
+		}
+		#tacheAddSubmit{
+			display: none;
+		}
+		input{
+			height: 60px;
+			background: $liBaseColorDark;
+			width: 230px;
+			border-radius: 0;
+			border:none;
+			font-family: $SourceSansPro;
+			font-weight: 300;
+			font-size: 20px;
+			float: left;
+			color: #000;
+			display:block;
+			line-height: 1.8;
+			::-webkit-input-placeholder {
+				color: #8a8a8a;
+			}
+			input:focus::-webkit-input-placeholder {
+				opacity: 0;
+			}
+		}
+		label{
+			display:block;
+			background: url(../img/dateaddprojet.png) no-repeat center;
+			background-size: 60%;
+			height: 46px;
+			width: 42px;
+			float: left;
+			margin: 5px 4% 0 6%;
+
+		}
 	}
 	ul{
 		float: left;
 		width: 100%;
 		background: darken($liBaseColorDark, 0);
 		li{
-			background: darken($liBaseColorDark, 20%);
+			background: darken($liBaseColorDark, 27%);
 			float: left;
 			width: 100%;
+			box-shadow: inset 0px 0px 1px 0px darken($liBaseColorDark, 10%);
 			.joursTache{
 					font-family: $latolight;
-					font-size: 36px;
+					font-size: 25px;
 					float: left;
 					width: 20%;
+					height: 60px;
+					line-height: 1.8;
 					margin-right: 6%;
 					display: block;
 					text-align: right;
+					color: $redMenu;
+					-webkit-font-smoothing: antialiased;
+					font-smoothing: antialiased;
 				.nbr_jours_tache_tache{
-
+					font-size: 36px
 				}
 			}
 			div{
@@ -450,28 +495,50 @@ body{
 				display: block;
 				padding: 13px 0;
 				p{
-
+					font-family: $SourceSansPro;
+					font-weight: 200;
+					font-size: 18px;
 				}
-				span{
+				.tacheProjectName{
+					font-family: $SourceSansPro;
+					font-weight: 300;
+
+					font-size: 11px;
+					color: $redMenu;
 
 				}
 
 			}
 		}
 		li:nth-child(1){
-			background: darken($liBaseColorDark, 0);
+			background: darken($liBaseColorDark, 0%);
 		}
 		li:nth-child(2){
-			background: darken($liBaseColorDark, 5%);
+			background: darken($liBaseColorDark, 3%);
 		}
 		li:nth-child(3){
-			background: darken($liBaseColorDark, 10%);
+			background: darken($liBaseColorDark, 6%);
 		}
 		li:nth-child(4){
-			background: darken($liBaseColorDark, 15%);
+			background: darken($liBaseColorDark, 9%);
 		}
 		li:nth-child(5){
-			background: darken($liBaseColorDark, 20%);
+			background: darken($liBaseColorDark, 12%);
+		}
+		li:nth-child(6){
+			background: darken($liBaseColorDark, 15%);
+		}
+		li:nth-child(7){
+			background: darken($liBaseColorDark, 18%);
+		}
+		li:nth-child(8){
+			background: darken($liBaseColorDark, 21%);
+		}
+		li:nth-child(9){
+			background: darken($liBaseColorDark, 24%);
+		}
+		li:nth-child(10){
+			background: darken($liBaseColorDark, 27%);
 		}
 	}
 }

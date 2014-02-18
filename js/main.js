@@ -1,24 +1,21 @@
 //START JQUERY
 $(function(){
 
-  var contentmove = $(".contentmove");
-
+	var contentmove = $(".contentmove");
 
 	$("#projets").removeClass("displayNone");////AS UPPPP
 
-
-	$(".projetsClose").click(function(e) {
+	$(".projetsClose").click(function() {
 		$this = $(this);
 		var theLi = $this.parent("li");
-		// $(".projetsClose").parent("li").removeClass("projetsOppenClass");
-		// if ( $("li").is(".projetsOppenClass") ) {
-		// 	console.log("kedis");
-		// };
 		theLi.toggleClass("projetsOppenClass");
 	});
-
-	var contentmove = $(".contentmove");
-
+	$(".menuAddTache").click(function() {
+		$this = $(this);
+		$("#addTaches").toggleClass("displayNone");
+		$("#menuTache").addClass("displayNone");
+		$("#menuAddTache").removeClass("displayNone");
+	});
 	$(".menuMenu").click(function(e){
 		e.preventDefault();
 		contentmove.toggleClass("menu_actif");
@@ -94,3 +91,10 @@ $(function(){
 	});// END PROJET SUBMIT
 
 }); // END JQUERY
+
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
+//bouncefix.add('page');
+

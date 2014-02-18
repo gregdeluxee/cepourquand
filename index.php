@@ -49,7 +49,7 @@
         <?php include('inc/menu.php'); ?>
         <?php //include('inc/menuLateral.php'); ?>
         <?php include('inc/menuTache.php'); ?>
-        <?php //include('inc/menuAddTache.php'); ?>
+        <?php include('inc/menuAddTache.php'); ?>
         <?php //include('inc/menuAddProjet.php'); ?>
         <?php //include('inc/menuModifProjet.php'); ?>
         <!-- END NAV -->
