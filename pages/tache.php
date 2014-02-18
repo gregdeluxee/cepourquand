@@ -1,11 +1,11 @@
-<?php 
+<?php
 echo $_SERVER['DOCUMENT_ROOT'];
 
 
  ?>
 
 
-<div id="taches">
+<div id="taches" class="contentmove">
 
 	<h1>Ajouter UNE TACHE</h1>
 	<form id="addTacheForm" action="#" method="POST">

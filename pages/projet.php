@@ -1,5 +1,5 @@
 <?php  ?>
-<div id="projets" class="displayNone">
+<div id="projets" class="displayNone contentmove">
 	<ul>
 		<li>
 			<div class="projetsClose">

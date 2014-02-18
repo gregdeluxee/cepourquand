@@ -157,46 +157,84 @@ body, html {
   -webkit-user-select: none;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  background: #3c3c3c;
+  background: #212121;
   width: 100%;
   height: 100%;
 }
 
-#container header {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 15;
-  -webkit-transition: all .4s ease-in-out;
-}
-#container header nav ul li {
-  float: left;
-  background: yellow;
-  padding: 5px;
-  margin: 10px;
-}
-#container header nav ul li div span {
-  width: 25px;
-  height: 1px;
-}
-#container header nav ul .menuMenu {
-  background: blue;
-}
-#container #content {
-  position: relative;
-  width: 100%;
-  width: 100%;
-  z-index: 10;
-  display: block;
-  background: green;
-  -webkit-transition: all .4s ease-in-out;
+.menu_actif {
+  -webkit-transform: translate3d(70%, 0, 0);
 }
 
-.menu_actif {
-  -webkit-transform: translate3d(80%, 0, 0);
+.displayNone {
+  display: none;
+}
+
+.translateX {
+  -webkit-transform: translateX(150%);
+  transform: translateX(150%);
+}
+
+#menuLateral {
+  background: #212121;
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  z-index: 0;
+  color: #fff;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 23px;
+  padding: 10px 0 0 10px;
+}
+#menuLateral .menuLateralTop {
+  float: left;
+  width: 100%;
+}
+#menuLateral .menuLateralTop div {
+  float: left;
+}
+#menuLateral .menuLateralTop h1 {
+  float: left;
+  margin: 4px 0 0 30px;
+}
+#menuLateral nav {
+  float: left;
+}
+#menuLateral nav ul {
+  margin-top: 50px;
+}
+#menuLateral nav ul li {
+  width: 100%;
+  float: left;
+  height: 60px;
+  line-height: 1.7;
+  text-indent: 20px;
+}
+#menuLateral nav ul li span {
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+}
+#menuLateral nav ul li:nth-child(1) span {
+  background: url(../img/projet.png) no-repeat center;
+  background-size: 100%;
+}
+#menuLateral nav ul li:nth-child(2) span {
+  background: url(../img/tache.png) no-repeat center;
+  background-size: 100%;
+}
+#menuLateral nav ul li:nth-child(3) span {
+  background: url(../img/filtre.png) no-repeat center;
+  background-size: 100%;
+}
+#menuLateral nav ul li:nth-child(4) {
+  margin-top: 40px;
+}
+#menuLateral nav ul li:nth-child(4) span {
+  background: url(../img/deconnect.png) no-repeat center;
+  background-size: 100%;
 }
 
 #menuAddProjet {
@@ -307,29 +345,42 @@ body, html {
   padding-top: 60px;
   background: #1a1a1a;
 }
+#addProjet form fieldset {
+  display: block;
+  width: 100%;
+}
 #addProjet form fieldset .dateName {
   height: 100px;
-  width: 100%;
   float: left;
   background: #282828;
+  color: #fff;
+  width: 100%;
+  padding: 22px 13px;
 }
 #addProjet form fieldset .dateName label {
   display: block;
   background: url(../img/dateaddprojet.png) no-repeat center;
   background-size: 100%;
-  height: 36px;
-  width: 32px;
+  height: 46px;
+  width: 42px;
   float: left;
+  margin-top: 5px;
 }
 #addProjet form fieldset .dateName input[type=date] {
   position: absolute;
   left: -99999px;
 }
 #addProjet form fieldset .dateName input {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
   float: left;
   background: #282828;
   border: none;
   color: #fff;
+  display: block;
+  width: 250px;
+  line-height: 1.8;
 }
 #addProjet form fieldset .dateName input ::-webkit-input-placeholder {
   color: #8a8a8a;
@@ -337,10 +388,30 @@ body, html {
 #addProjet form fieldset .dateName input input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-#addProjet form input[type=submit] {
-  display: none;
+#addProjet form fieldset .dateName input:focus {
+  border: 0px;
+  color: none;
+  box-shadow: 0px;
 }
-#addProjet ul li {
+#addProjet form fieldset input {
+  width: 50%;
+  float: left;
+  height: 40px;
+  padding: 0;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: none;
+  background: #1d1d1d;
+  border-radius: 0;
+  border: 0;
+  text-indent: 41px;
+  background: url(../img/breif.png) no-repeat 6% 50% #212121;
+  background-size: 13%;
+}
+#addProjet form fieldset select {
+  border-radius: 0;
+  border: 0;
   width: 50%;
   float: left;
   height: 40px;
@@ -348,76 +419,51 @@ body, html {
   text-align: center;
   color: #fff;
   font-size: 14px;
-  line-height: 2.8;
   box-shadow: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  text-indent: 41px;
+  background: url(../img/courprof.png) no-repeat 2% 50% #1d1d1e;
+  background-size: 18%;
 }
-#addProjet ul li div {
+#addProjet form fieldset .addCollabo {
+  background: url(../img/collabo.png) no-repeat 2% 50% #212121;
+  background-size: 18%;
+}
+#addProjet form fieldset .addProjetAddTache {
+  width: 50%;
+  float: left;
   height: 40px;
-  width: 40px;
-  float: left;
-}
-#addProjet ul li p {
-  float: left;
-  display: inline;
-  padding: 0 0 0 0px;
-  margin: 0;
-  width: 70%;
-}
-#addProjet ul li:nth-child(1) {
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: none;
   background: #d7403f;
 }
-#addProjet ul li:nth-child(1) div {
-  padding-top: 19px;
+#addProjet form fieldset .addProjetAddTache p {
+  float: left;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.8;
 }
-#addProjet ul li:nth-child(1) div span {
+#addProjet form fieldset .addProjetAddTache div {
+  padding-top: 19px;
+  float: left;
+}
+#addProjet form fieldset .addProjetAddTache div span {
   margin: 0px 8px;
   background: #fff;
   width: 25px;
   height: 1px;
   display: block;
 }
-#addProjet ul li:nth-child(1) div :last-child {
+#addProjet form fieldset .addProjetAddTache div :last-child {
   -webkit-transform: rotate(90deg);
 }
-#addProjet ul li:nth-child(2) {
-  background: #1d1d1d;
-}
-#addProjet ul li:nth-child(2) div {
-  background: url(../img/discution.png) no-repeat center;
-  background-size: 60%;
-}
-#addProjet ul li:nth-child(3) {
-  background: #1d1d1d;
-}
-#addProjet ul li:nth-child(3) div {
-  background: url(../img/breif.png) no-repeat center;
-  background-size: 47%;
-}
-#addProjet ul li:nth-child(4) {
-  background: #212121;
-}
-#addProjet ul li:nth-child(4) div {
-  background: url(../img/collabo.png) no-repeat center;
-  background-size: 60%;
-}
-#addProjet ul li:nth-child(5) {
-  background: #282828;
-  line-height: 3.7;
-  height: 52px;
-  width: 100%;
-}
-#addProjet ul li:nth-child(5) div {
-  height: 52px;
-  width: 98px;
-  background: url(../img/modifier.png) no-repeat left center;
-  background-size: 30%;
-  margin: 0 auto;
-  float: none;
-}
-#addProjet ul li:nth-child(5) p {
-  margin: 0;
-  padding: 0;
-  text-indent: 35px;
+#addProjet form input[type=submit] {
+  display: none;
 }
 
 #projets {
@@ -654,15 +700,6 @@ body, html {
   margin: 0;
   padding: 0;
   text-indent: 35px;
-}
-
-.displayNone {
-  display: none;
-}
-
-.translateX {
-  -webkit-transform: translateX(150%);
-  transform: translateX(150%);
 }
 
 #login {

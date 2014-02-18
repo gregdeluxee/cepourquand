@@ -85,79 +85,102 @@ $redMenu : #d7403f;
 }
 
 body, html{
-  -webkit-user-select: none;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  background: #3c3c3c;
-width: 100%;
-height: 100%;
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	background: #212121;
+	width: 100%;
+	height: 100%;
 }
 body{
 
 }
 
-#container{
-	//overflow: hidden;
-	header{
-		height: 50px;
+
+
+.menu_actif{
+	-webkit-transform:translate3d(70%,0,0);
+}
+
+.displayNone{
+	display: none;
+
+}
+.translateX{
+	-webkit-transform: translateX(150%);
+	transform: translateX(150%);
+
+}
+
+#menuLateral{
+	background:#212121;
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	z-index: 0;
+	color: #fff;
+	font-family: $SourceSansPro;
+	font-weight: 200;
+	font-size: 23px;
+	padding: 10px 0 0 10px;
+	.menuLateralTop{
+		float: left;
 		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 15;
-		-webkit-transition: all .4s ease-in-out;
-		nav{
-			ul{
-				li{
+		div{
+			float: left;
+		}
+		h1{
+			float: left;
+			margin: 4px 0 0 30px;
+		}
+	}
+	nav{
+		float:left;
+		ul{
+			margin-top: 50px;
+			li{
+				width: 100%;
+				float: left;
+				height: 60px;
+				line-height: 1.7;
+				text-indent: 20px;
+				span{
+					width: 40px;
+					height: 40px;
+					display: block;
 					float: left;
-					background: yellow;
-					padding: 5px;
-					margin: 10px;
-					div{
-						span{
-							width: 25px;
-							height: 1px;
-
-						}
-					}
-				}
-				.menuMenu{
-					background: blue;
-				}
-				.menuTitre{
-
-				}
-				.menuAdd{
-
 				}
 			}
-		}
-	}
+			li:nth-child(1){
+				span{
+					background: url(../img/projet.png) no-repeat center;
+					background-size: 100%;
+				}
+			}
+			li:nth-child(2){
+				span{
+					background: url(../img/tache.png) no-repeat center;
+					background-size: 100%;
+				}
+			}
+			li:nth-child(3){
+				span{
+					background: url(../img/filtre.png) no-repeat center;
+					background-size: 100%;
+				}
+			}
+			li:nth-child(4){
+				margin-top: 40px;
+				span{
+					background: url(../img/deconnect.png) no-repeat center;
+					background-size: 100%;
+				}
+			}
 
-	#content{
-		position: relative;
-		width: 100%;
-		width: 100%;
-		z-index: 10;
-		display: block;
-		background: green;
-
-		-webkit-transition: all .4s ease-in-out;
-		section{
 
 		}
 	}
 }
-.menu_actif{
-	-webkit-transform:translate3d(80%,0,0);
-}
-
-
-
-
-
-
 
 
 #menuAddProjet{
@@ -279,28 +302,39 @@ body{
 	background: lighten($liBaseColor, 0);
 	form{
 		fieldset{
+			display: block;
+			width: 100%;
 			.dateName{
 				height: 100px;
-				width: 100%;
 				float: left;
 				background: #282828;
+				color: #fff;
+				width: 100%;
+				padding: 22px 13px;
 				label{
 					display:block;
 					background: url(../img/dateaddprojet.png) no-repeat center;
 					background-size: 100%;
-					height: 36px;
-					width: 32px;
+					height: 46px;
+					width: 42px;
 					float: left;
+					margin-top: 5px;
 				}
 				input[type=date]{
 					position: absolute;
 					left: -99999px;
 				}
 				input{
+					font-family: $SourceSansPro;
+					font-weight: 300;
+					font-size: 32px;
 					float: left;
 					background: #282828;
 					border: none;
 					color: #fff;
+					display:block;
+					width: 250px;
+					line-height: 1.8;
 					::-webkit-input-placeholder {
 						color: #8a8a8a;
 					}
@@ -308,20 +342,33 @@ body{
 						opacity: 0;
 					}
 				}
+				input:focus{
+			        border:0px;
+			        color:none;
+					box-shadow: 0px;
+				}
+			}
+			input{
+				width: 50%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: left;
+				color: #fff;
+				font-size: 14px;
+				box-shadow: none;
+				background: #1d1d1d;
+				border-radius: 0;
+				border:0;
+				text-indent: 41px;
+				background: url(../img/breif.png) no-repeat 6% 50% #212121;
+				background-size: 13%;
 			}
 
 
-		}
-		input[type=submit]{
-			display: none;
-		}
-	}
-
-
-
-
-		ul{
-			li{
+			select{
+				border-radius: 0;
+				border:0;
 				width: 50%;
 				float: left;
 				height: 40px;
@@ -329,28 +376,39 @@ body{
 				text-align: center;
 				color: #fff;
 				font-size: 14px;
-				line-height: 2.8;
+				//line-height: 2.8;
 				box-shadow: none;
-
-				div{
-					height: 40px;
-					width: 40px;
-					float: left;
-
-				}
+				overflow: hidden;
+				-webkit-appearance: none;
+				text-indent: 41px;
+				background: url(../img/courprof.png) no-repeat 2% 50% #1D1D1E;
+				background-size: 18%;
+			}
+			.addCollabo{
+				background: url(../img/collabo.png) no-repeat 2% 50% #212121;
+				background-size: 18%;
+			}
+			.addProjetAddTache{
+				width: 50%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: center;
+				color: #fff;
+				font-size: 14px;
+				box-shadow: none;
+				background: $redMenu;
 				p{
 					float: left;
-					display: inline;
-					padding: 0 0 0 0px;
-					margin: 0;
-					width: 70%;
+					font-family: $SourceSansPro;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 2.8;
 
 				}
-			}
-			li:nth-child(1){
-				background: $redMenu;
 				div{
 					padding-top: 19px;
+					float: left;
 					span{
 						margin: 0px 8px;
 						background: #fff;
@@ -363,51 +421,16 @@ body{
 					}
 				}
 			}
-			li:nth-child(2){
-				background: #1d1d1d;
-				div{
-					background: url(../img/discution.png) no-repeat center;
-					background-size: 60%;
-				}
-			}
-			li:nth-child(3){
-				background: #1d1d1d;
-				div{
-					background: url(../img/breif.png) no-repeat center;
-					background-size: 47%;
-				}
-
-			}
-			li:nth-child(4){
-				background: #212121;
-				div{
-					background: url(../img/collabo.png) no-repeat center;
-					background-size: 60%;
-				}
-			}
-			li:nth-child(5){
-				background: #282828;
-				line-height: 3.7;
-				height: 52px;
-				width: 100%;
-				div{
-					height: 52px;
-					width: 98px;
-					background: url(../img/modifier.png) no-repeat left center;
-					background-size: 30%;
-					margin: 0 auto;
-					float: none;
-
-				}
-				p{
-					margin: 0;
-					padding: 0;
-					text-indent: 35px;
-				}
-			}
 		}
-
+		input[type=submit]{
+			display: none;
+		}
+	}
 }
+
+
+
+
 
 #projets{
 	padding-top: 60px;
@@ -674,15 +697,7 @@ body{
 	}
 }
 
-.displayNone{
-	display: none;
 
-}
-.translateX{
-	-webkit-transform: translateX(150%);
-	transform: translateX(150%);
-
-}
 
 #login{
 	background: #3c3c3c;

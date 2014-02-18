@@ -10,11 +10,19 @@ $(function(){
 	$(".projetsClose").click(function(e) {
 		$this = $(this);
 		var theLi = $this.parent("li");
-		$(".projetsClose").parent("li").removeClass("projetsOppenClass");
-		theLi.addClass("projetsOppenClass");
+		// $(".projetsClose").parent("li").removeClass("projetsOppenClass");
+		// if ( $("li").is(".projetsOppenClass") ) {
+		// 	console.log("kedis");
+		// };
+		theLi.toggleClass("projetsOppenClass");
 	});
 
+	var contentmove = $(".contentmove");
 
+	$(".menuMenu").click(function(e){
+		e.preventDefault();
+		contentmove.toggleClass("menu_actif");
+	});
 
 
 
@@ -84,32 +92,5 @@ $(function(){
 		    }
 		});// END PROJET TREATMENT AJAX
 	});// END PROJET SUBMIT
-//ADD TACHE TREATMENT
-	$("#addTacheForm").submit(function(e) {
-		e.preventDefault();
-		var donnees = $(this).serialize();
-		// ADD TACHE TREATMENT AJAX
-		$.ajax({
-			type: "POST",
-			url: './traitementAjax/traitementAjoutTache.php',
-			data: donnees,
-			dataType : 'text',
-			success : function(answer, statut){
-				console.log(answer);
-				console.log(donnees);
-				if (answer == "success") {
-					console.log("success")
-				}else if (answer == "failed") {
-					console.log("failed")
-           		};
-			},
-		    error : function(resultat, statut, erreur){
-		    	console.log("error")
-		    },
-		    complete : function(resultat, statut){
-
-		    }
-		});// END TACHE TREATMENT AJAX
-	});// END TACHE SUBMIT
 
 }); // END JQUERY

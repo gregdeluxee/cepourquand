@@ -1,6 +1,6 @@
 <?php  ?>
 
 
-<div id="commentaires">
+<div id="commentaires" class="contentmove">
 
 </div><!-- End commentaires -->
