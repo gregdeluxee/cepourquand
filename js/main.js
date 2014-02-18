@@ -23,6 +23,7 @@ function getCookie(sName) {
 
 //START JQUERY
 $(function(){
+<<<<<<< HEAD
 	alert(getCookie('loged'));
   var contentmove = $(".contentmove");
 
@@ -31,13 +32,22 @@ $(function(){
 	//	$("#projets").removeClass("displayNone");
 	//	$("#taches").removeClass("displayNone");
 	//};	
+=======
+
+	var contentmove = $(".contentmove");
+	var filtreCheck = $("#filtre input");
+	var filtreCheckParent = $("#filtre input").parent("li");
+>>>>>>> d1d4fa35bad2dfbec3aca146209e62df433dc318
 
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
 	var filtreCheckParent = $("#filtre input").parent("li");
 
+<<<<<<< HEAD
 	$("#projets").removeClass("displayNone");////AS UPPPP
 
+=======
+>>>>>>> d1d4fa35bad2dfbec3aca146209e62df433dc318
 	$(".projetsClose").click(function() {
 		$this = $(this);
 		var theLi = $this.parent("li");
