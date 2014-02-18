@@ -112,6 +112,9 @@ body{
 
 }
 
+
+/// MENU ///
+
 #menuLateral{
 	background:#212121;
 	height: 100%;
@@ -182,7 +185,120 @@ body{
 	}
 }
 
+#menuTache{
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: $redMenu;
+	color: #fff;
+	-webkit-transition:.3s all ease-in-out ;
+	transition: .3s all ease-in-out ;
+	nav{
+		ul{
+			li{
+				padding: 12px 5px;
+				line-height: 1;
+				font-family: $SourceSansPro;
+				font-weight: 300;
+				-webkit-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+				div{
+					span{
+						width: 25px;
+						height: 1px;
+						display: block;
+						background: #fff;
+					}
+				}
+			}
+			.menuMenu{
+				position: absolute;
+				left: 0;
+				z-index: 7;
+				div span{
+					margin: 8px;
+				}
+			}
+			.menuTitre{
+				width: 100%;
+				font-size: 32px;
+				text-align: center;
+				position: absolute;
+				z-index: 6;
+				text-transform: uppercase;
+			}
+			.menuAdd{
+				position: absolute;
+				right: 0;
+				z-index: 7;
+				div{
+					height: 35px;
+					width: 40px;
+					padding-top: 16px;
+					span{
+						margin: 0px 8px;
+					}
+					:last-child{
+						-webkit-transform: rotate(90deg);
+					}
+				}
+			}
+		}
+	}
+}
 
+#menuAddTache{
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: $redMenu;
+	color: #fff;
+	-webkit-transition:.3s all ease-in-out ;
+	transition: .3s all ease-in-out ;
+	nav{
+		ul{
+			li{
+				padding: 12px 5px;
+				line-height: 1;
+				font-family: $latolight;
+				-webkit-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+			}
+			.menuMenu{
+				position: absolute;
+				left: 0;
+				z-index: 7;
+				font-size: 20px;
+				text-align: left;
+				line-height: 1.7;
+			}
+			.menuTitre{
+				width: 100%;
+				font-size: 32px;
+				text-align: center;
+				position: absolute;
+				z-index: 6;
+				text-transform: uppercase;
+			}
+			.menuAdd{
+				position: absolute;
+				right: 0;
+				z-index: 7;
+				line-height: 1.7;
+				font-size: 20px;
+				text-align: right;
+			}
+		}
+	}
+}
 #menuAddProjet{
 	height: 60px;
 	width: 100%;
@@ -296,6 +412,72 @@ body{
 		}
 	}
 }
+
+
+/// PAGE ///
+
+#taches{
+	padding-top: 60px;
+	#addTaches{
+		display: none;
+		float: left;
+		width: 100%;
+	}
+	ul{
+		float: left;
+		width: 100%;
+		background: darken($liBaseColorDark, 0);
+		li{
+			background: darken($liBaseColorDark, 20%);
+			float: left;
+			width: 100%;
+			.joursTache{
+					font-family: $latolight;
+					font-size: 36px;
+					float: left;
+					width: 20%;
+					margin-right: 6%;
+					display: block;
+					text-align: right;
+				.nbr_jours_tache_tache{
+
+				}
+			}
+			div{
+				float: right;
+				width: 68%;
+				margin-right: 6%;
+				display: block;
+				padding: 13px 0;
+				p{
+
+				}
+				span{
+
+				}
+
+			}
+		}
+		li:nth-child(1){
+			background: darken($liBaseColorDark, 0);
+		}
+		li:nth-child(2){
+			background: darken($liBaseColorDark, 5%);
+		}
+		li:nth-child(3){
+			background: darken($liBaseColorDark, 10%);
+		}
+		li:nth-child(4){
+			background: darken($liBaseColorDark, 15%);
+		}
+		li:nth-child(5){
+			background: darken($liBaseColorDark, 20%);
+		}
+	}
+}
+
+
+
 
 #addProjet{
 	padding-top: 60px;
@@ -427,8 +609,6 @@ body{
 		}
 	}
 }
-
-
 
 
 

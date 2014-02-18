@@ -237,6 +237,111 @@ body, html {
   background-size: 100%;
 }
 
+#menuTache {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #d7403f;
+  color: #fff;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+#menuTache nav ul li {
+  padding: 12px 5px;
+  line-height: 1;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#menuTache nav ul li div span {
+  width: 25px;
+  height: 1px;
+  display: block;
+  background: #fff;
+}
+#menuTache nav ul .menuMenu {
+  position: absolute;
+  left: 0;
+  z-index: 7;
+}
+#menuTache nav ul .menuMenu div span {
+  margin: 8px;
+}
+#menuTache nav ul .menuTitre {
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+  position: absolute;
+  z-index: 6;
+  text-transform: uppercase;
+}
+#menuTache nav ul .menuAdd {
+  position: absolute;
+  right: 0;
+  z-index: 7;
+}
+#menuTache nav ul .menuAdd div {
+  height: 35px;
+  width: 40px;
+  padding-top: 16px;
+}
+#menuTache nav ul .menuAdd div span {
+  margin: 0px 8px;
+}
+#menuTache nav ul .menuAdd div :last-child {
+  -webkit-transform: rotate(90deg);
+}
+
+#menuAddTache {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #d7403f;
+  color: #fff;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+#menuAddTache nav ul li {
+  padding: 12px 5px;
+  line-height: 1;
+  font-family: "latolight", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#menuAddTache nav ul .menuMenu {
+  position: absolute;
+  left: 0;
+  z-index: 7;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.7;
+}
+#menuAddTache nav ul .menuTitre {
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+  position: absolute;
+  z-index: 6;
+  text-transform: uppercase;
+}
+#menuAddTache nav ul .menuAdd {
+  position: absolute;
+  right: 0;
+  z-index: 7;
+  line-height: 1.7;
+  font-size: 20px;
+  text-align: right;
+}
+
 #menuAddProjet {
   height: 60px;
   width: 100%;
@@ -339,6 +444,56 @@ body, html {
 }
 #menu nav ul .menuAdd div :last-child {
   -webkit-transform: rotate(90deg);
+}
+
+#taches {
+  padding-top: 60px;
+}
+#taches #addTaches {
+  display: none;
+  float: left;
+  width: 100%;
+}
+#taches ul {
+  float: left;
+  width: 100%;
+  background: #efefef;
+}
+#taches ul li {
+  background: #bcbcbc;
+  float: left;
+  width: 100%;
+}
+#taches ul li .joursTache {
+  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  float: left;
+  width: 20%;
+  margin-right: 6%;
+  display: block;
+  text-align: right;
+}
+#taches ul li div {
+  float: right;
+  width: 68%;
+  margin-right: 6%;
+  display: block;
+  padding: 13px 0;
+}
+#taches ul li:nth-child(1) {
+  background: #efefef;
+}
+#taches ul li:nth-child(2) {
+  background: #e2e2e2;
+}
+#taches ul li:nth-child(3) {
+  background: #d5d5d5;
+}
+#taches ul li:nth-child(4) {
+  background: #c9c9c9;
+}
+#taches ul li:nth-child(5) {
+  background: #bcbcbc;
 }
 
 #addProjet {
