@@ -32,25 +32,43 @@ $(function(){
 	//	$("#taches").removeClass("displayNone");
 	//};	
 
+	var contentmove = $(".contentmove");
+	var filtreCheck = $("#filtre input");
+	var filtreCheckParent = $("#filtre input").parent("li");
 
-	$(".projetsClose").click(function(e) {
+	$("#projets").removeClass("displayNone");////AS UPPPP
+
+	$(".projetsClose").click(function() {
 		$this = $(this);
 		var theLi = $this.parent("li");
-		// $(".projetsClose").parent("li").removeClass("projetsOppenClass");
-		// if ( $("li").is(".projetsOppenClass") ) {
-		// 	console.log("kedis");
-		// };
 		theLi.toggleClass("projetsOppenClass");
 	});
-
-	var contentmove = $(".contentmove");
-
+	$(".menuAddTache").click(function() {
+		$this = $(this);
+		$("#addTaches").toggleClass("displayNone");
+		$("#menuTache").addClass("displayNone");
+		$("#menuAddTache").removeClass("displayNone");
+	});
 	$(".menuMenu").click(function(e){
 		e.preventDefault();
 		contentmove.toggleClass("menu_actif");
 	});
 
+	// if ($("#filtre input").is(":checked")) {
+	// 	$this = $(this);
+	// }else{
+	// 	$this.parent("li").addClass("liBgNo");
+	// }
 
+
+$('#filtre input').change(function() {
+	$this = $(this);
+	if ($this.is(':checked')) {
+		$this.parent("li").removeClass("liBgNo");
+ 	} else {
+  		$this.parent("li").addClass("liBgNo");
+  }
+});
 
 //LOGIN AJAX TREATMENT
 	$("#loginForm").submit(function(e) {
@@ -122,3 +140,10 @@ $(function(){
 	});// END PROJET SUBMIT
 
 }); // END JQUERY
+
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
+//bouncefix.add('page');
+

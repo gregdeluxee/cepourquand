@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="menuTache" class="contentmove">
+<div id="menuFiltres" class="contentmove">
 	<nav>
 		<ul>
 			<li class="menuMenu">
@@ -10,12 +10,9 @@
 					<span></span>
 				</div>
 			</li>
-			<li class="menuTitre">Tâches</li>
-			<li class="menuAdd menuAddTache">
-				<div>
-					<span></span>
-					<span></span>
-				</div>
+			<li class="menuTitre">Project</li>
+			<li class="menuOK">
+				OK
 			</li>
 		</ul>
 	</nav>
