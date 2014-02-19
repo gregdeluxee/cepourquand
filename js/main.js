@@ -40,7 +40,7 @@ $(function(){
 	if (logedCookie =="1") {
 		$("#projets").removeClass("displayNone");
 		$("#taches").removeClass("displayNone");
-	};	
+	};
 
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
@@ -52,32 +52,45 @@ $(function(){
 		$this = $(this);
 		var theLi = $this.parent("li");
 		theLi.toggleClass("projetsOppenClass");
-	});
+	})
 	$(".menuAddTache").click(function() {
 		$this = $(this);
 		$("#addTaches").toggleClass("displayNone");
 		$("#menuTache").addClass("displayNone");
 		$("#menuAddTache").removeClass("displayNone");
-	});
+	})
 	$(".menuMenu").click(function(e){
 		e.preventDefault();
 		contentmove.toggleClass("menu_actif");
+	})
+
+
+
+
+
+	$(".addCollaboProjet").click(function(){
+		$(".addProjetAddTacheInputCollabo").toggleClass("displayNone");
+	})
+	$(".addProjetAddTacheInputCollabo").children("span").click(function(){
+		$(".addProjetAddTacheInputCollabo").addClass("displayNone");
 	});
 
-	// if ($("#filtre input").is(":checked")) {
-	// 	$this = $(this);
-	// }else{
-	// 	$this.parent("li").addClass("liBgNo");
-	// }
+	$(".addProjetAddTache").click(function(){
+		$(".addProjetAddTacheInputTache").toggleClass("displayNone");
+	})
+	$(".addProjetAddTacheInputTache").children("span").click(function(){
+		$(".addProjetAddTacheInputTache").addClass("displayNone");
+	})
 
-$('#filtre input').change(function() {
-	$this = $(this);
-	if ($this.is(':checked')) {
-		$this.parent("li").removeClass("liBgNo");
- 	} else {
-  		$this.parent("li").addClass("liBgNo");
-  	}
-});
+
+	$('#filtre input').change(function() {
+		$this = $(this);
+		if ($this.is(':checked')) {
+			$this.parent("li").removeClass("liBgNo");
+	 	} else {
+	  		$this.parent("li").addClass("liBgNo");
+	  	}
+	})
 
 
 

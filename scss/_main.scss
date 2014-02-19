@@ -88,7 +88,7 @@ body, html{
 	-webkit-user-select: none;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
-	background: #212121;
+	background: #282828;
 	width: 100%;
 	height: 100%;
 }
@@ -784,7 +784,7 @@ body{
 					color: #fff;
 					display:block;
 					width: 250px;
-					line-height: 1.8;
+					padding-top: 18px;
 					::-webkit-input-placeholder {
 						color: #8a8a8a;
 					}
@@ -798,6 +798,36 @@ body{
 					box-shadow: 0px;
 				}
 			}
+			.addProjetAddTacheInputTache, .addProjetAddTacheInputCollabo{
+				width: 100%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: left;
+				font-size: 14px;
+				background: #efefef ;
+				span{
+					width: 20%;
+					float: left;
+					color: #fff;
+					height: 40px;
+					background: #212121;
+					font-size: 16px;
+					font-family: $SourceSansPro;
+					font-weight: 300;
+					text-align: center;
+					line-height: 2.5;
+				}
+				input{
+					width: 80%;
+					float: left;
+					color: #000;
+					text-indent: 11px;
+					height: 40px;
+					background: #efefef ;
+
+				}
+			}
 			input{
 				width: 50%;
 				float: left;
@@ -807,11 +837,10 @@ body{
 				color: #fff;
 				font-size: 14px;
 				box-shadow: none;
-				background: #1d1d1d;
 				border-radius: 0;
 				border:0;
 				text-indent: 41px;
-				background: url(../img/breif.png) no-repeat 6% 50% #212121;
+				background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
 				background-size: 13%;
 			}
 
@@ -831,11 +860,20 @@ body{
 				overflow: hidden;
 				-webkit-appearance: none;
 				text-indent: 41px;
-				background: url(../img/courprof.png) no-repeat 2% 50% #1D1D1E;
+				background: url(../img/courprof.png) no-repeat 6% 50% #1D1D1E;
 				background-size: 18%;
 			}
-			.addCollabo{
-				background: url(../img/collabo.png) no-repeat 2% 50% #212121;
+			.addCollaboProjet{
+				width: 50%;
+				float: left;
+				height: 40px;
+				color: #fff;
+				font-size: 16px;
+				font-family: $SourceSansPro;
+				font-weight: 300;
+				line-height: 2.8;
+				text-indent: 41px;
+				background: url(../img/collabo.png) no-repeat 6% 50% #212121;
 				background-size: 18%;
 			}
 			.addProjetAddTache{
