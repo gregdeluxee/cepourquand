@@ -96,18 +96,22 @@ $(function(){
 		$("#menu").addClass("displayNone");
 		$("#menuModifrojet").removeClass("displayNone");
 	})
-	// $(".menuLateRalGoProjet").click(function(){
-	// 	$("#projets").removeClass("displayNone");
-	// 	$("#filtre, #menuFiltres").("displayNone");
-	// 	$("#menuLateral").addClass("displayNone");
-	// 	$("#menu").addClass("displayNone");
-	// 	$("#menuModifrojet").removeClass("displayNone");
-	// })
-	$(".menuLateRalGoFiltre").click(function(){
-		console.log("kedisss");
-		$("#projets, #menu").addClass("displayNone");
-		$("#filtre, #menuFiltres").removeClass("displayNone");
 
+	$(".menuLateRalGoDeco").click(function(){
+		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
+	})
+
+	$(".menuLateRalGoFiltre").click(function(){
+		$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
+		$("#filtre, #menuFiltres").removeClass("displayNone");
+	})
+	$(".menuLateRalGoTache").click(function(){
+		$("#filtre, #menuFiltres, #projets, #menu").addClass("displayNone");
+		$("#taches, #menuTache").removeClass("displayNone");
+	})
+	$(".menuLateRalGoProjet").click(function(){
+		$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
+		$(" #projets, #menu").removeClass("displayNone");
 	})
 
 

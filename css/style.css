@@ -637,7 +637,48 @@ body, html {
 #taches {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  padding-top: 38px;
+  padding-top: 60px;
+}
+#taches #addTaches {
+  background: #efefef;
+  float: left;
+  width: 100%;
+}
+#taches #addTaches input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#taches #addTaches #tacheAddSubmit {
+  display: none;
+}
+#taches #addTaches input {
+  height: 60px;
+  background: #efefef;
+  width: 230px;
+  border-radius: 0;
+  border: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  float: left;
+  color: #000;
+  display: block;
+  line-height: 1.8;
+}
+#taches #addTaches input ::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+#taches #addTaches input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#taches #addTaches label {
+  display: block;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 60%;
+  height: 46px;
+  width: 42px;
+  float: left;
+  margin: 5px 4% 0 6%;
 }
 #taches ul {
   float: left;
