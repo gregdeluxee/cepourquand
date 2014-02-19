@@ -95,11 +95,13 @@ $(function(){
 
 ///////   SWIPE AMODIFIER
 
-		$("#projets > ul > li").click(function() {
-			$this = $(this);
-			$this.css("-webkit-transform", "translateX(0px)");
-			$this.toggleClass("projetsOppenClass");
-		})
+		// $("#projets > ul > li").click(function() {
+		// 	$this = $(this);
+		// 	$this.css("-webkit-transform", "translateX(0px)");
+		// 	$this.toggleClass("projetsOppenClass");
+		// })
+
+
 $("#projets > ul > li").swipe( {
         swipeStatus:function(event, phase, direction, distance, duration)
         {
