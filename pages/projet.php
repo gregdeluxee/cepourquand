@@ -1,6 +1,18 @@
-<?php  ?>
+<?php 
+
+ 	$projetManager = new ProjetManager($db);
+    $projets = $projetManager->getProjetByUserId($_SESSION['id_user']);
+    print_r($projets);
+
+ ?>
 <div id="projets" class="contentmove">
 	<ul>
+
+
+
+
+
+
 		<li>
 			<div class="projetValide"></div>
 			<div class="projetSup"></div>
@@ -63,6 +75,8 @@
 			</div>
 
 		</li>
+
+
 		<li>
 			<div class="projetValide"></div>
 			<div class="projetSup"></div>

@@ -64,14 +64,14 @@
 
         <p>TEST</p>
         <!-- NAV -->
-        <?php //include('inc/menu.php'); ?>
-        <?php //include('inc/menuLateral.php'); ?>
+        <?php// include('inc/menu.php'); ?>
+        <?php// include('inc/menuLateral.php'); ?>
         <?php include('inc/menuTache.php'); ?>
         <?php include('inc/menuAddTache.php'); ?>
-        <?php //include('inc/menuFiltres.php'); ?>
-        <?php //include('inc/menuChat.php'); ?>
-        <?php //include('inc/menuAddProjet.php'); ?>
-        <?php //include('inc/menuModifProjet.php'); ?>
+        <?php// include('inc/menuFiltres.php'); ?>
+        <?php// include('inc/menuChat.php'); ?>
+        <?php include('inc/menuAddProjet.php'); ?>
+        <?php// include('inc/menuModifProjet.php'); ?>
         <!-- END NAV -->
 
         <!-- CONTENT  -->
@@ -83,9 +83,11 @@
             }
             ?>
             <?php// include('pages/projet.php'); ?>
-            <?php include('pages/tache.php'); ?>
-            <?php// include('pages/commentaire.php'); ?>
-            <?php// include('pages/addProjet.php'); ?>
+            <?php// include('pages/tache.php'); ?>
+            <?php// include('pages/filtre.php'); ?>
+            <?php// include('pages/chat.php'); ?>
+            <?php include('pages/addProjet.php'); ?>
+            <?php// include('pages/modifProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->
@@ -94,5 +96,6 @@
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
         <script src="js/fastclick.js"></script>
+        <script src="js/jquery.touchSwipe.min.js"></script>
     </body>
 </html>
