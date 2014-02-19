@@ -95,6 +95,10 @@ body, html{
 body{
 
 }
+#content{
+	overflow: hidden;
+
+}
 
 
 
@@ -234,7 +238,7 @@ body{
 				z-index: 6;
 				text-transform: uppercase;
 			}
-			.menuAdd{
+			.menuAddTache{
 				position: absolute;
 				right: 0;
 				z-index: 7;
@@ -275,7 +279,7 @@ body{
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
-			.menuMenu{
+			.menuMenuAnnulTache{
 				position: absolute;
 				left: 0;
 				z-index: 7;
@@ -291,7 +295,7 @@ body{
 				z-index: 6;
 				text-transform: uppercase;
 			}
-			.menuAddTache{
+			.menuAddTacheokVal{
 				position: absolute;
 				right: 0;
 				z-index: 7;

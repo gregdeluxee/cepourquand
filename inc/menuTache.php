@@ -11,7 +11,7 @@
 				</div>
 			</li>
 			<li class="menuTitre">Tâches</li>
-			<li class="menuAdd menuAddTache">
+			<li class="menuAddTache">
 				<div>
 					<span></span>
 					<span></span>

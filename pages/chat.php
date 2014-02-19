@@ -1,5 +1,4 @@
-<?php
-?>
+<?php ?>
 
 
 <div id="chat" class="displayNone">

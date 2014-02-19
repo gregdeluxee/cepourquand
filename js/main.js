@@ -49,12 +49,15 @@ $(function(){
 	$("#projets").removeClass("displayNone");////AS UPPPP
 
 
-
 	$(".menuAddTache").click(function() {
-		$this = $(this);
 		$("#addTaches").toggleClass("displayNone");
 		$("#menuTache").addClass("displayNone");
 		$("#menuAddTache").removeClass("displayNone");
+	})
+	$(".menuMenuAnnulTache").click(function() {
+		$("#addTaches").toggleClass("displayNone");
+		$("#menuTache").removeClass("displayNone");
+		$("#menuAddTache").addClass("displayNone");
 	})
 
 
@@ -64,12 +67,14 @@ $(function(){
 	$(".menuMenu").click(function(e){
 		e.preventDefault();
 		contentmove.toggleClass("menu_actif");
+		$("#menuLateral").toggleClass("displayNone");
+
 	})
 	$(".menuAdd").click(function(e){
 		e.preventDefault();
 		$("#addProjet").removeClass("displayNone");
 		$("#projets").addClass("displayNone");
-		$("#menuLateral").addClass("displayNone");
+		$("#menuLateral").toggleClass("displayNone");
 		$("#menu").addClass("displayNone");
 		$("#menuAddProjet").removeClass("displayNone");
 	})
@@ -77,7 +82,7 @@ $(function(){
 		e.preventDefault();
 		$("#addProjet").addClass("displayNone");
 		$("#projets").removeClass("displayNone");
-		$("#menuLateral").removeClass("displayNone");
+		$("#menuLateral").toggleClass("displayNone");
 		$("#menu").removeClass("displayNone");
 		$("#menuAddProjet").addClass("displayNone");
 	})
@@ -85,22 +90,32 @@ $(function(){
 		e.preventDefault();
 		$("#projetModif").addClass("displayNone");
 		$("#projets").removeClass("displayNone");
-		$("#menuLateral").removeClass("displayNone");
+		$("#menuLateral").toggleClass("displayNone");
 		$("#menu").removeClass("displayNone");
 		$("#menuModifrojet").addClass("displayNone");
 	})
 	$(".projetmodifedit").click(function(){
 		$("#projets").addClass("displayNone");
 		$("#projetModif").removeClass("displayNone");
-		$("#menuLateral").addClass("displayNone");
+		$("#menuLateral").toggleClass("displayNone");
 		$("#menu").addClass("displayNone");
 		$("#menuModifrojet").removeClass("displayNone");
 	})
+	$(".menuAnnulMenuAddProj").click(function(e){
+		e.preventDefault();
+		$("#addProjet").addClass("displayNone");
+		$("#projets").removeClass("displayNone");
+		$("#menuLateral").toggleClass("displayNone");
+		$("#menu").removeClass("displayNone");
+		$("#menuAddProjet").addClass("displayNone");
+	})
+
+
+
 
 	$(".menuLateRalGoDeco").click(function(){
 		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
 	})
-
 	$(".menuLateRalGoFiltre").click(function(){
 		$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
 		$("#filtre, #menuFiltres").removeClass("displayNone");
@@ -372,6 +387,9 @@ $(".menuAnnulMenuAddProj").click(function(e){
 				console.log(donnees);
 				if (answer == "success") {
 					console.log("success")
+					$("#addTaches").toggleClass("displayNone");
+					$("#menuTache").removeClass("displayNone");
+					$("#menuAddTache").addClass("displayNone");
 				}else if (answer == "failed") {
 					console.log("failed")
            		};

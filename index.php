@@ -53,12 +53,12 @@
         <?php include('inc/menuChat.php'); ?>
         <?php include('inc/menuAddProjet.php'); ?>
         <?php include('inc/menuModifProjet.php'); ?>
+
         <!-- END NAV -->
 
         <!-- CONTENT -->
         <div id="content">
-
-            <?php //include('pages/login.php'); ?>
+             <?php //include('pages/login.php'); ?>
             <?php include('inc/menuLateral.php'); ?>
             <?php include('pages/projet.php'); ?>
             <?php include('pages/tache.php'); ?>
@@ -68,6 +68,7 @@
             <?php include('pages/modifProjet.php'); ?>
 
         </div>
+
         <!-- END CONTENT -->
 
         <script src="js/vendor/zepto.min.js"></script>

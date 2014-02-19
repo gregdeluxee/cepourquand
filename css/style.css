@@ -162,6 +162,10 @@ body, html {
   height: 100%;
 }
 
+#content {
+  overflow: hidden;
+}
+
 .menu_actif {
   -webkit-transform: translate3d(75%, 0, 0);
 }
@@ -284,20 +288,20 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuTache nav ul .menuAdd {
+#menuTache nav ul .menuAddTache {
   position: absolute;
   right: 0;
   z-index: 7;
 }
-#menuTache nav ul .menuAdd div {
+#menuTache nav ul .menuAddTache div {
   height: 35px;
   width: 40px;
   padding-top: 16px;
 }
-#menuTache nav ul .menuAdd div span {
+#menuTache nav ul .menuAddTache div span {
   margin: 0px 8px;
 }
-#menuTache nav ul .menuAdd div :last-child {
+#menuTache nav ul .menuAddTache div :last-child {
   -webkit-transform: rotate(90deg);
 }
 
@@ -321,7 +325,7 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#menuAddTache nav ul .menuMenu {
+#menuAddTache nav ul .menuMenuAnnulTache {
   position: absolute;
   left: 0;
   z-index: 7;
@@ -337,7 +341,7 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuAddTache nav ul .menuAddTache {
+#menuAddTache nav ul .menuAddTacheokVal {
   position: absolute;
   right: 0;
   z-index: 7;
