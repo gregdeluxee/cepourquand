@@ -36,6 +36,6 @@
 			<div class="addCollaboProjet" >Collaborateurs</div>
 
 		</fieldset>
-		<input id="projetAddSubmit" type="submit" name="submit">
+		<input id="projetEditSubmit" type="submit" name="submit">
 	</form>
 </div><!-- End addProjet -->

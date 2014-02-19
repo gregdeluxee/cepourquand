@@ -10,10 +10,8 @@
 					<span></span>
 				</div>
 			</li>
-			<li class="menuTitre">Project</li>
-			<li class="menuOK">
-				OK
-			</li>
+			<li class="menuTitre">Filtres</li>
+
 		</ul>
 	</nav>
 </div><!-- End menu -->

@@ -67,7 +67,7 @@
 							<li><div></div><p>Discussion</p></li>
 							<li><div></div><p>Briefing</p></li>
 							<li><div></div><p>Collaborateurs</p></li>
-							<li><div><p>Modifier</p></div></li>
+							<li class="projetmodifedit"><div><p>Modifier</p></div></li>
 						</ul>
 					</nav>
 				</div>
@@ -131,7 +131,7 @@
 							<li><div></div><p>Discussion</p></li>
 							<li><div></div><p>Briefing</p></li>
 							<li><div></div><p>Collaborateurs</p></li>
-							<li><div><p>Modifier</p></div></li>
+							<li class="projetmodifedit"><div><p>Modifier</p></div></li>
 						</ul>
 					</nav>
 				</div>
@@ -194,7 +194,7 @@
 							<li><div></div><p>Discussion</p></li>
 							<li><div></div><p>Briefing</p></li>
 							<li><div></div><p>Collaborateurs</p></li>
-							<li><div><p>Modifier</p></div></li>
+							<li class="projetmodifedit"><div><p>Modifier</p></div></li>
 						</ul>
 					</nav>
 				</div>
@@ -257,7 +257,7 @@
 							<li><div></div><p>Discussion</p></li>
 							<li><div></div><p>Briefing</p></li>
 							<li><div></div><p>Collaborateurs</p></li>
-							<li><div><p>Modifier</p></div></li>
+							<li class="projetmodifedit"><div><p>Modifier</p></div></li>
 						</ul>
 					</nav>
 				</div>

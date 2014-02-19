@@ -162,6 +162,10 @@ body, html {
   height: 100%;
 }
 
+#content {
+  overflow: hidden;
+}
+
 .menu_actif {
   -webkit-transform: translate3d(75%, 0, 0);
 }
@@ -284,20 +288,20 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuTache nav ul .menuAdd {
+#menuTache nav ul .menuAddTache {
   position: absolute;
   right: 0;
   z-index: 7;
 }
-#menuTache nav ul .menuAdd div {
+#menuTache nav ul .menuAddTache div {
   height: 35px;
   width: 40px;
   padding-top: 16px;
 }
-#menuTache nav ul .menuAdd div span {
+#menuTache nav ul .menuAddTache div span {
   margin: 0px 8px;
 }
-#menuTache nav ul .menuAdd div :last-child {
+#menuTache nav ul .menuAddTache div :last-child {
   -webkit-transform: rotate(90deg);
 }
 
@@ -321,7 +325,7 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#menuAddTache nav ul .menuMenu {
+#menuAddTache nav ul .menuMenuAnnulTache {
   position: absolute;
   left: 0;
   z-index: 7;
@@ -337,7 +341,7 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuAddTache nav ul .menuAddTache {
+#menuAddTache nav ul .menuAddTacheokVal {
   position: absolute;
   right: 0;
   z-index: 7;
@@ -346,7 +350,7 @@ body, html {
   text-align: right;
 }
 
-#menuAddProjet {
+#menuAddProjet, #menuModifrojet {
   height: 60px;
   width: 100%;
   position: fixed;
@@ -359,14 +363,14 @@ body, html {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
-#menuAddProjet nav ul li {
+#menuAddProjet nav ul li, #menuModifrojet nav ul li {
   padding: 12px 5px;
   line-height: 1;
   font-family: "latolight", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#menuAddProjet nav ul .menuAnnulMenuAddProj {
+#menuAddProjet nav ul .menuAnnulMenuAddProj, #menuAddProjet nav ul .menuAnnulMenuAddProjBis, #menuModifrojet nav ul .menuAnnulMenuAddProj, #menuModifrojet nav ul .menuAnnulMenuAddProjBis {
   position: absolute;
   left: 0;
   z-index: 7;
@@ -374,7 +378,7 @@ body, html {
   text-align: left;
   line-height: 1.7;
 }
-#menuAddProjet nav ul .menuTitre {
+#menuAddProjet nav ul .menuTitre, #menuModifrojet nav ul .menuTitre {
   width: 100%;
   font-size: 32px;
   text-align: center;
@@ -382,7 +386,7 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuAddProjet nav ul .menuAddAjourproj {
+#menuAddProjet nav ul .menuAddAjourproj, #menuModifrojet nav ul .menuAddAjourproj {
   position: absolute;
   right: 0;
   z-index: 7;
@@ -590,6 +594,8 @@ body, html {
 }
 
 #filtre {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   padding-top: 38px;
 }
 #filtre ul li {
@@ -635,7 +641,48 @@ body, html {
 #taches {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  padding-top: 38px;
+  padding-top: 60px;
+}
+#taches #addTaches {
+  background: #efefef;
+  float: left;
+  width: 100%;
+}
+#taches #addTaches input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#taches #addTaches #tacheAddSubmit {
+  display: none;
+}
+#taches #addTaches input {
+  height: 60px;
+  background: #efefef;
+  width: 230px;
+  border-radius: 0;
+  border: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  float: left;
+  color: #000;
+  display: block;
+  line-height: 1.8;
+}
+#taches #addTaches input ::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+#taches #addTaches input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#taches #addTaches label {
+  display: block;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 60%;
+  height: 46px;
+  width: 42px;
+  float: left;
+  margin: 5px 4% 0 6%;
 }
 #taches ul {
   float: left;
@@ -879,7 +926,7 @@ body, html {
 }
 
 #projetModif {
-  padding-top: 60px;
+  padding-top: 38px;
   background: #1a1a1a;
 }
 #projetModif form fieldset {
@@ -1037,7 +1084,9 @@ body, html {
   -webkit-transform: rotate(90deg);
 }
 #projetModif form input[type=submit] {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
 }
 
 #projets {

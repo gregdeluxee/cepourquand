@@ -1,7 +1,4 @@
 <?php
-	// AFFICHER TITRE PROJET A LA PLACE DE L'ID
-	$tacheManager = new TacheManager($db);
-    $taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);
 
 ?>
 

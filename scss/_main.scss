@@ -95,6 +95,10 @@ body, html{
 body{
 
 }
+#content{
+	overflow: hidden;
+
+}
 
 
 
@@ -234,7 +238,7 @@ body{
 				z-index: 6;
 				text-transform: uppercase;
 			}
-			.menuAdd{
+			.menuAddTache{
 				position: absolute;
 				right: 0;
 				z-index: 7;
@@ -275,7 +279,7 @@ body{
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
-			.menuMenu{
+			.menuMenuAnnulTache{
 				position: absolute;
 				left: 0;
 				z-index: 7;
@@ -291,7 +295,7 @@ body{
 				z-index: 6;
 				text-transform: uppercase;
 			}
-			.menuAddTache{
+			.menuAddTacheokVal{
 				position: absolute;
 				right: 0;
 				z-index: 7;
@@ -302,7 +306,7 @@ body{
 		}
 	}
 }
-#menuAddProjet{
+#menuAddProjet, #menuModifrojet{
 	height: 60px;
 	width: 100%;
 	position: fixed;
@@ -323,7 +327,7 @@ body{
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
-			.menuAnnulMenuAddProj{
+			.menuAnnulMenuAddProj, .menuAnnulMenuAddProjBis{
 				position: absolute;
 				left: 0;
 				z-index: 7;
@@ -517,6 +521,8 @@ body{
 }
 
 /// PAGE ///
+
+
 #chat{
 	padding-top: 60px;
 	.contentChat{
@@ -564,13 +570,13 @@ body{
 			-webkit-appearance:none;
 			appearance:none;
 			border-radius: 0;
-
 		}
 	}
-
 }
 
 #filtre{
+	-webkit-transition:.3s all ease-in-out ;
+	transition: .3s all ease-in-out ;
 	padding-top: 38px;
 	ul{
 		li{
@@ -612,16 +618,57 @@ body{
 			background: url(../img/valide_filtre.png) no-repeat 96% 50%  #3fb547;
 			background-size: 11%;
 		}
-
 	}
-
 }
 
 
 #taches{
 	-webkit-transition:.3s all ease-in-out ;
 	transition: .3s all ease-in-out ;
-	padding-top: 38px;
+	padding-top: 60px;
+
+	#addTaches{
+		background: $liBaseColorDark;
+		float: left;
+		width: 100%;
+		input[type=date]{
+			position: absolute;
+			left: -99999px;
+		}
+		#tacheAddSubmit{
+			display: none;
+		}
+		input{
+			height: 60px;
+			background: $liBaseColorDark;
+			width: 230px;
+			border-radius: 0;
+			border:none;
+			font-family: $SourceSansPro;
+			font-weight: 300;
+			font-size: 20px;
+			float: left;
+			color: #000;
+			display:block;
+			line-height: 1.8;
+			::-webkit-input-placeholder {
+				color: #8a8a8a;
+			}
+			input:focus::-webkit-input-placeholder {
+				opacity: 0;
+			}
+		}
+		label{
+			display:block;
+			background: url(../img/dateaddprojet.png) no-repeat center;
+			background-size: 60%;
+			height: 46px;
+			width: 42px;
+			float: left;
+			margin: 5px 4% 0 6%;
+
+		}
+	}
 	ul{
 		float: left;
 		width: 100%;
@@ -662,12 +709,9 @@ body{
 				.tacheProjectName{
 					font-family: $SourceSansPro;
 					font-weight: 300;
-
 					font-size: 11px;
 					color: $redMenu;
-
 				}
-
 			}
 		}
 		li:nth-child(1){
@@ -702,8 +746,6 @@ body{
 		}
 	}
 }
-
-
 
 
 #addProjet{
@@ -802,8 +844,6 @@ body{
 				background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
 				background-size: 13%;
 			}
-
-
 			select{
 				border-radius: 0;
 				border:0;
@@ -851,7 +891,6 @@ body{
 					font-weight: 300;
 					font-size: 14px;
 					line-height: 2.8;
-
 				}
 				div{
 					padding-top: 19px;
@@ -877,7 +916,7 @@ body{
 	}
 }
 #projetModif{
-	padding-top: 60px;
+	padding-top: 38px;
 	background: lighten($liBaseColor, 0);
 	form{
 		fieldset{
@@ -953,8 +992,7 @@ body{
 					color: #000;
 					text-indent: 11px;
 					height: 40px;
-					background: #efefef ;
-
+					background: #efefef;
 				}
 			}
 			input{
@@ -972,8 +1010,6 @@ body{
 				background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
 				background-size: 13%;
 			}
-
-
 			select{
 				border-radius: 0;
 				border:0;
@@ -1021,7 +1057,6 @@ body{
 					font-weight: 300;
 					font-size: 14px;
 					line-height: 2.8;
-
 				}
 				div{
 					padding-top: 19px;
@@ -1040,7 +1075,9 @@ body{
 			}
 		}
 		input[type=submit]{
-			display: none;
+			visibility: hidden;
+			position: absolute;
+			left: -9999px;
 		}
 	}
 }
@@ -1061,37 +1098,29 @@ body{
 		float: left;
 		background:url(../img/bg-ul-test.png) center;
 
-
 		li:nth-child(1){
 			background: lighten($liBaseColor, 0);
 		}
-
 		li:nth-child(2){
 			background: lighten($liBaseColor, 1);
 		}
-
 		li:nth-child(3){
 			background: lighten($liBaseColor, 2);
 		}
-
 		li:nth-child(4){
 			background: lighten($liBaseColor, 3);
 		}
-
 		li:nth-child(5){
 			background: lighten($liBaseColor, 4);
 		}
-
 		li:nth-child(6){
 			background: lighten($liBaseColor, 5);
 		}
-
 		li:nth-child(7){
 			background: lighten($liBaseColor, 6);
 		}
 		.projetsOppenClass{
 			height: 100%;
-
 		}
 
 		li{
