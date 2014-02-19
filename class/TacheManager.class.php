@@ -36,16 +36,35 @@ class TacheManager{
   	}
 
   	public function getTacheByProjetId($id_projet){
-  		$sql = 'SELECT * 
-  		FROM tache 
-  		WHERE id_projet_tache= :id_projet';
-  		$q = $this->_db->prepare($sql);
+      $sql = 'SELECT * 
+      FROM tache 
+      WHERE id_projet_tache= :id_projet';
+      $q = $this->_db->prepare($sql);
       $q->execute(array(':id_projet' => $id_projet));
       while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
-	     	$taches[] = new Tache($donnees);
-	    }
+        $taches[] = new Tache($donnees);
+      }
       $q->closeCursor();
-	    return $taches;
-  	}
+      return $taches;
+    }
+
+    public function getTacheByUserId($id_user){
+      $sql = 'SELECT * 
+      FROM tache 
+      WHERE auteur_tache= :id_user';
+      $q = $this->_db->prepare($sql);
+      $q->execute(array(':id_user' => $id_user));
+      while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+        $taches[] = new Tache($donnees);
+      }
+      $q->closeCursor();
+      return $taches;
+    }
+
+    public function getTitreProjet($id_projet){
+    $projetManager = new ProjetManager($db);
+    $projet = $projetManager->getProjetById($id_projet);
+    return $projet->titre_projet();
+  }//End function titreProjet
 
 } //End class TacheManager

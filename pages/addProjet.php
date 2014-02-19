@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="addProjet" class="displayNone">
+<div id="addProjet" class=""><!--displayNone-->
 	<form id="addProjetForm" action="#" method="POST">
 		<fieldset>
 			<div class="dateName" >
@@ -14,7 +14,7 @@
 			</div>
 			<div class="addProjetAddTacheInputCollabo displayNone">
 				<span>OK</span>
-				<input placeholder="prenom.nom prenom.nom 3tid2 3tid1" name="addCollaboProj" id="addCollaboProj" type="text">
+				<input placeholder="prenom.nom prenom.nom 3tid2 3tid1" name="collaborateurs" id="addCollaboProj" type="text">
 			</div>
 			<label class="addProjetAddTache" for="addTacheProjet">
 				<div>

@@ -51,6 +51,14 @@ class UserManager
       return new User($donnees);
     }
 
+    public function getIdByLogin($login){
+      $q = $this->_db->prepare('SELECT id_user FROM user WHERE login_user = :login_user');
+      $q->execute(array(':login_user' => $login));
+      $donnees = $q->fetch(PDO::FETCH_ASSOC);
+      $q->closeCursor();
+      return $donnees;
+    }
+
     public function exists($info){
       if (is_int($info)) // On veut voir si tel personnage ayant pour id $info existe.
       {

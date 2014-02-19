@@ -28,10 +28,28 @@ class ProjetManager{
       $q->bindValue(':auteur_projet', $projet->auteur_projet());
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
-
     	$q->execute() or die(print_r($q->errorInfo()));
+      return $this->_db->lastInsertId();
       $q->closeCursor();
   	}
+
+    public function addCollaborateur($id_projet, $id_user){
+      $sql = 'INSERT INTO projet_gestion
+        SET 
+        id_projet = :id_projet, 
+        id_user = :id_user,
+        hidden_projet = :hidden_projet,
+        checked_projet = :checked_projet';
+
+      $q = $this->_db->prepare($sql);
+      $q->bindValue(':id_projet', $id_projet);
+      $q->bindValue(':id_user', $id_user);
+      $q->bindValue(':hidden_projet', "0");
+      $q->bindValue(':checked_projet', "0");
+
+      $q->execute() or die(print_r($q->errorInfo()));
+      $q->closeCursor();
+    }
 
   	public function getProjetByUserId($id_user){
   		$sql = 'SELECT * 
@@ -47,5 +65,21 @@ class ProjetManager{
       	$q->closeCursor();
       	return $projets;
   	}
+
+    public function getProjetById($id_projet){
+      $sql = 'SELECT * 
+      FROM projet 
+      WHERE id_projet = :id_projet';
+      $q = $this->_db->prepare($sql);
+      $q->execute(array(':id_projet' => $id_projet)) or die(print_r($q->errorInfo()));;
+      $donnees = $q->fetch(PDO::FETCH_ASSOC);
+      $q->closeCursor();
+      return new Projet($donnees);
+    }
+
+    public function getNextProjetId(){
+      $id = $this->_db->query('SELECT `AUTO_INCREMENT` FROM projet');
+      return $id;
+    }
 
 } //End class ProjetManager

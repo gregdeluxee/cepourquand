@@ -71,9 +71,13 @@ class Tache{
 		}
 	}
 
-
-	public function test(){
-
-	}//End function test
+	public function jourRestant(){
+		$date = $this->date_remise_tache();
+		$today = time();
+		$date = strtotime($date);
+		$difference = $date - $today;
+		$jours = $difference/(60*60*24);
+		return floor($jours);
+	}//End function jourRestant
 
 } //End class Tache
