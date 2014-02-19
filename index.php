@@ -52,7 +52,7 @@
         <?php //include('inc/menuAddTache.php'); ?>
         <?php //include('inc/menuFiltres.php'); ?>
         <?php //include('inc/menuChat.php'); ?>
-        <?php include('inc/menuAddProjet.php'); ?>
+        <?php //include('inc/menuAddProjet.php'); ?>
         <?php //include('inc/menuModifProjet.php'); ?>
         <!-- END NAV -->
 
@@ -60,12 +60,12 @@
         <div id="content">
 
             <?php //include('pages/login.php'); ?>
-            <?php //include('pages/projet.php'); ?>
+            <?php include('pages/projet.php'); ?>
             <?php //include('pages/tache.php'); ?>
             <?php //include('pages/filtre.php'); ?>
             <?php //include('pages/chat.php'); ?>
             <?php //include('pages/commentaire.php'); ?>
-            <?php include('pages/addProjet.php'); ?>
+            <?php //include('pages/addProjet.php'); ?>
             <?php //include('pages/modifProjet.php'); ?>
 
         </div>
@@ -75,6 +75,7 @@
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
         <script src="js/fastclick.js"></script>
+        <script src="js/jquery.touchSwipe.min.js"></script>
 
     </body>
 </html>

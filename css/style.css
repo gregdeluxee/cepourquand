@@ -917,6 +917,168 @@ body, html {
   display: none;
 }
 
+#projetModif {
+  padding-top: 60px;
+  background: #1a1a1a;
+}
+#projetModif form fieldset {
+  display: block;
+  width: 100%;
+}
+#projetModif form fieldset .dateName {
+  height: 100px;
+  float: left;
+  background: #282828;
+  color: #fff;
+  width: 100%;
+  padding: 22px 13px;
+}
+#projetModif form fieldset .dateName label {
+  display: block;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 100%;
+  height: 46px;
+  width: 42px;
+  float: left;
+  margin-top: 5px;
+}
+#projetModif form fieldset .dateName input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#projetModif form fieldset .dateName input {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  float: left;
+  background: #282828;
+  border: none;
+  color: #fff;
+  display: block;
+  width: 250px;
+  padding-top: 18px;
+}
+#projetModif form fieldset .dateName input ::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+#projetModif form fieldset .dateName input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#projetModif form fieldset .dateName input:focus {
+  border: 0px;
+  color: none;
+  box-shadow: 0px;
+}
+#projetModif form fieldset .addProjetAddTacheInputTache, #projetModif form fieldset .addProjetAddTacheInputCollabo {
+  width: 100%;
+  float: left;
+  height: 40px;
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+  background: #efefef;
+}
+#projetModif form fieldset .addProjetAddTacheInputTache span, #projetModif form fieldset .addProjetAddTacheInputCollabo span {
+  width: 20%;
+  float: left;
+  color: #fff;
+  height: 40px;
+  background: #212121;
+  font-size: 16px;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2.5;
+}
+#projetModif form fieldset .addProjetAddTacheInputTache input, #projetModif form fieldset .addProjetAddTacheInputCollabo input {
+  width: 80%;
+  float: left;
+  color: #000;
+  text-indent: 11px;
+  height: 40px;
+  background: #efefef;
+}
+#projetModif form fieldset input {
+  width: 50%;
+  float: left;
+  height: 40px;
+  padding: 0;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  text-indent: 41px;
+  background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
+  background-size: 13%;
+}
+#projetModif form fieldset select {
+  border-radius: 0;
+  border: 0;
+  width: 50%;
+  float: left;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  text-indent: 41px;
+  background: url(../img/courprof.png) no-repeat 6% 50% #1d1d1e;
+  background-size: 18%;
+}
+#projetModif form fieldset .addCollaboProjet {
+  width: 50%;
+  float: left;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 2.8;
+  text-indent: 41px;
+  background: url(../img/collabo.png) no-repeat 6% 50% #212121;
+  background-size: 18%;
+}
+#projetModif form fieldset .addProjetAddTache {
+  width: 50%;
+  float: left;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: none;
+  background: #d7403f;
+}
+#projetModif form fieldset .addProjetAddTache p {
+  float: left;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.8;
+}
+#projetModif form fieldset .addProjetAddTache div {
+  padding-top: 19px;
+  float: left;
+}
+#projetModif form fieldset .addProjetAddTache div span {
+  margin: 0px 8px;
+  background: #fff;
+  width: 25px;
+  height: 1px;
+  display: block;
+}
+#projetModif form fieldset .addProjetAddTache div :last-child {
+  -webkit-transform: rotate(90deg);
+}
+#projetModif form input[type=submit] {
+  display: none;
+}
+
 #projets {
   padding-top: 60px;
   background: #1a1a1a;
@@ -927,7 +1089,7 @@ body, html {
   height: 100%;
   width: 100%;
   float: left;
-  background: #1a1a1a;
+  background: url(../img/bg-ul-test.png) center;
 }
 #projets ul li:nth-child(1) {
   background: #1a1a1a;
@@ -964,17 +1126,21 @@ body, html {
   box-shadow: inset 0px 0px 1px 0px #1a1a1a;
   overflow: hidden;
 }
-#projets ul li .projetsClose {
+#projets ul li .projetContainer {
+  position: relative;
+  overflow: hidden;
+}
+#projets ul li .projetContainer .projetsClose {
   width: 100%;
   float: left;
 }
-#projets ul li .projetsClose .jours {
+#projets ul li .projetContainer .projetsClose .jours {
   float: left;
   height: 100%;
   width: 20%;
   margin-right: 6%;
 }
-#projets ul li .projetsClose .jours span {
+#projets ul li .projetContainer .projetsClose .jours span {
   color: #d7403f;
   font-family: "latohairline", Arial, Helvetica, sans-serif;
   font-size: 31px;
@@ -982,7 +1148,7 @@ body, html {
   float: right;
   line-height: 2.7;
 }
-#projets ul li .projetsClose .jours span .nbr_jours {
+#projets ul li .projetContainer .projetsClose .jours span .nbr_jours {
   float: left;
   font-family: "latolight", Arial, Helvetica, sans-serif;
   font-size: 60px;
@@ -990,7 +1156,7 @@ body, html {
   font-smoothing: antialiased;
   line-height: 1;
 }
-#projets ul li .projetsClose .projetContent {
+#projets ul li .projetContainer .projetsClose .projetContent {
   float: left;
   height: 100%;
   width: 68%;
@@ -1000,34 +1166,34 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#projets ul li .projetsClose .projetContent h1 {
+#projets ul li .projetContainer .projetsClose .projetContent h1 {
   font-size: 32px;
   width: 100%;
   float: left;
   margin-top: -5px;
 }
-#projets ul li .projetsClose .projetContent .projetProf {
+#projets ul li .projetContainer .projetsClose .projetContent .projetProf {
   font-size: 10px;
   width: 50%;
   float: left;
 }
-#projets ul li .projetsClose .projetContent .projetCreat {
+#projets ul li .projetContainer .projetsClose .projetContent .projetCreat {
   font-size: 10px;
   width: 50%;
   float: left;
   text-align: right;
 }
-#projets ul li .projetsOpen {
+#projets ul li .projetContainer .projetsOpen {
   width: 100%;
   float: left;
 }
-#projets ul li .projetsOpen ul {
+#projets ul li .projetContainer .projetsOpen ul {
   background: #fff;
   float: left;
   width: 100%;
   background: #efefef;
 }
-#projets ul li .projetsOpen ul li {
+#projets ul li .projetContainer .projetsOpen ul li {
   font-family: "latolight", Arial, Helvetica, sans-serif;
   font-size: 18px;
   width: 100%;
@@ -1036,7 +1202,7 @@ body, html {
   float: left;
   padding: 0;
 }
-#projets ul li .projetsOpen ul li .projetJoursTache {
+#projets ul li .projetContainer .projetsOpen ul li .projetJoursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
   font-size: 36px;
   float: left;
@@ -1045,35 +1211,35 @@ body, html {
   display: block;
   text-align: right;
 }
-#projets ul li .projetsOpen ul li p {
+#projets ul li .projetContainer .projetsOpen ul li p {
   float: right;
   width: 68%;
   margin-right: 6%;
   display: block;
   padding: 13px 0;
 }
-#projets ul li .projetsOpen ul li:nth-child(1) {
+#projets ul li .projetContainer .projetsOpen ul li:nth-child(1) {
   background: #efefef;
 }
-#projets ul li .projetsOpen ul li:nth-child(2) {
+#projets ul li .projetContainer .projetsOpen ul li:nth-child(2) {
   background: #e2e2e2;
 }
-#projets ul li .projetsOpen ul li:nth-child(3) {
+#projets ul li .projetContainer .projetsOpen ul li:nth-child(3) {
   background: #d5d5d5;
 }
-#projets ul li .projetsOpen ul li:nth-child(4) {
+#projets ul li .projetContainer .projetsOpen ul li:nth-child(4) {
   background: #c9c9c9;
 }
-#projets ul li .projetsOpen ul li:nth-child(5) {
+#projets ul li .projetContainer .projetsOpen ul li:nth-child(5) {
   background: #bcbcbc;
 }
-#projets ul li .projetsOpen nav {
+#projets ul li .projetContainer .projetsOpen nav {
   height: 132px;
   width: 100%;
   float: left;
   opacity: 1;
 }
-#projets ul li .projetsOpen nav ul li {
+#projets ul li .projetContainer .projetsOpen nav ul li {
   width: 50%;
   float: left;
   height: 40px;
@@ -1084,62 +1250,62 @@ body, html {
   line-height: 2.8;
   box-shadow: none;
 }
-#projets ul li .projetsOpen nav ul li div {
+#projets ul li .projetContainer .projetsOpen nav ul li div {
   height: 40px;
   width: 40px;
   float: left;
 }
-#projets ul li .projetsOpen nav ul li p {
+#projets ul li .projetContainer .projetsOpen nav ul li p {
   float: left;
   display: inline;
   padding: 0 0 0 0px;
   margin: 0;
   width: 70%;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(1) {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(1) {
   background: #d7403f;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(1) div {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(1) div {
   padding-top: 19px;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(1) div span {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(1) div span {
   margin: 0px 8px;
   background: #fff;
   width: 25px;
   height: 1px;
   display: block;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(1) div :last-child {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(1) div :last-child {
   -webkit-transform: rotate(90deg);
 }
-#projets ul li .projetsOpen nav ul li:nth-child(2) {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(2) {
   background: #1d1d1d;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(2) div {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(2) div {
   background: url(../img/discution.png) no-repeat center;
   background-size: 60%;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(3) {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(3) {
   background: #1d1d1d;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(3) div {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(3) div {
   background: url(../img/breif.png) no-repeat center;
   background-size: 47%;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(4) {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(4) {
   background: #212121;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(4) div {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(4) div {
   background: url(../img/collabo.png) no-repeat center;
   background-size: 60%;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(5) {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(5) {
   background: #282828;
   line-height: 3.7;
   height: 52px;
   width: 100%;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(5) div {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(5) div {
   height: 52px;
   width: 98px;
   background: url(../img/modifier.png) no-repeat left center;
@@ -1147,7 +1313,7 @@ body, html {
   margin: 0 auto;
   float: none;
 }
-#projets ul li .projetsOpen nav ul li:nth-child(5) p {
+#projets ul li .projetContainer .projetsOpen nav ul li:nth-child(5) p {
   margin: 0;
   padding: 0;
   text-indent: 35px;

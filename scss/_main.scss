@@ -915,6 +915,177 @@ body{
 		}
 	}
 }
+#projetModif{
+	padding-top: 60px;
+	background: lighten($liBaseColor, 0);
+	form{
+		fieldset{
+			display: block;
+			width: 100%;
+			.dateName{
+				height: 100px;
+				float: left;
+				background: #282828;
+				color: #fff;
+				width: 100%;
+				padding: 22px 13px;
+				label{
+					display:block;
+					background: url(../img/dateaddprojet.png) no-repeat center;
+					background-size: 100%;
+					height: 46px;
+					width: 42px;
+					float: left;
+					margin-top: 5px;
+				}
+				input[type=date]{
+					position: absolute;
+					left: -99999px;
+				}
+				input{
+					font-family: $SourceSansPro;
+					font-weight: 300;
+					font-size: 32px;
+					float: left;
+					background: #282828;
+					border: none;
+					color: #fff;
+					display:block;
+					width: 250px;
+					padding-top: 18px;
+					::-webkit-input-placeholder {
+						color: #8a8a8a;
+					}
+					input:focus::-webkit-input-placeholder {
+						opacity: 0;
+					}
+				}
+				input:focus{
+			        border:0px;
+			        color:none;
+					box-shadow: 0px;
+				}
+			}
+			.addProjetAddTacheInputTache, .addProjetAddTacheInputCollabo{
+				width: 100%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: left;
+				font-size: 14px;
+				background: #efefef ;
+				span{
+					width: 20%;
+					float: left;
+					color: #fff;
+					height: 40px;
+					background: #212121;
+					font-size: 16px;
+					font-family: $SourceSansPro;
+					font-weight: 300;
+					text-align: center;
+					line-height: 2.5;
+				}
+				input{
+					width: 80%;
+					float: left;
+					color: #000;
+					text-indent: 11px;
+					height: 40px;
+					background: #efefef ;
+
+				}
+			}
+			input{
+				width: 50%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: left;
+				color: #fff;
+				font-size: 14px;
+				box-shadow: none;
+				border-radius: 0;
+				border:0;
+				text-indent: 41px;
+				background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
+				background-size: 13%;
+			}
+
+
+			select{
+				border-radius: 0;
+				border:0;
+				width: 50%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: center;
+				color: #fff;
+				font-size: 14px;
+				//line-height: 2.8;
+				box-shadow: none;
+				overflow: hidden;
+				-webkit-appearance: none;
+				text-indent: 41px;
+				background: url(../img/courprof.png) no-repeat 6% 50% #1D1D1E;
+				background-size: 18%;
+			}
+			.addCollaboProjet{
+				width: 50%;
+				float: left;
+				height: 40px;
+				color: #fff;
+				font-size: 16px;
+				font-family: $SourceSansPro;
+				font-weight: 300;
+				line-height: 2.8;
+				text-indent: 41px;
+				background: url(../img/collabo.png) no-repeat 6% 50% #212121;
+				background-size: 18%;
+			}
+			.addProjetAddTache{
+				width: 50%;
+				float: left;
+				height: 40px;
+				padding: 0;
+				text-align: center;
+				color: #fff;
+				font-size: 14px;
+				box-shadow: none;
+				background: $redMenu;
+				p{
+					float: left;
+					font-family: $SourceSansPro;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 2.8;
+
+				}
+				div{
+					padding-top: 19px;
+					float: left;
+					span{
+						margin: 0px 8px;
+						background: #fff;
+						width: 25px;
+						height: 1px;
+						display: block;
+					}
+					:last-child{
+						-webkit-transform: rotate(90deg);
+					}
+				}
+			}
+		}
+		input[type=submit]{
+			display: none;
+		}
+	}
+}
+
+
+
 
 
 
@@ -927,9 +1098,8 @@ body{
 		height: 100%;
 		width: 100%;
 		float: left;
+		background:url(../img/bg-ul-test.png) center;
 
-
-		background: lighten($liBaseColor, 0);
 
 		li:nth-child(1){
 			background: lighten($liBaseColor, 0);
@@ -973,212 +1143,241 @@ body{
 			padding:25px 0 0 0;
 			box-shadow: inset 0px 0px 1px 0px $liBaseColor;
 			overflow: hidden;
-			.projetsClose{
-				width: 100%;
-				float: left;
-				.jours{
-					float: left;
-					height: 100%;
-					width: 20%;
-					margin-right: 6%;
-					span{
-						color: $redMenu;
-						font-family: $latohairline;
-						font-size: 31px;
-						text-align: right;
-						float: right;
-						line-height: 2.7;
-						.nbr_jours{
-							float: left;
-							font-family: $latolight;
-							font-size: 60px;
-							-webkit-font-smoothing: antialiased;
-							font-smoothing: antialiased;
-							line-height: 1;
-						}
-					}
-				}
-				.projetContent{
-					float: left;
-					height: 100%;
-					width: 68%;
-					margin-right: 6%;
-					color: #fff;
-					font-family: $latolight;
-					-webkit-font-smoothing: antialiased;
-					font-smoothing: antialiased;
-					h1{
-						font-size: 32px;
-						width: 100%;
-						float: left;
-						margin-top: -5px;
+			// .projetValide{
+			// 	position: absolute;
+			// 	float: left;
+			// 	height: 108px;
+			// 	background: green;
+			// 	width: 50%;
+			// 	left: 0;
+			// 	margin-top: -25px;
+			// 	opacity: .4;
 
-					}
-					.projetProf{
-						font-size: 10px;
-						width: 50%;
-						float: left;
+			// }
+			// .projetSup{
+			// 	position: absolute;
+			// 	float: left;
+			// 	height: 108px;
+			// 	background: red;
+			// 	width: 50%;
+			// 	right: 0;
+			// 	margin-top: -25px;
+			// 	opacity: .4;
 
+			// }
+			.projetContainer{
+				position: relative;
+				overflow: hidden;
 
-					}
-					.projetCreat{
-						font-size: 10px;
-						//font-family: $latohairline;
-						width: 50%;
-						float: left;
-						text-align: right;
-
-					}
-				}
-			}
-
-			.projetsOpen{
-				width: 100%;
-				float: left;
-				ul{
-					background: #fff;
-					float: left;
+				.projetsClose{
 					width: 100%;
-					background: darken($liBaseColorDark, 0);
-					li{
-						font-family: $latolight;
-						font-size: 18px;
-						width: 100%;
-						height:100%;
-						background: darken($liBaseColorDark, 20%);
+					float: left;
+					.jours{
 						float: left;
-						padding: 0;
-						.projetJoursTache{
-							font-family: $latolight;
-							font-size: 36px;
-							float: left;
-							width: 20%;
-							margin-right: 6%;
-							display: block;
+						height: 100%;
+						width: 20%;
+						margin-right: 6%;
+						span{
+							color: $redMenu;
+							font-family: $latohairline;
+							font-size: 31px;
 							text-align: right;
-						}
-						p{
 							float: right;
-							width: 68%;
-							margin-right: 6%;
-							display: block;
-							padding: 13px 0;
-
+							line-height: 2.7;
+							.nbr_jours{
+								float: left;
+								font-family: $latolight;
+								font-size: 60px;
+								-webkit-font-smoothing: antialiased;
+								font-smoothing: antialiased;
+								line-height: 1;
+							}
 						}
 					}
-					li:nth-child(1){
-						background: darken($liBaseColorDark, 0);
-					}
+					.projetContent{
+						float: left;
+						height: 100%;
+						width: 68%;
+						margin-right: 6%;
+						color: #fff;
+						font-family: $latolight;
+						-webkit-font-smoothing: antialiased;
+						font-smoothing: antialiased;
+						h1{
+							font-size: 32px;
+							width: 100%;
+							float: left;
+							margin-top: -5px;
 
-					li:nth-child(2){
-						background: darken($liBaseColorDark, 5%);
-					}
-
-					li:nth-child(3){
-						background: darken($liBaseColorDark, 10%);
-					}
-
-					li:nth-child(4){
-						background: darken($liBaseColorDark, 15%);
-					}
-
-					li:nth-child(5){
-						background: darken($liBaseColorDark, 20%);
-					}
-				}
-				nav{
-					height: 132px;
-					width: 100%;
-					float: left;
-					opacity: 1;
-					ul{
-						li{
+						}
+						.projetProf{
+							font-size: 10px;
 							width: 50%;
 							float: left;
-							height: 40px;
+
+
+						}
+						.projetCreat{
+							font-size: 10px;
+							//font-family: $latohairline;
+							width: 50%;
+							float: left;
+							text-align: right;
+
+						}
+					}
+				}
+
+				.projetsOpen{
+					width: 100%;
+					float: left;
+					ul{
+						background: #fff;
+						float: left;
+						width: 100%;
+						background: darken($liBaseColorDark, 0);
+						li{
+							font-family: $latolight;
+							font-size: 18px;
+							width: 100%;
+							height:100%;
+							background: darken($liBaseColorDark, 20%);
+							float: left;
 							padding: 0;
-							text-align: center;
-							color: #fff;
-							font-size: 14px;
-							line-height: 2.8;
-							box-shadow: none;
-
-							div{
-								height: 40px;
-								width: 40px;
+							.projetJoursTache{
+								font-family: $latolight;
+								font-size: 36px;
 								float: left;
-
+								width: 20%;
+								margin-right: 6%;
+								display: block;
+								text-align: right;
 							}
 							p{
-								float: left;
-								display: inline;
-								padding: 0 0 0 0px;
-								margin: 0;
-								width: 70%;
+								float: right;
+								width: 68%;
+								margin-right: 6%;
+								display: block;
+								padding: 13px 0;
 
 							}
 						}
 						li:nth-child(1){
-							background: $redMenu;
-							div{
-								padding-top: 19px;
-								span{
-									margin: 0px 8px;
-									background: #fff;
-									width: 25px;
-									height: 1px;
-									display: block;
-								}
-								:last-child{
-									-webkit-transform: rotate(90deg);
-								}
-							}
+							background: darken($liBaseColorDark, 0);
 						}
+
 						li:nth-child(2){
-							background: #1d1d1d;
-							div{
-								background: url(../img/discution.png) no-repeat center;
-								background-size: 60%;
-							}
+							background: darken($liBaseColorDark, 5%);
 						}
+
 						li:nth-child(3){
-							background: #1d1d1d;
-							div{
-								background: url(../img/breif.png) no-repeat center;
-								background-size: 47%;
-							}
-
+							background: darken($liBaseColorDark, 10%);
 						}
+
 						li:nth-child(4){
-							background: #212121;
-							div{
-								background: url(../img/collabo.png) no-repeat center;
-								background-size: 60%;
-							}
+							background: darken($liBaseColorDark, 15%);
 						}
+
 						li:nth-child(5){
-							background: #282828;
-							line-height: 3.7;
-							height: 52px;
-							width: 100%;
-							div{
-								height: 52px;
-								width: 98px;
-								background: url(../img/modifier.png) no-repeat left center;
-								background-size: 30%;
-								margin: 0 auto;
-								float: none;
+							background: darken($liBaseColorDark, 20%);
+						}
+					}
+					nav{
+						height: 132px;
+						width: 100%;
+						float: left;
+						opacity: 1;
+						ul{
+							li{
+								width: 50%;
+								float: left;
+								height: 40px;
+								padding: 0;
+								text-align: center;
+								color: #fff;
+								font-size: 14px;
+								line-height: 2.8;
+								box-shadow: none;
+
+								div{
+									height: 40px;
+									width: 40px;
+									float: left;
+
+								}
+								p{
+									float: left;
+									display: inline;
+									padding: 0 0 0 0px;
+									margin: 0;
+									width: 70%;
+
+								}
+							}
+							li:nth-child(1){
+								background: $redMenu;
+								div{
+									padding-top: 19px;
+									span{
+										margin: 0px 8px;
+										background: #fff;
+										width: 25px;
+										height: 1px;
+										display: block;
+									}
+									:last-child{
+										-webkit-transform: rotate(90deg);
+									}
+								}
+							}
+							li:nth-child(2){
+								background: #1d1d1d;
+								div{
+									background: url(../img/discution.png) no-repeat center;
+									background-size: 60%;
+								}
+							}
+							li:nth-child(3){
+								background: #1d1d1d;
+								div{
+									background: url(../img/breif.png) no-repeat center;
+									background-size: 47%;
+								}
 
 							}
-							p{
-								margin: 0;
-								padding: 0;
-								text-indent: 35px;
+							li:nth-child(4){
+								background: #212121;
+								div{
+									background: url(../img/collabo.png) no-repeat center;
+									background-size: 60%;
+								}
+							}
+							li:nth-child(5){
+								background: #282828;
+								line-height: 3.7;
+								height: 52px;
+								width: 100%;
+								div{
+									height: 52px;
+									width: 98px;
+									background: url(../img/modifier.png) no-repeat left center;
+									background-size: 30%;
+									margin: 0 auto;
+									float: none;
+
+								}
+								p{
+									margin: 0;
+									padding: 0;
+									text-indent: 35px;
+								}
 							}
 						}
 					}
 				}
+
 			}
+
 		}
 	}
 }
