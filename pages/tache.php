@@ -3,10 +3,7 @@
 	$tacheManager = new TacheManager($db);
     $taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 9071f0d73cb482c5fc112d098168fc11dfee9329
 	$tacheManager = new TacheManager($db);
     $tache = $tacheManager->getTacheByUserId("1");
     print_r($tache);
