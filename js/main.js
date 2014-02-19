@@ -81,13 +81,45 @@ $(function(){
 		$("#menu").removeClass("displayNone");
 		$("#menuAddProjet").addClass("displayNone");
 	})
+	$(".menuAnnulMenuAddProjBis").click(function(e){
+		e.preventDefault();
+		$("#projetModif").addClass("displayNone");
+		$("#projets").removeClass("displayNone");
+		$("#menuLateral").removeClass("displayNone");
+		$("#menu").removeClass("displayNone");
+		$("#menuModifrojet").addClass("displayNone");
+	})
+	$(".projetmodifedit").click(function(){
+		$("#projets").addClass("displayNone");
+		$("#projetModif").removeClass("displayNone");
+		$("#menuLateral").addClass("displayNone");
+		$("#menu").addClass("displayNone");
+		$("#menuModifrojet").removeClass("displayNone");
+	})
+	// $(".menuLateRalGoProjet").click(function(){
+	// 	$("#projets").removeClass("displayNone");
+	// 	$("#filtre, #menuFiltres").("displayNone");
+	// 	$("#menuLateral").addClass("displayNone");
+	// 	$("#menu").addClass("displayNone");
+	// 	$("#menuModifrojet").removeClass("displayNone");
+	// })
+	$(".menuLateRalGoFiltre").click(function(){
+		console.log("kedisss");
+		$("#projets, #menu").addClass("displayNone");
+		$("#filtre, #menuFiltres").removeClass("displayNone");
+
+	})
+
 
 	$(".projetAddTache").click(function() {
-		console.log("kedis");
 		$this = $(this);
 		var thisParent = $this.parent("ul").parent("nav").prev(".addTachesprojet")
 		thisParent.toggleClass("displayNone");
 	})
+
+
+
+
 
 
 	$("#projets .projetsClose").click(function() {

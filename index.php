@@ -47,7 +47,6 @@
 
         <!-- NAV -->
         <?php include('inc/menu.php'); ?>
-        <?php include('inc/menuLateral.php'); ?>
         <?php include('inc/menuTache.php'); ?>
         <?php include('inc/menuAddTache.php'); ?>
         <?php include('inc/menuFiltres.php'); ?>
@@ -60,6 +59,7 @@
         <div id="content">
 
             <?php //include('pages/login.php'); ?>
+            <?php include('inc/menuLateral.php'); ?>
             <?php include('pages/projet.php'); ?>
             <?php include('pages/tache.php'); ?>
             <?php include('pages/filtre.php'); ?>

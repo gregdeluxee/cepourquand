@@ -302,7 +302,7 @@ body{
 		}
 	}
 }
-#menuAddProjet{
+#menuAddProjet, #menuModifrojet{
 	height: 60px;
 	width: 100%;
 	position: fixed;
@@ -323,7 +323,7 @@ body{
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
-			.menuAnnulMenuAddProj{
+			.menuAnnulMenuAddProj, .menuAnnulMenuAddProjBis{
 				position: absolute;
 				left: 0;
 				z-index: 7;
@@ -571,6 +571,8 @@ body{
 }
 
 #filtre{
+	-webkit-transition:.3s all ease-in-out ;
+	transition: .3s all ease-in-out ;
 	padding-top: 38px;
 	ul{
 		li{
@@ -877,7 +879,7 @@ body{
 	}
 }
 #projetModif{
-	padding-top: 60px;
+	padding-top: 38px;
 	background: lighten($liBaseColor, 0);
 	form{
 		fieldset{
@@ -1040,7 +1042,9 @@ body{
 			}
 		}
 		input[type=submit]{
-			display: none;
+			visibility: hidden;
+			position: absolute;
+			left: -9999px;
 		}
 	}
 }
