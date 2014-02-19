@@ -1,0 +1,16 @@
+Bon jai pas vrmt rempli x) 
+J'ai pas énormément bossé ce soir non plus, jme suis pas mal informé. J'ai eu des trucs à réglés.
+Bon taff ;) je bosse chez moi :)
+
+
+
+
+
+
+
+
+menuAddTache : Bouton annuler, retirer la tâche et non activer le menu actif
+
+
+
+Uniformiser les typos des menus

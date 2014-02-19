@@ -1,5 +1,9 @@
 <?php
-	echo $_SERVER['DOCUMENT_ROOT'];
+
+	$tacheManager = new TacheManager($db);
+    $tache = $tacheManager->getTacheByUserId("1");
+    print_r($tache);
+
 ?>
 
 
@@ -10,11 +14,15 @@
 				<label for="dateAddTache"></label>
 				<input id="dateAddTache" type="date" name="date">
 				<input type="text" placeholder="Nom de la Tâche..." name="titre">
-				<input type="hidden" name="idProjet" value="1">
+				<input type="hidden" name="idProjet" value="">
 			</fieldset>
 			<input type="submit" id="tacheAddSubmit" name="submit">
 		</form>
 	</div><!-- End ADD TACHE -->
+
+
+
+
 	<ul>
 		<li>
 			<span class="joursTache" ><span class="nbr_jours_tache_tache">1</span>j</span>

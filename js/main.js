@@ -1,3 +1,4 @@
+//START JAVASCRIPT
 function createCookie(name,value,days) {
 	if (days) {
 		var date = new Date();
@@ -23,16 +24,23 @@ function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
 
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
+//bouncefix.add('page');
+
+//END JAVASCRIPT
 
 //START JQUERY
 $(function(){
   var contentmove = $(".contentmove");
-  console.log(readCookie('loged'));
-  	//var logedCookie = $.cookie('loged'); // récupère la valeur du cookie « tutoriel »
-	//if (logedCookie =="1") {
-	//	$("#projets").removeClass("displayNone");
-	//	$("#taches").removeClass("displayNone");
-	//};	
+  //Are you already logged ?
+  	logedCookie = readCookie('loged');
+	if (logedCookie =="1") {
+		$("#projets").removeClass("displayNone");
+		$("#taches").removeClass("displayNone");
+	};	
 
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
@@ -68,14 +76,16 @@ $('#filtre input').change(function() {
 		$this.parent("li").removeClass("liBgNo");
  	} else {
   		$this.parent("li").addClass("liBgNo");
-  }
+  	}
 });
+
 
 
 //LOGIN AJAX TREATMENT
 	$("#loginForm").submit(function(e) {
 		e.preventDefault();
 		var donnees = $(this).serialize();
+		var login = $(this).find("input[name=login]").val();
 		// LOGINFORM AJAX
 		$.ajax({
 			type: "POST",
@@ -89,7 +99,7 @@ $('#filtre input').change(function() {
 					$("#login").addClass("translateX");
 					$("#projets").removeClass("displayNone");
 					createCookie('loged','1','30');
-					console.log(readCookie('loged'));
+					createCookie('login',login,'30');
 					// PROJET TREATMENT AJAX
 					$.ajax({
 						type: "POST",
@@ -102,20 +112,21 @@ $('#filtre input').change(function() {
 					});// END PROJET TREATMENT AJAX
 
            		}else if (answer == "failed") {
-           			console.log('failed');
            			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
+           			console.log('failed');
            		};
 		    },
 		    error : function(resultat, statut, erreur){
-		    	console.log("errorhfgdh")
+		    	console.log("error");
 		    },
 		    complete : function(resultat, statut){
-		    	console.log("complete")
-		    	console.log(resultat);
+		    	console.log("complete");
 		    }
 		});// END LOGINFORM AJAX
-
 	});// END LOGINFORM SUBMIT
+
+
+
 //ADD PROJET TREATMENT
 	$("#addProjetForm").submit(function(e) {
 		e.preventDefault();
@@ -144,11 +155,39 @@ $('#filtre input').change(function() {
 		});// END PROJET TREATMENT AJAX
 	});// END PROJET SUBMIT
 
+
+
+//ADD TACHE TREATMENT
+	$("#addTacheForm").submit(function(e) {
+		e.preventDefault();
+		var donnees = $(this).serialize();
+		// ADD PROJET TREATMENT AJAX
+		$.ajax({
+			type: "POST",
+			url: './traitementAjax/traitementAjoutTache.php',
+			data: donnees,
+			dataType : 'text',
+			success : function(answer, statut){
+				console.log(answer);
+				console.log(donnees);
+				if (answer == "success") {
+					console.log("success")
+				}else if (answer == "failed") {
+					console.log("failed")
+           		};
+			},
+		    error : function(resultat, statut, erreur){
+		    	console.log("error")
+		    },
+		    complete : function(resultat, statut){
+
+		    }
+		});// END PROJET TREATMENT AJAX
+	});// END PROJET SUBMIT
+
+
+
+
 }); // END JQUERY
 
-window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-}, false);
-
-//bouncefix.add('page');
 
