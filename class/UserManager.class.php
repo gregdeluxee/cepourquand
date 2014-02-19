@@ -54,7 +54,7 @@ class UserManager
     public function getIdByLogin($login){
       $q = $this->_db->prepare('SELECT id_user FROM user WHERE login_user = :login_user');
       $q->execute(array(':login_user' => $login));
-      $donnees = $q->fetch(PDO::FETCH_ASSOC);
+      $donnees = $q->fetch();
       $q->closeCursor();
       return $donnees;
     }

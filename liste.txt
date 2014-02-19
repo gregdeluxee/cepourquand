@@ -1,16 +1,8 @@
-Bon jai pas vrmt rempli x) 
-J'ai pas énormément bossé ce soir non plus, jme suis pas mal informé. J'ai eu des trucs à réglés.
-Bon taff ;) je bosse chez moi :)
+Ajouter projet :
 
+	Ajouter une tache : manque choix de la date
+	En javascript, lors qu'on valide la tache, l'afficher et introduire un nouveau input pour ajouter une autre tache et ainsi de suite.
+	name tache => tache1,tache2,tache3, etc
+	name date tache => dateTache1,dateTache2,dateTache3, etc
 
-
-
-
-
-
-
-menuAddTache : Bouton annuler, retirer la tâche et non activer le menu actif
-
-
-
-Uniformiser les typos des menus
+	Il n'y a pas de différence visible entre ajouter collaborateur et ajouter une tache mis à part le placeholder. Je pense il faut pas permettre les deux en même temps d'une facon ou d'une autre.

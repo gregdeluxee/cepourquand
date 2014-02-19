@@ -2,7 +2,7 @@
 
 include('../core/init.php');
 $_SESSION['id_user'] = 1;
-if (isset($_POST['titre']) AND isset($_POST['date'])) {
+if (isset($_POST['titre']) AND isset($_POST['date']) AND strlen($_POST['titre'])>0) {
 
 	$projet = new Projet(array(
 	  'titre_projet' => $_POST['titre'],
@@ -24,20 +24,29 @@ if (isset($_POST['titre']) AND isset($_POST['date'])) {
 		foreach ($collaborateur as $value) {
 			$userManager = new UserManager($db);
 			$idUser = $userManager->getIdByLogin($value);
-			print_r($projetManager->getNextProjetId());
-			$projetManager->addCollaborateur($projetManager->getNextProjetId(), $idUser);
+			$projetManager->addCollaborateur($projetId, $idUser[0]);
 		}
 	}
+	$nbTache = 1;
+	while (isset($_POST['tache'.$nbTache]) AND strlen($_POST['tache'.$nbTache])>0){
+		$tache = new Tache(array(
+		  'id_projet_tache' =>  $projetId,
+		  'titre_tache' => $_POST['tache'.$nbTache],
+		  'date_remise_tache' => $_POST['dateTache'.$nbTache],
+		  'auteur_tache' => $_SESSION['id_user'],
+		  'checked_tache' => "0",
+		  'deleted_tache' => "0"
+		));
+		$tacheManager = new TacheManager($db);
+		$tacheManager->addTache($tache);
 
-
-
-
-
-
-
-
+		$nbTache+=1;
+	}
 
 	echo "success";
+}
+else{
+	echo "failed";
 }
 
 
