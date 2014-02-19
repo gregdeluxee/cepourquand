@@ -14,7 +14,7 @@
 ?>
 
 
-<div id="taches" class="contentmove "> <!-- displayNone -->
+<div id="taches" class="contentmove"> <!-- displayNone -->
 	<div id="addTaches" class="displayNone">
 		<form id="addTacheForm" action="#" method="POST">
 			<fieldset>
