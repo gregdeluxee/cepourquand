@@ -8,10 +8,10 @@
 
 	<nav>
 		<ul>
-			<li><span></span>Projets</li>
-			<li><span></span>Tâches</li>
-			<li><span></span>Filtres</li>
-			<li><span></span>Déconnexion</li>
+			<li class="menuLateRalGoProjet"><span></span>Projets</li>
+			<li class="menuLateRalGoTache"><span></span>Tâches</li>
+			<li class="menuLateRalGoFiltre"><span></span>Filtres</li>
+			<li class="menuLateRalGoDeco"><span></span>Déconnexion</li>
 		</ul>
 	</nav>
 

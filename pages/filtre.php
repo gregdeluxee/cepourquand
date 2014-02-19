@@ -3,7 +3,7 @@
 ?>
 
 
-<div id="filtre" class="contentmove">
+<div id="filtre" class="contentmove displayNone">
 	<ul>
 		<li><input id="filtrePersonnel" checked type="checkbox"><label for="filtrePersonnel">Personnels</label></li>
 		<li><input id="filtreCollaborateur" checked type="checkbox"><label for="filtreCollaborateur">Collaborateurs</label></li>

@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="menuChat" class="contentmove">
+<div id="menuChat" class="contentmove displayNone">
 	<nav>
 		<ul>
 			<li class="menuChatRetour"></li>

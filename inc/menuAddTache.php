@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="menuAddTache" class="contentmove displayNone">
+<div id="menuAddTache" class="displayNone">
 	<nav>
 		<ul>
 			<li class="menuMenu">Annuler</li>

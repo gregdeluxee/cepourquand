@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="projetModif" class="contentmove">
+<div id="projetModif" class="displayNone">
 	<form id="addProjetForm" action="#" method="POST">
 		<fieldset>
 			<div class="dateName" >

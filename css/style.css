@@ -180,7 +180,7 @@ body, html {
 }
 
 #menuLateral {
-  background: #212121;
+  background: #282828;
   height: 100%;
   width: 80%;
   position: absolute;
@@ -366,7 +366,7 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#menuAddProjet nav ul .menuMenu {
+#menuAddProjet nav ul .menuAnnulMenuAddProj {
   position: absolute;
   left: 0;
   z-index: 7;
@@ -382,7 +382,7 @@ body, html {
   z-index: 6;
   text-transform: uppercase;
 }
-#menuAddProjet nav ul .menuAdd {
+#menuAddProjet nav ul .menuAddAjourproj {
   position: absolute;
   right: 0;
   z-index: 7;
@@ -637,47 +637,6 @@ body, html {
   transition: 0.3s all ease-in-out;
   padding-top: 38px;
 }
-#taches #addTaches {
-  background: #efefef;
-  float: left;
-  width: 100%;
-}
-#taches #addTaches input[type=date] {
-  position: absolute;
-  left: -99999px;
-}
-#taches #addTaches #tacheAddSubmit {
-  display: none;
-}
-#taches #addTaches input {
-  height: 60px;
-  background: #efefef;
-  width: 230px;
-  border-radius: 0;
-  border: none;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  float: left;
-  color: #000;
-  display: block;
-  line-height: 1.8;
-}
-#taches #addTaches input ::-webkit-input-placeholder {
-  color: #8a8a8a;
-}
-#taches #addTaches input input:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-#taches #addTaches label {
-  display: block;
-  background: url(../img/dateaddprojet.png) no-repeat center;
-  background-size: 60%;
-  height: 46px;
-  width: 42px;
-  float: left;
-  margin: 5px 4% 0 6%;
-}
 #taches ul {
   float: left;
   width: 100%;
@@ -756,7 +715,7 @@ body, html {
 }
 
 #addProjet {
-  padding-top: 60px;
+  padding-top: 38px;
   background: #1a1a1a;
 }
 #addProjet form fieldset {
@@ -914,7 +873,9 @@ body, html {
   -webkit-transform: rotate(90deg);
 }
 #addProjet form input[type=submit] {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
 }
 
 #projetModif {
@@ -1186,6 +1147,61 @@ body, html {
 #projets ul li .projetContainer .projetsOpen {
   width: 100%;
   float: left;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet {
+  background: #efefef;
+  float: left;
+  width: 100%;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet #tacheProjetAddSubmit {
+  position: absolute;
+  visibility: hidden;
+  left: -9999px;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet input {
+  height: 60px;
+  background: #efefef;
+  width: 200px;
+  border-radius: 0;
+  border: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  float: left;
+  color: #000;
+  display: block;
+  line-height: 1.8;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet input ::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet label {
+  display: block;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 60%;
+  height: 46px;
+  width: 42px;
+  float: left;
+  margin: 5px 4% 0 6%;
+}
+#projets ul li .projetContainer .projetsOpen .addTachesprojet .submitClassprojettacheAdd {
+  display: block;
+  background: none;
+  height: 46px;
+  width: 42px;
+  float: left;
+  margin: 0;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 3;
 }
 #projets ul li .projetContainer .projetsOpen ul {
   background: #fff;

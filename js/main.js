@@ -48,11 +48,7 @@ $(function(){
 
 	$("#projets").removeClass("displayNone");////AS UPPPP
 
-	$("#projets > ul > li").click(function() {
-		$this = $(this);
-		$this.css("-webkit-transform", "translateX(0px)");
-		$this.toggleClass("projetsOppenClass");
-	})
+
 
 	$(".menuAddTache").click(function() {
 		$this = $(this);
@@ -60,10 +56,46 @@ $(function(){
 		$("#menuTache").addClass("displayNone");
 		$("#menuAddTache").removeClass("displayNone");
 	})
+
+
+
+
+
 	$(".menuMenu").click(function(e){
 		e.preventDefault();
 		contentmove.toggleClass("menu_actif");
 	})
+	$(".menuAdd").click(function(e){
+		e.preventDefault();
+		$("#addProjet").removeClass("displayNone");
+		$("#projets").addClass("displayNone");
+		$("#menuLateral").addClass("displayNone");
+		$("#menu").addClass("displayNone");
+		$("#menuAddProjet").removeClass("displayNone");
+	})
+	$(".menuAnnulMenuAddProj").click(function(e){
+		e.preventDefault();
+		$("#addProjet").addClass("displayNone");
+		$("#projets").removeClass("displayNone");
+		$("#menuLateral").removeClass("displayNone");
+		$("#menu").removeClass("displayNone");
+		$("#menuAddProjet").addClass("displayNone");
+	})
+
+	$(".projetAddTache").click(function() {
+		console.log("kedis");
+		$this = $(this);
+		var thisParent = $this.parent("ul").parent("nav").prev(".addTachesprojet")
+		thisParent.toggleClass("displayNone");
+	})
+
+
+	$("#projets .projetsClose").click(function() {
+		$this = $(this);
+		//$this.css("-webkit-transform", "translateX(0px)");
+		$this.parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
+	})
+
 
 	$(".addCollaboProjet").click(function(){
 		$(".addProjetAddTacheInputCollabo").toggleClass("displayNone");
@@ -102,32 +134,32 @@ $(function(){
 		// })
 
 
-$("#projets > ul > li").swipe( {
-        swipeStatus:function(event, phase, direction, distance, duration)
-        {
-			$this = $(this);
+// $("#projets > ul > li").swipe( {
+//         swipeStatus:function(event, phase, direction, distance, duration)
+//         {
+// 			$this = $(this);
 
-		if (phase == "move")
-			$this.css("-webkit-transform", "translateX("+(distance)+"px)");
-			$this.toggleClass("projetsOppenClass");
+// 		if (phase == "move")
+// 			$this.css("-webkit-transform", "translateX("+(distance)+"px)");
+// 			$this.toggleClass("projetsOppenClass");
 
-			if (phase == "end"){
-				if (distance >=250) {
-					if (direction == "left") {
-						$this.css("-webkit-transform", "translateX(-100px)");
-					}else{
-						$this.css("-webkit-transform", "translateX(100px)");
-					};
-				}else{
-					$this.css("-webkit-transform", "translateX(0px)");
-				};
+// 			if (phase == "end"){
+// 				if (distance >=250) {
+// 					if (direction == "left") {
+// 						$this.css("-webkit-transform", "translateX(-100px)");
+// 					}else{
+// 						$this.css("-webkit-transform", "translateX(100px)");
+// 					};
+// 				}else{
+// 					$this.css("-webkit-transform", "translateX(0px)");
+// 				};
 
-			}
-          // $this.css("background", "red");
-        },
-        // triggerOnTouchEnd:false,
-        threshold:120
-      });
+// 			}
+//           // $this.css("background", "red");
+//         },
+//         // triggerOnTouchEnd:false,
+//         threshold:120
+//       });
 
 
  // $("#projets > ul > li").swipe( {
@@ -244,7 +276,14 @@ $("#projets > ul > li").swipe( {
 	});// END LOGINFORM SUBMIT
 
 
-
+$(".menuAnnulMenuAddProj").click(function(e){
+		e.preventDefault();
+		$("#addProjet").addClass("displayNone");
+		$("#projets").removeClass("displayNone");
+		$("#menuLateral").removeClass("displayNone");
+		$("#menu").removeClass("displayNone");
+		$("#menuAddProjet").addClass("displayNone");
+	})
 //ADD PROJET TREATMENT
 	$("#addProjetForm").submit(function(e) {
 		e.preventDefault();
@@ -260,6 +299,13 @@ $("#projets > ul > li").swipe( {
 				console.log(donnees);
 				if (answer == "success") {
 					console.log("success")
+
+					$("#addProjet").addClass("displayNone");
+					$("#projets").removeClass("displayNone");
+					$("#menuLateral").removeClass("displayNone");
+					$("#menu").removeClass("displayNone");
+					$("#menuAddProjet").addClass("displayNone");
+
 				}else if (answer == "failed") {
 					console.log("failed")
            		};

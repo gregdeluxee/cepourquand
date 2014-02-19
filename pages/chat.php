@@ -2,7 +2,7 @@
 ?>
 
 
-<div id="chat" class="contentmove">
+<div id="chat" class="displayNone">
 	<div class="contentChat">
 
 	</div>

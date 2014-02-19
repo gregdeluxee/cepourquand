@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="menuFiltres" class="contentmove">
+<div id="menuFiltres" class="contentmove displayNone">
 	<nav>
 		<ul>
 			<li class="menuMenu">

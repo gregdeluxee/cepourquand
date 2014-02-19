@@ -1,13 +1,13 @@
 <?php
 
-	$tacheManager = new TacheManager($db);
-    $tache = $tacheManager->getTacheByUserId("1");
-    print_r($tache);
+	// $tacheManager = new TacheManager($db);
+ //    $tache = $tacheManager->getTacheByUserId("1");
+ //    print_r($tache);
 
 ?>
 
 
-<div id="taches" class="contentmove">
+<div id="taches" class="contentmove displayNone">
 	<div id="addTaches" class="displayNone">
 		<form id="addTacheForm" action="#" method="POST">
 			<fieldset>
