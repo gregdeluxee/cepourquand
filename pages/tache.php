@@ -1,8 +1,8 @@
 <?php
 
-	// $tacheManager = new TacheManager($db);
- //    $tache = $tacheManager->getTacheByUserId("1");
- //    print_r($tache);
+	$tacheManager = new TacheManager($db);
+    $tache = $tacheManager->getTacheByUserId("1");
+    print_r($tache);
 
 ?>
 
