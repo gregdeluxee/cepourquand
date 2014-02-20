@@ -784,7 +784,7 @@ body, html {
   background: #282828;
   color: #fff;
   width: 100%;
-  padding: 22px 13px;
+  padding: 32px 13px 0 13px;
 }
 #addProjet form fieldset .dateName label {
   display: block;
@@ -841,7 +841,26 @@ body, html {
   text-align: center;
   line-height: 2.5;
 }
+#addProjet form fieldset .addProjetAddTacheInputTache label, #addProjet form fieldset .addProjetAddTacheInputCollabo label {
+  width: 20%;
+  float: left;
+  height: 40px;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 40%;
+}
 #addProjet form fieldset .addProjetAddTacheInputTache input, #addProjet form fieldset .addProjetAddTacheInputCollabo input {
+  width: 60%;
+  float: left;
+  color: #000;
+  text-indent: 11px;
+  height: 40px;
+  background: #efefef;
+}
+#addProjet form fieldset .addProjetAddTacheInputTache input[type=date], #addProjet form fieldset .addProjetAddTacheInputCollabo input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#addProjet form fieldset .addTacheProjet input {
   width: 80%;
   float: left;
   color: #000;
