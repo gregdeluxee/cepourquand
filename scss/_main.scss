@@ -1268,10 +1268,8 @@ body{
 			-webkit-transition:.3s all ease-in-out ;
 			transition: .3s all ease-in-out ;
 			width: 100%;
-			height: 108px;
 			background: lighten($liBaseColor, 6);
 			float: left;
-			padding:25px 0 0 0;
 			box-shadow: inset 0px 0px 1px 0px $liBaseColor;
 			overflow: hidden;
 
@@ -1294,6 +1292,7 @@ body{
 							text-align: right;
 							float: right;
 							line-height: 2.7;
+							margin-top: 10px;
 							.nbr_jours{
 								float: left;
 								font-family: $latolight;
@@ -1301,6 +1300,7 @@ body{
 								-webkit-font-smoothing: antialiased;
 								font-smoothing: antialiased;
 								line-height: 1;
+								margin-top: 0px;
 							}
 						}
 					}
@@ -1310,6 +1310,7 @@ body{
 						width: 68%;
 						margin-right: 6%;
 						color: #fff;
+						padding: 25px 0;
 						font-family: $SourceSansProLight;
 						-webkit-font-smoothing: antialiased;
 						font-smoothing: antialiased;

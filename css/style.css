@@ -1266,10 +1266,8 @@ body, html {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
   width: 100%;
-  height: 108px;
   background: #292929;
   float: left;
-  padding: 25px 0 0 0;
   box-shadow: inset 0px 0px 1px 0px #1a1a1a;
   overflow: hidden;
 }
@@ -1294,6 +1292,7 @@ body, html {
   text-align: right;
   float: right;
   line-height: 2.7;
+  margin-top: 10px;
 }
 #projets ul li .projetContainer .projetsClose .jours span .nbr_jours {
   float: left;
@@ -1302,6 +1301,7 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   line-height: 1;
+  margin-top: 0px;
 }
 #projets ul li .projetContainer .projetsClose .projetContent {
   float: left;
@@ -1309,6 +1309,7 @@ body, html {
   width: 68%;
   margin-right: 6%;
   color: #fff;
+  padding: 25px 0;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
