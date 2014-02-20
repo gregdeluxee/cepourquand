@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //START JAVASCRIPT
 function createCookie(name,value,days) {
 	if (days) {
@@ -29,6 +30,8 @@ function eraseCookie(name) {
 
 //END JAVASCRIPT
 
+=======
+>>>>>>> 44907e0a440fbae600ca3a0df2651b644483d62a
 //START JQUERY
 $(function(){
   var contentmove = $(".contentmove");
@@ -298,50 +301,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		$("#menuAddProjet").addClass("displayNone");
 	})
 
-//LOGIN AJAX TREATMENT
-	$("#loginForm").submit(function(e) {
-		e.preventDefault();
-		var donnees = $(this).serialize();
-		var login = $(this).find("input[name=login]").val();
-		// LOGINFORM AJAX
-		$.ajax({
-			type: "POST",
-			url: './traitementAjax/traitementLogin.php',
-			data: donnees,
-			dataType : 'text',
-			success : function(answer, statut){
-				console.log(statut);
-           		if (answer == "success") {
-           			setTimeout(function(){ $("#login").addClass("displayNone");	}, 600);
-					$("#login").addClass("translateX");
-					$("#projets").removeClass("displayNone");
-					createCookie('loged','1','30');
-					createCookie('login',login,'30');
-					// PROJET TREATMENT AJAX
 
-					$.ajax({
-						type: "POST",
-						url: './traitementAjax/traitementDonnees.php',
-						dataType: 'html',
-						success: function(answer, statut){
-							$("#content").append(answer);
-						}
-
-					});// END PROJET TREATMENT AJAX
-
-           		}else if (answer == "failed") {
-           			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
-           			console.log('failed');
-           		};
-		    },
-		    error : function(resultat, statut, erreur){
-		    	console.log("error");
-		    },
-		    complete : function(resultat, statut){
-		    	console.log("complete");
-		    }
-		});// END LOGINFORM AJAX
-	});// END LOGINFORM SUBMIT
 
 //DECONNEXION AJAX TREATMENT
 		$("#unconnected").swipe( {
