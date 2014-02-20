@@ -9,7 +9,7 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Cépourkan?</title>
+        <title>Cépourkan | Gestionnaire de tâches scolaires</title>
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -18,7 +18,12 @@
  -->        <meta http-equiv="cleartype" content="on">
 
 
-
+        <link rel="apple-touch-startup-image" href="img/startup/apple-touch-startup-image.png">
+        <link rel="apple-touch-startup-image" href="img/startup/apple-touch-startup-image.png">
+        <link rel="apple-touch-startup-image" sizes="640x960" href="img/startup/apple-touch-startup-image-retina.png" />
+        <link rel="apple-touch-startup-image" sizes="960x640" href="img/startup/apple-touch-startup-image-landscape-retina.png" />
+        <link rel="apple-touch-startup-image" sizes="640x1136" href="img/startup/apple-touch-startup-image-4in.png" />
+        <link rel="apple-touch-startup-image" sizes="1136x640" href="img/startup/apple-touch-startup-image-landscape-4in.png" />
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
@@ -32,8 +37,8 @@
 
         <!-- For iOS web apps. -->
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Cépourkan?">
 
 
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
