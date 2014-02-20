@@ -380,7 +380,7 @@ $(function(){
 					$(this).parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
 					$(".projetsClose").removeClass("xxOpen");
 					$(this).addClass("xxOpen");
-					console.log("il l'aaaaaaaaaaaaaaaaaaaaaaaaaa")
+					console.log("il l'aaaaaaaaaaaaaaaaaaaaaaaaaa");
 				}
 			};
 			//Swipe animation
