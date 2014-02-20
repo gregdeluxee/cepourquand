@@ -72,7 +72,6 @@ $latolight:'latolight', Arial, Helvetica, sans-serif;
 $latoregular:'latoregular', Arial, Helvetica, sans-serif;
 $latobold:'latobold', Arial, Helvetica, sans-serif;
 
-$SourceSansPro:'Source Sans Pro', Helvetica,  sans-serif;
 $SourceSansProLight:'SourceSansPro-Light', Helvetica,  sans-serif;
 $SourceSansProExtraLight:'SourceSansPro-ExtraLight', Helvetica,  sans-serif;
 
@@ -1329,7 +1328,7 @@ body{
 						.projetCreat{
 							font-size: 10px;
 							width: 50%;
-							float: left;
+							float: right;
 							text-align: right;
 
 						}
@@ -1407,6 +1406,7 @@ body{
 							background: darken($liBaseColorDark, 20%);
 							float: left;
 							padding: 0;
+							box-shadow: inset 0px 0px 1px 0px $liBaseColorDark;
 							.projetJoursTache{
 								font-family: $latolight;
 								font-size: 36px;
@@ -1415,6 +1415,11 @@ body{
 								margin-right: 6%;
 								display: block;
 								text-align: right;
+								color: $redMenu;
+
+								-webkit-font-smoothing: antialiased;
+								font-smoothing: antialiased;
+								line-height: 1;
 							}
 							p{
 								float: right;

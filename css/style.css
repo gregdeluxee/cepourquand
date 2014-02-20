@@ -1327,7 +1327,7 @@ body, html {
 #projets ul li .projetContainer .projetsClose .projetContent .projetCreat {
   font-size: 10px;
   width: 50%;
-  float: left;
+  float: right;
   text-align: right;
 }
 #projets ul li .projetContainer .projetsOpen {
@@ -1401,6 +1401,7 @@ body, html {
   background: #bcbcbc;
   float: left;
   padding: 0;
+  box-shadow: inset 0px 0px 1px 0px #efefef;
 }
 #projets ul li .projetContainer .projetsOpen ul li .projetJoursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
@@ -1410,6 +1411,10 @@ body, html {
   margin-right: 6%;
   display: block;
   text-align: right;
+  color: #d7403f;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  line-height: 1;
 }
 #projets ul li .projetContainer .projetsOpen ul li p {
   float: right;
