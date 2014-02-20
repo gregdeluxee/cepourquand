@@ -80,17 +80,26 @@ class ProjetManager{
       return new Projet($donnees);
     }
 
-    public function updateChekedProjet($id_projet){
-      $sql = 'UPDATE projet_gestion SET checked_projet = "1" WHERE id_user = :id_user AND id_projet = :id_projet';
+    public function updateChekedProjet($id_user, $id_projet){
+      $sql = 'UPDATE projet_gestion SET checked_projet = "1" WHERE id_projet = :id_projet AND id_user = :id_user';
       $q = $this->_db->prepare($sql);
-      $q->bindValue(':id_user', $id_user);
       $q->bindValue(':id_projet', $id_projet);
+      $q->bindValue(':id_user', $id_user);
+      $q->execute() or die(print_r($q->errorInfo()));
+      $q->closeCursor();
+    }
+
+    public function updateHiddenProjet($id_user, $id_projet){
+      $sql = 'UPDATE projet_gestion SET hidden_projet = "1" WHERE id_projet = :id_projet AND id_user = :id_user';
+      $q = $this->_db->prepare($sql);
+      $q->bindValue(':id_projet', $id_projet);
+      $q->bindValue(':id_user', $id_user);
       $q->execute() or die(print_r($q->errorInfo()));
       $q->closeCursor();
     }
 
     public function exists($info){
-        return (bool) $this->_db->query('SELECT COUNT(*) FROM projet_gestion WHERE id_user = '.$info)->fetchColumn();
+        return (bool) $this->_db->query('SELECT COUNT(*) FROM projet_gestion WHERE hidden_projet = 0 AND id_user = '.$info)->fetchColumn();
     }
 
 } //End class ProjetManager

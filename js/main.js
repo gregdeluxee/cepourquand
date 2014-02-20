@@ -353,6 +353,7 @@ $(function(){
 		swipeStatus:function(event, phase, direction, distance, duration, fingerCount){
 			console.log(phase);
 			console.log(duration);
+			var projet = $(this);
 			//On start
 			if(phase == "start"){
 
@@ -360,14 +361,14 @@ $(function(){
 			//Finger animation
 			if(phase == "move"){
 				if(direction == "right"){
-
+					projet.parent().css("-webkit-transform","translateX("+distance+"px)")
 				}
 				else if(direction == "left"){
 
 				}
 			};
 			//Redirect when click/tap a link
-			if(phase == "end" && duration < 150 ){
+			if(phase == "end" && duration < 70 ){
 				console.log("OUVRE");
 				if ($(this).hasClass("xxOpen")) {
 					$(".projetsOpen").addClass("displayNone");
@@ -384,11 +385,10 @@ $(function(){
 				}
 			};
 			//Swipe animation
-			if(phase == "end" && duration > 150 ){
+			if(phase == "end" && duration > 70 ){
 				$idProjet = $(this).data("id-projet");
-				var donnees = $idProjet;
+				var donnees = 'id-projet='+$idProjet;
 				if(direction == "right"){
-/*
 					$.ajax({
 						type: "POST",
 						url: './traitementAjax/traitementChekedProjet.php',
@@ -398,22 +398,43 @@ $(function(){
 							console.log(answer);
 							console.log(donnees);
 							if (answer == "success") {
-
+								console.log("success");
+								//projet.css("-webkit-transform","translateX(100%)");
 							}else if (answer == "failed") {
-								console.log("failed")
+								console.log("failed");
 			           		};
 						},
 					    error : function(resultat, statut, erreur){
-					    	console.log("error")
+					    	console.log("error");
 					    },
 					    complete : function(resultat, statut){
 
 					    }
 					});// END PROJET TREATMENT AJAX
-*/
 				}
 				else if(direction == "left"){
+					$.ajax({
+						type: "POST",
+						url: './traitementAjax/traitementHiddenProjet.php',
+						data: donnees,
+						dataType : 'text',
+						success : function(answer, statut){
+							console.log(answer);
+							console.log(donnees);
+							if (answer == "success") {
+								console.log(projet);
+								projet.addClass("displayNone");
+							}else if (answer == "failed") {
+								console.log("failed");
+			           		};
+						},
+					    error : function(resultat, statut, erreur){
+					    	console.log("error");
+					    },
+					    complete : function(resultat, statut){
 
+					    }
+					});// END PROJET TREATMENT AJAX
 				}
 			};
 			if(phase == "cancel"){
