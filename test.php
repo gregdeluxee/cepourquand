@@ -44,6 +44,7 @@
          <!-- jQuery 1.10.2 -->
        <!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/jquery.touchSwipe.min.js"></script>
     </head>
     <body>
 
@@ -101,7 +102,13 @@
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/login.js"></script>
-        <script src="js/fastclick.js"></script>
-        <script src="js/jquery.touchSwipe.min.js"></script>
+        <?php  
+            if (isset($_COOKIE['login']) AND strlen($_COOKIE['login'])>0) {
+                ?>
+                <script src="js/main.js"></script>
+                <?php
+            } 
+        ?>
     </body>
 </html>
+  

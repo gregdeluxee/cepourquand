@@ -59,7 +59,8 @@ $(function(){
 						dataType: 'html',
 						success: function(answer, statut){
 							$("#content").append(answer);
-							$("#content").append('<script src="js/main.js"></script>')
+							$("body").append('<script src="js/jquery.touchSwipe.min.js"></script>');
+							$("body").append('<script src="js/main.js"></script>');
 						}
 
 					});// END PROJET TREATMENT AJAX

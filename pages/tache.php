@@ -4,8 +4,6 @@
 	if ($tacheManager->exists($_SESSION['id_user'])) {
     	$taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);		
 	}
-
-
 ?>
 
 
