@@ -69,7 +69,7 @@
 									</div>
 									<p>Ajouter une tâche</p>
 								</li>
-								<li class="projetDiscussion"><div></div><p>Discussion</p></li>
+								<li class="projetDiscussion" data-id-projet="<?php echo $projet->id_projet(); ?>"><div></div><p>Discussion</p></li>
 								<li><div></div><p>Briefing</p></li>
 								<li><div></div><p>Collaborateurs</p></li>
 								<li class="projetmodifedit"><div><p>Modifier</p></div></li>
