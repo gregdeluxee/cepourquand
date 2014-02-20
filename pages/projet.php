@@ -69,7 +69,7 @@
 									</div>
 									<p>Ajouter une tâche</p>
 								</li>
-								<li><div></div><p>Discussion</p></li>
+								<li class="projetDiscussion"><div></div><p>Discussion</p></li>
 								<li><div></div><p>Briefing</p></li>
 								<li><div></div><p>Collaborateurs</p></li>
 								<li class="projetmodifedit"><div><p>Modifier</p></div></li>
