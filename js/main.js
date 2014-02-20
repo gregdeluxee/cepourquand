@@ -186,12 +186,7 @@ $(function(){
 	})
 
 
-
-
-///////////////////////////////////   MUR DE BERLIN !!!!!!!!! je prend les comuniste !
-
-
-$(".menuAnnulMenuAddProj").click(function(e){
+	$(".menuAnnulMenuAddProj").click(function(e){
 		e.preventDefault();
 		$("#addProjet").addClass("displayNone");
 		$("#projets").removeClass("displayNone");
@@ -199,6 +194,22 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		$("#menu").removeClass("displayNone");
 		$("#menuAddProjet").addClass("displayNone");
 	})
+
+	$(".menuAnnulMenuAddProj").swipe({
+    	tap:function(event, target) {
+			$("#addProjet").addClass("displayNone");
+			$("#projets").removeClass("displayNone");
+			$("#menuLateral").removeClass("displayNone");
+			$("#menu").removeClass("displayNone");
+			$("#menuAddProjet").addClass("displayNone");
+    	}
+  	});
+
+
+
+///////////////////////////////////   MUR DE BERLIN !!!!!!!!! je prend les comuniste !
+
+
 
 
 
