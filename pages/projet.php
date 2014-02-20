@@ -96,7 +96,7 @@
 							<div class="projetCreat">L'auteur du projet</div>
 						</div>
 					</div>
-					<div class="projetsOpen">
+					<div class="projetsOpen displayNone">
 						<ul>
 							<li>
 								<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
