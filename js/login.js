@@ -53,7 +53,7 @@ $(function(){
            			setTimeout(function(){ $("#login").addClass("displayNone");	}, 600);
 					$("#login").addClass("translateX");
 					$("#projets").removeClass("displayNone");
-					$("#menuTache, #menu, #menuFiltres").removeClass("displayNone");
+					$("#menu").removeClass("displayNone");
 					createCookie('loged','1','30');
 					createCookie('login',login,'30');
 					// PROJET TREATMENT AJAX

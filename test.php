@@ -96,12 +96,6 @@
                     include('traitementAjax/rafraichir.php'); 
                 } 
             ?>
-            <?php// include('pages/projet.php'); ?>
-            <?php// include('pages/tache.php'); ?>
-            <?php// include('pages/filtre.php'); ?>
-            <?php// include('pages/chat.php'); ?>
-            <?php// include('pages/addProjet.php'); ?>
-            <?php// include('pages/modifProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->

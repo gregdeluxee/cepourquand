@@ -356,7 +356,7 @@ $(function(){
 				}
 			};
 			//Redirect when click/tap a link
-			if(phase == "end" && duration < 70 ){
+			if(phase == "end" && duration < 300 ){
 				console.log("OUVRE");
 				if ($(this).hasClass("xxOpen")) {
 					$(".projetsOpen").addClass("displayNone");
@@ -373,7 +373,7 @@ $(function(){
 				}
 			};
 			//Swipe animation
-			if(phase == "end" && duration > 70 && distance >100){
+			if(phase == "end" && duration > 300 && distance >100){
 				$idProjet = $(this).data("id-projet");
 				var donnees = 'id-projet='+$idProjet;
 				if(direction == "right"){

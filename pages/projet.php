@@ -1,6 +1,7 @@
 <?php
 
  	$projetManager = new ProjetManager($db);
+ 	print_r($projetManager->exists($_SESSION['id_user']));
  	if ($projetManager->exists($_SESSION['id_user'])) {
     	$projets = $projetManager->getProjetByUserId($_SESSION['id_user']);
 	}
