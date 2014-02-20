@@ -1,3 +1,5 @@
+//var urlLink ='http://localhost/cepourquand'; //LOCAL
+var urlLink ='http://cepourkan.eu'; //ONLINE
 
 //START JQUERY
 $(function(){
@@ -228,7 +230,7 @@ $(function(){
           		//DECONNEXION AJAX
           		$.ajax({
 					type: "POST",
-					url: './traitementAjax/traitementUnconnected.php',
+					url: urlLink+'/traitementAjax/traitementUnconnected.php',
 					dataType : 'text',
 					success : function(answer, statut){
 						console.log(statut);
@@ -262,7 +264,7 @@ $(function(){
 		// ADD PROJET TREATMENT AJAX
 		$.ajax({
 			type: "POST",
-			url: './traitementAjax/traitementAjoutProjet.php',
+			url: urlLink+'/traitementAjax/traitementAjoutProjet.php',
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
@@ -299,7 +301,7 @@ $(function(){
 		// ADD PROJET TREATMENT AJAX
 		$.ajax({
 			type: "POST",
-			url: './traitementAjax/traitementAjoutTache.php',
+			url: urlLink+'/traitementAjax/traitementAjoutTache.php',
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
@@ -377,7 +379,7 @@ $(function(){
 				if(direction == "right"){
 					$.ajax({
 						type: "POST",
-						url: './traitementAjax/traitementHiddenProjet.php',
+						url: urlLink+'/traitementAjax/traitementHiddenProjet.php',
 						data: donnees,
 						dataType : 'text',
 						success : function(answer, statut){
@@ -402,7 +404,7 @@ $(function(){
 				else if(direction == "left"){
 					$.ajax({
 						type: "POST",
-						url: './traitementAjax/traitementChekedProjet.php',
+						url: urlLink+'/traitementAjax/traitementChekedProjet.php',
 						data: donnees,
 						dataType : 'text',
 						success : function(answer, statut){
