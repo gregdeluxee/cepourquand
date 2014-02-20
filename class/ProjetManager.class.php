@@ -81,7 +81,7 @@ class ProjetManager{
     }
 
     public function updateChekedProjet($id_projet){
-      $sql = 'UPDATE projet_gestion SET checked_projet = "1" WHERE id_user = :id_user AND id_projet = :id_projet'
+      $sql = 'UPDATE projet_gestion SET checked_projet = "1" WHERE id_user = :id_user AND id_projet = :id_projet';
       $q = $this->_db->prepare($sql);
       $q->bindValue(':id_user', $id_user);
       $q->bindValue(':id_projet', $id_projet);
