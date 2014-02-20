@@ -2,35 +2,212 @@
 //START JQUERY
 $(function(){
 
-
-
-
-
-
-  	var contentmove = $(".contentmove");
-  	//Virer le login si deja connecté
-  	$("#login").addClass("displayNone");
-  	$("#login").addClass("translateX");
-	$("#projets").removeClass("displayNone");
-
-
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
 	var filtreCheckParent = $("#filtre input").parent("li");
 
+//Virer le login si deja connecté
 
+	$("#login").addClass("displayNone");
+	$("#login").addClass("translateX");
+	$("#projets").removeClass("displayNone");
 
-	$(".menuAddTache").click(function() {
-		$("#addTaches").toggleClass("displayNone");
-		$("#menuTache").addClass("displayNone");
-		$("#menuAddTache").removeClass("displayNone");
+//click sur ok dans ajout de tache
+
+	$(".menuAddTache").swipe({
+		tap:function(event, target) {
+			$("#addTaches").toggleClass("displayNone");
+			$("#menuTache").addClass("displayNone");
+			$("#menuAddTache").removeClass("displayNone");
+		}
+	});
+
+//click sur annuler dans ajout de tache
+
+	$(".menuMenuAnnulTache").swipe({
+		tap:function(event, target) {
+			$("#addTaches").toggleClass("displayNone");
+			$("#menuTache").removeClass("displayNone");
+			$("#menuAddTache").addClass("displayNone");
+		}
+	});
+
+//Lance le menu lateral
+
+	$(".menuMenu").swipe({
+		tap:function(event, target) {
+			e.preventDefault();
+			contentmove.toggleClass("menu_actif");
+			$("#menuLateral").toggleClass("displayNone");
+		}
+	});
+
+// projet , add tache
+
+	$(".menuAdd").swipe({
+		tap:function(event, target) {
+			$("#addProjet").removeClass("displayNone");
+			$("#projets").addClass("displayNone");
+			$("#menuLateral").toggleClass("displayNone");
+			$("#menu").addClass("displayNone");
+			$("#menuAddProjet").removeClass("displayNone");
+		}
+	});
+
+//Click sur annuler dans modifier un projet
+
+	$(".menuAnnulMenuAddProjBis").swipe({
+		tap:function(event, target) {
+			$("#projetModif").addClass("displayNone");
+			$("#projets").removeClass("displayNone");
+			$("#menuLateral").toggleClass("displayNone");
+			$("#menu").removeClass("displayNone");
+			$("#menuModifrojet").addClass("displayNone");
+		}
+	});
+
+//Click sur annuler dans ajouter un projet
+
+	$(".menuAnnulMenuAddProj").swipe({
+		tap:function(event, target) {
+			$("#addProjet").addClass("displayNone");
+			$("#projets").removeClass("displayNone");
+			$("#menuLateral").toggleClass("displayNone");
+			$("#menu").removeClass("displayNone");
+			$("#menuAddProjet").addClass("displayNone");
+		}
+	});
+
+//Click sur modifier un projet :p
+
+	$(".projetmodifedit").swipe({
+		tap:function(event, target) {
+			$("#projets").addClass("displayNone");
+			$("#projetModif").removeClass("displayNone");
+			$("#menuLateral").toggleClass("displayNone");
+			$("#menu").addClass("displayNone");
+			$("#menuModifrojet").removeClass("displayNone");
+		}
+	});
+
+// le click sur le booton retour du menu Chat
+
+	$(".menuChatRetour").swipe({
+		tap:function(event, target) {
+			$("#projets").removeClass("displayNone");
+			$("#menu").removeClass("displayNone");
+			$("#menuChat").addClass("displayNone");
+			$("#chat").addClass("displayNone");
+		}
+	});
+
+//click dans projet sur discution
+
+	$(".projetDiscussion").swipe({
+		tap:function(event, target) {
+			$("#projets").addClass("displayNone");
+			$("#menu").addClass("displayNone");
+			$("#menuChat").removeClass("displayNone");
+			$("#chat").removeClass("displayNone");
+		}
+	});
+
+// les 4 diferent bouton dans le menu lateral
+
 	})
-	$(".menuMenuAnnulTache").click(function() {
-		$("#addTaches").toggleClass("displayNone");
-		$("#menuTache").removeClass("displayNone");
-		$("#menuAddTache").addClass("displayNone");
+	$(".menuLateRalGoProjet").swipe({
+		tap:function(event, target) {
+			$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
+			$(" #projets, #menu").removeClass("displayNone");
+			contentmove.toggleClass("menu_actif");
+			$("#menuLateral").toggleClass("displayNone");
+		}
+	});
+	$(".menuLateRalGoTache").swipe({
+		tap:function(event, target) {
+			$("#filtre, #menuFiltres, #projets, #menu").addClass("displayNone");
+			$("#taches, #menuTache").removeClass("displayNone");
+			contentmove.toggleClass("menu_actif");
+			$("#menuLateral").toggleClass("displayNone");
+
+		}
+	});
+	$(".menuLateRalGoFiltre").swipe({
+		tap:function(event, target) {
+			$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
+			$("#filtre, #menuFiltres").removeClass("displayNone");
+			contentmove.toggleClass("menu_actif");
+			$("#menuLateral").toggleClass("displayNone");
+		}
+	});
+	$(".menuLateRalGoDeco").swipe({
+		tap:function(event, target) {
+			$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
+		}
+	});
+
+// ajout une tache dans projet
+
+	$(".projetAddTache").swipe({
+		tap:function(event, target) {
+			$this = $(this);
+			var thisParent = $this.parent("ul").parent("nav").prev(".addTachesprojet")
+			thisParent.toggleClass("displayNone");
+		}
+	});
+
+// click sur annuler dans le menu
+
+	$(".menuAnnulMenuAddProj").swipe({
+		tap:function(event, target) {
+			$("#addProjet").addClass("displayNone");
+			$("#projets").removeClass("displayNone");
+			$("#menuLateral").removeClass("displayNone");
+			$("#menu").removeClass("displayNone");
+			$("#menuAddProjet").addClass("displayNone");
+		}
+	});
+
+// les ajout de tache dans projet add modif ...
+
+	$(".addCollaboProjet").swipe({
+		tap:function(event, target) {
+			$(".addProjetAddTacheInputCollabo").toggleClass("displayNone");
+			$(".addProjetAddTacheInputTache").addClass("displayNone")
+		}
+	});
+
+	$(".addProjetAddTache").swipe({
+		tap:function(event, target) {
+			$(".addProjetAddTacheInputTache").toggleClass("displayNone");
+			$(".addProjetAddTacheInputCollabo").addClass("displayNone");
+		}
+	});
+
+	$(".addProjetAddTacheInputCollabo").children("span").swipe({
+		tap:function(event, target) {
+			$(".addProjetAddTacheInputCollabo").addClass("displayNone");
+		}
+	});
+
+	$(".addProjetAddTacheInputTache").children("span").swipe({
+		tap:function(event, target) {
+			$(".addProjetAddTacheInputTache").addClass("displayNone");
+		}
+	});
+
+// Filtre les input qui change
+
+	$('#filtre input').change(function() {
+		$this = $(this);
+		if ($this.is(':checked')) {
+			$this.parent("li").removeClass("liBgNo");
+	 	} else {
+	  		$this.parent("li").addClass("liBgNo");
+	  	}
 	})
 
+// script qui reduit la taille des jour en fonction du nombre de chiffre
 
 	$(".nbr_jours").each(function(){
 		$this = $(this);
@@ -54,162 +231,9 @@ $(function(){
 		}
 	});
 
-	$(".menuMenu").click(function(e){
-		e.preventDefault();
-		contentmove.toggleClass("menu_actif");
-		$("#menuLateral").toggleClass("displayNone");
-
-	})
-	$(".menuAdd").click(function(e){
-		e.preventDefault();
-		$("#addProjet").removeClass("displayNone");
-		$("#projets").addClass("displayNone");
-		$("#menuLateral").toggleClass("displayNone");
-		$("#menu").addClass("displayNone");
-		$("#menuAddProjet").removeClass("displayNone");
-	})
-	$(".menuAnnulMenuAddProj").click(function(e){
-		e.preventDefault();
-		$("#addProjet").addClass("displayNone");
-		$("#projets").removeClass("displayNone");
-		$("#menuLateral").toggleClass("displayNone");
-		$("#menu").removeClass("displayNone");
-		$("#menuAddProjet").addClass("displayNone");
-	})
-	$(".menuAnnulMenuAddProjBis").click(function(e){
-		e.preventDefault();
-		$("#projetModif").addClass("displayNone");
-		$("#projets").removeClass("displayNone");
-		$("#menuLateral").toggleClass("displayNone");
-		$("#menu").removeClass("displayNone");
-		$("#menuModifrojet").addClass("displayNone");
-	})
-	$(".projetmodifedit").click(function(){
-		$("#projets").addClass("displayNone");
-		$("#projetModif").removeClass("displayNone");
-		$("#menuLateral").toggleClass("displayNone");
-		$("#menu").addClass("displayNone");
-		$("#menuModifrojet").removeClass("displayNone");
-	})
-	$(".menuAnnulMenuAddProj").click(function(e){
-		e.preventDefault();
-		$("#addProjet").addClass("displayNone");
-		$("#projets").removeClass("displayNone");
-		$("#menuLateral").toggleClass("displayNone");
-		$("#menu").removeClass("displayNone");
-		$("#menuAddProjet").addClass("displayNone");
-	})
-
-
-	$(".projetDiscussion").click(function(){
-		$("#projets").addClass("displayNone");
-		$("#menu").addClass("displayNone");
-		$("#menuChat").removeClass("displayNone");
-		$("#chat").removeClass("displayNone");
-	})
-
-	$(".menuChatRetour").click(function(){
-		$("#projets").removeClass("displayNone");
-		$("#menu").removeClass("displayNone");
-		$("#menuChat").addClass("displayNone");
-		$("#chat").addClass("displayNone");
-	})
-
-
-
-	$(".menuLateRalGoDeco").click(function(){
-		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
-	})
-	$(".menuLateRalGoFiltre").click(function(){
-		$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
-		$("#filtre, #menuFiltres").removeClass("displayNone");
-		contentmove.toggleClass("menu_actif");
-		$("#menuLateral").toggleClass("displayNone");
-
-
-	})
-	$(".menuLateRalGoTache").click(function(){
-		$("#filtre, #menuFiltres, #projets, #menu").addClass("displayNone");
-		$("#taches, #menuTache").removeClass("displayNone");
-		contentmove.toggleClass("menu_actif");
-		$("#menuLateral").toggleClass("displayNone");
-
-
-	})
-	$(".menuLateRalGoProjet").click(function(){
-		$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
-		$(" #projets, #menu").removeClass("displayNone");
-		contentmove.toggleClass("menu_actif");
-		$("#menuLateral").toggleClass("displayNone");
-
-	})
-
-
-	$(".projetAddTache").click(function() {
-		$this = $(this);
-		var thisParent = $this.parent("ul").parent("nav").prev(".addTachesprojet")
-		thisParent.toggleClass("displayNone");
-	})
-
-
-
-
-
-
-
-	$(".addCollaboProjet").click(function(){
-		$(".addProjetAddTacheInputCollabo").toggleClass("displayNone");
-		$(".addProjetAddTacheInputTache").addClass("displayNone")
-	})
-	$(".addProjetAddTache").click(function(){
-		$(".addProjetAddTacheInputTache").toggleClass("displayNone");
-		$(".addProjetAddTacheInputCollabo").addClass("displayNone");
-	})
-
-	$(".addProjetAddTacheInputCollabo").children("span").click(function(){
-		$(".addProjetAddTacheInputCollabo").addClass("displayNone");
-	});
-	$(".addProjetAddTacheInputTache").children("span").click(function(){
-		$(".addProjetAddTacheInputTache").addClass("displayNone");
-	})
-
-
-
-
-	$('#filtre input').change(function() {
-		$this = $(this);
-		if ($this.is(':checked')) {
-			$this.parent("li").removeClass("liBgNo");
-	 	} else {
-	  		$this.parent("li").addClass("liBgNo");
-	  	}
-	})
-
-
-	$(".menuAnnulMenuAddProj").click(function(e){
-		e.preventDefault();
-		$("#addProjet").addClass("displayNone");
-		$("#projets").removeClass("displayNone");
-		$("#menuLateral").removeClass("displayNone");
-		$("#menu").removeClass("displayNone");
-		$("#menuAddProjet").addClass("displayNone");
-	})
-
-	$(".menuAnnulMenuAddProj").swipe({
-    	tap:function(event, target) {
-			$("#addProjet").addClass("displayNone");
-			$("#projets").removeClass("displayNone");
-			$("#menuLateral").removeClass("displayNone");
-			$("#menu").removeClass("displayNone");
-			$("#menuAddProjet").addClass("displayNone");
-    	}
-  	});
-
 
 
 ///////////////////////////////////   MUR DE BERLIN !!!!!!!!! je prend les comuniste !
-
-
 
 
 
