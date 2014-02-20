@@ -24,9 +24,6 @@ function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
 
-window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-}, false);
 
 //bouncefix.add('page');
 
