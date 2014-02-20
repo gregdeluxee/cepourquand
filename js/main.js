@@ -130,11 +130,6 @@ $(function(){
 			},50);
 		}
 	});
-	$(".menuLateRalGoDeco").swipe({
-		tap:function(event, target) {
-			$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
-		}
-	});
 
 // ajout une tache dans projet
 
@@ -351,10 +346,14 @@ $(function(){
 			//Finger animation
 			if(phase == "move"){
 				if(direction == "right"){
-					projet.parent().css("-webkit-transform","translateX("+distance+"px)")
+					projet.parent().prevAll(".projetSup").removeClass("displayNone");
+					projet.parent().prevAll(".projetValide").addClass("displayNone");
+					projet.parent().css("-webkit-transform","translateX("+distance+"px)");
 				}
 				else if(direction == "left"){
-
+					projet.parent().prevAll(".projetValide").removeClass("displayNone");
+					projet.parent().prevAll(".projetSup").addClass("displayNone");
+					projet.parent().css("-webkit-transform","translateX(-"+distance+"px)");
 				}
 			};
 			//Redirect when click/tap a link
@@ -375,21 +374,22 @@ $(function(){
 				}
 			};
 			//Swipe animation
-			if(phase == "end" && duration > 70 ){
+			if(phase == "end" && duration > 70 && distance >100){
 				$idProjet = $(this).data("id-projet");
 				var donnees = 'id-projet='+$idProjet;
 				if(direction == "right"){
 					$.ajax({
 						type: "POST",
-						url: './traitementAjax/traitementChekedProjet.php',
+						url: './traitementAjax/traitementHiddenProjet.php',
 						data: donnees,
 						dataType : 'text',
 						success : function(answer, statut){
 							console.log(answer);
 							console.log(donnees);
 							if (answer == "success") {
-								console.log("success");
-								//projet.css("-webkit-transform","translateX(100%)");
+								console.log(projet);
+								projet.parent().css("-webkit-transform","translateX(-100%)");
+								setTimeout(function(){	projet.addClass("displayNone");},1000);	
 							}else if (answer == "failed") {
 								console.log("failed");
 			           		};
@@ -405,15 +405,16 @@ $(function(){
 				else if(direction == "left"){
 					$.ajax({
 						type: "POST",
-						url: './traitementAjax/traitementHiddenProjet.php',
+						url: './traitementAjax/traitementChekedProjet.php',
 						data: donnees,
 						dataType : 'text',
 						success : function(answer, statut){
 							console.log(answer);
 							console.log(donnees);
 							if (answer == "success") {
-								console.log(projet);
-								projet.addClass("displayNone");
+								console.log("success");
+								projet.parent().css("-webkit-transform","translateX(100%)");
+								setTimeout(function(){	projet.parent().addClass("displayNone");},1000);								
 							}else if (answer == "failed") {
 								console.log("failed");
 			           		};

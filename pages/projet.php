@@ -20,8 +20,8 @@
 		foreach ($projets as $projet) {
 			?>
 			<li>
-				<div class="projetValide"></div>
-				<div class="projetSup"></div>
+				<div class="projetValide displayNone"></div>
+				<div class="projetSup displayNone"></div>
 				<div class="projetContainer" >
 					<div class="projetsClose" data-id-projet="<?php echo $projet->id_projet(); ?>">
 						<div class="jours">
