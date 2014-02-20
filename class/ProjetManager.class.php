@@ -58,8 +58,8 @@ class ProjetManager{
   		FROM projet 
   		INNER JOIN projet_gestion 
   		ON projet_gestion.id_projet = projet.id_projet 
-  		WHERE projet_gestion.id_user = :id_user
-      ORDER BY date_remise_projet';
+  		WHERE projet_gestion.id_user = :id_user AND projet_gestion.hidden_projet = "0"
+      ORDER BY date_remise_projet, checked_projet';
   		$q = $this->_db->prepare($sql);
       	$q->execute(array(':id_user' => $id_user)) or die(print_r($q->errorInfo()));;
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
