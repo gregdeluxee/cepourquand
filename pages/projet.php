@@ -33,7 +33,7 @@
 							<div class="projetCreat"><?php echo $projet->auteur_prenom_projet(); ?></div>
 						</div>
 					</div>
-					<div class="projetsOpen">
+					<div class="projetsOpen displayNone">
 						<ul>
 							<?php
 								foreach ($taches as $tache) {
