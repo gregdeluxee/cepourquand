@@ -26,3 +26,18 @@ Garde en tête qu'il faut compter 3-4h de debug en groupe, ça serait mieux de l
 A taleur, bon boulot ;)
 
 Encore un truc, n'insère rien ENTRE les traitements ajax stp. Organise toi comme tu le sens au dessus et moi en dessous ;) Et surtout, COMMENTE TON CODE ! J'ai voulu regarder un peu c'est bon j'ai abandoné après 15 secondes... si on doit débug et qu'il y a aucun coms, c'est la mort assurée ;) xD
+
+
+
+
+Very last thing : Pour le login on aura un prob avec le JS. Soit il faut remplacer tout les clicks etc par la fonction on
+Soit on fait un JS login et un JS pour quand on est logué
+Explication : Pour le moment quand on est sur la page login, tout le JS est chargé. Lorsqu'on se log, les autres pages sont ajoutés. Le prob, les éléments ne sont pas triggered... Du coup pas d'action genre quand tu ouvre le menu, le content ne bouge pas. Voilou.
+
+5h32, dodo now....
+T'as la bdd aussi... important, faut que tu mette dans un dossier www/cepourquand afin que les var php tournent sinon t'auras des erreurs. Au pire si ty arrive pas, bosse sur ta version pr les changement HTML/CSS mais sans sync alors...
+dsl de pas avoir utilisé cepourkan des le debut
+
+La bdd elle tourne mais je devrai la refaire. mes modifs ne prennent pas.
+
+A toute

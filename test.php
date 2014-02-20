@@ -77,12 +77,23 @@
                     include('pages/login.php'); 
                 }
             ?>
-            <?php include('pages/projet.php'); ?>
-            <?php include('pages/tache.php'); ?>
-            <?php include('pages/filtre.php'); ?>
-            <?php include('pages/chat.php'); ?>
-            <?php include('pages/addProjet.php'); ?>
-            <?php include('pages/modifProjet.php'); ?>
+            <?php 
+                if (isset($_COOKIE['login']) AND strlen($_COOKIE['login'])>0) {
+                    $login = $_COOKIE['login'];   
+                    $userInfos = new UserManager($db);
+                    if ($userInfos->exists($login)) {
+                        $user = $userInfos->get($login);
+                        $_SESSION['id_user'] = $user->id_user();
+                    }
+                    include('traitementAjax/rafraichir.php'); 
+                } 
+            ?>
+            <?php// include('pages/projet.php'); ?>
+            <?php// include('pages/tache.php'); ?>
+            <?php// include('pages/filtre.php'); ?>
+            <?php// include('pages/chat.php'); ?>
+            <?php// include('pages/addProjet.php'); ?>
+            <?php// include('pages/modifProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->

@@ -296,7 +296,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		// LOGINFORM AJAX
 		$.ajax({
 			type: "POST",
-			url: '../traitementAjax/traitementLogin.php',
+			url: './traitementAjax/traitementLogin.php',
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
@@ -308,17 +308,17 @@ $(".menuAnnulMenuAddProj").click(function(e){
 					createCookie('loged','1','30');
 					createCookie('login',login,'30');
 					// PROJET TREATMENT AJAX
-					/*
+					
 					$.ajax({
 						type: "POST",
-						url: './traitementAjax/rafraichir.php',
+						url: './traitementAjax/traitementDonnees.php',
 						dataType: 'html',
 						success: function(answer, statut){
-							//$("#content").append(answer);
+							$("#content").append(answer);
 						}
 				
 					});// END PROJET TREATMENT AJAX
-					*/
+					
            		}else if (answer == "failed") {
            			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
            			console.log('failed');
@@ -333,6 +333,36 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		});// END LOGINFORM AJAX
 	});// END LOGINFORM SUBMIT
 
+//DECONNEXION AJAX TREATMENT
+		$("#unconnected").swipe( {
+        	tap:function(event, target) {
+        		eraseCookie('loged');
+        		eraseCookie('login');
+          		//DECONNEXION AJAX
+          		$.ajax({
+					type: "POST",
+					url: './traitementAjax/traitementUnconnected.php',
+					dataType : 'text',
+					success : function(answer, statut){
+						console.log(statut);
+		           		if (answer == "success") {
+		           			$("#login").removeClass("displayNone");
+		           			$("#login").removeClass("translateX");
+		           		}else if (answer == "failed") {
+		           			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
+		           			console.log('failed');
+		           		};
+				    },
+				    error : function(resultat, statut, erreur){
+				    	console.log("error");
+				    },
+				    complete : function(resultat, statut){
+				    	console.log("complete");
+				    }
+				});// END DECONNEXION AJAX
+        	},
+        	threshold:50
+      	});
 
 //ADD PROJET TREATMENT
 	$("#addProjetForm").submit(function(e) {
