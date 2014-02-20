@@ -1,7 +1,6 @@
 <?php 
-
+print_r("test url");
 include('../core/init.php');
-//$_SESSION['id_user'] = 1;
 if (isset($_POST['titre']) AND isset($_POST['date']) AND strlen($_POST['titre'])>0) {
 
 	$projet = new Projet(array(
@@ -12,6 +11,7 @@ if (isset($_POST['titre']) AND isset($_POST['date']) AND strlen($_POST['titre'])
 	  'cours_projet' =>  $_POST['cours'],
 	  'briefing_projet' =>  $_POST['briefing']
 	));
+	print_r($projet);
 	$projetManager = new ProjetManager($db);
 	$projetId = $projetManager->addProjet($projet);
 	$projetManager->addCollaborateur($projetId, $_SESSION['id_user']);
