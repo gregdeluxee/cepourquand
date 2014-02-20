@@ -784,7 +784,7 @@ body, html {
   background: #282828;
   color: #fff;
   width: 100%;
-  padding: 22px 13px;
+  padding: 32px 13px 0 13px;
 }
 #addProjet form fieldset .dateName label {
   display: block;
@@ -821,6 +821,52 @@ body, html {
   color: none;
   box-shadow: 0px;
 }
+#addProjet form fieldset ul {
+  background: #fff;
+  float: left;
+  width: 100%;
+  background: #efefef;
+}
+#addProjet form fieldset ul li {
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  background: #bcbcbc;
+  float: left;
+  padding: 0;
+}
+#addProjet form fieldset ul li .projetJoursTache {
+  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  float: left;
+  width: 20%;
+  margin-right: 6%;
+  display: block;
+  text-align: right;
+}
+#addProjet form fieldset ul li p {
+  float: right;
+  width: 68%;
+  margin-right: 6%;
+  display: block;
+  padding: 13px 0;
+}
+#addProjet form fieldset ul li:nth-child(1) {
+  background: #efefef;
+}
+#addProjet form fieldset ul li:nth-child(2) {
+  background: #e2e2e2;
+}
+#addProjet form fieldset ul li:nth-child(3) {
+  background: #d5d5d5;
+}
+#addProjet form fieldset ul li:nth-child(4) {
+  background: #c9c9c9;
+}
+#addProjet form fieldset ul li:nth-child(5) {
+  background: #bcbcbc;
+}
 #addProjet form fieldset .addProjetAddTacheInputTache, #addProjet form fieldset .addProjetAddTacheInputCollabo {
   width: 100%;
   float: left;
@@ -833,15 +879,41 @@ body, html {
 #addProjet form fieldset .addProjetAddTacheInputTache span, #addProjet form fieldset .addProjetAddTacheInputCollabo span {
   width: 20%;
   float: left;
-  color: #fff;
+  color: #000;
   height: 40px;
-  background: #212121;
   font-size: 16px;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
-  text-align: center;
   line-height: 2.5;
 }
+#addProjet form fieldset .addProjetAddTacheInputTache span label, #addProjet form fieldset .addProjetAddTacheInputCollabo span label {
+  background: no-repeat;
+  width: 100%;
+  text-align: center;
+}
+#addProjet form fieldset .addProjetAddTacheInputTache label, #addProjet form fieldset .addProjetAddTacheInputCollabo label {
+  width: 20%;
+  float: left;
+  height: 40px;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 40%;
+}
 #addProjet form fieldset .addProjetAddTacheInputTache input, #addProjet form fieldset .addProjetAddTacheInputCollabo input {
+  width: 60%;
+  float: left;
+  color: #000;
+  text-indent: 11px;
+  height: 40px;
+  background: #efefef;
+}
+#addProjet form fieldset .addProjetAddTacheInputTache input[type=date], #addProjet form fieldset .addProjetAddTacheInputCollabo input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#addProjet form fieldset .addProjetAddTacheInputTache input[type=submit], #addProjet form fieldset .addProjetAddTacheInputCollabo input[type=submit] {
+  position: absolute;
+  left: -99999px;
+}
+#addProjet form fieldset .addProjetAddTacheInputCollabo input {
   width: 80%;
   float: left;
   color: #000;
@@ -944,7 +1016,7 @@ body, html {
   background: #282828;
   color: #fff;
   width: 100%;
-  padding: 22px 13px;
+  padding: 32px 13px 0 13px;
 }
 #projetModif form fieldset .dateName label {
   display: block;
@@ -981,6 +1053,52 @@ body, html {
   color: none;
   box-shadow: 0px;
 }
+#projetModif form fieldset ul {
+  background: #fff;
+  float: left;
+  width: 100%;
+  background: #efefef;
+}
+#projetModif form fieldset ul li {
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  background: #bcbcbc;
+  float: left;
+  padding: 0;
+}
+#projetModif form fieldset ul li .projetJoursTache {
+  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  float: left;
+  width: 20%;
+  margin-right: 6%;
+  display: block;
+  text-align: right;
+}
+#projetModif form fieldset ul li p {
+  float: right;
+  width: 68%;
+  margin-right: 6%;
+  display: block;
+  padding: 13px 0;
+}
+#projetModif form fieldset ul li:nth-child(1) {
+  background: #efefef;
+}
+#projetModif form fieldset ul li:nth-child(2) {
+  background: #e2e2e2;
+}
+#projetModif form fieldset ul li:nth-child(3) {
+  background: #d5d5d5;
+}
+#projetModif form fieldset ul li:nth-child(4) {
+  background: #c9c9c9;
+}
+#projetModif form fieldset ul li:nth-child(5) {
+  background: #bcbcbc;
+}
 #projetModif form fieldset .addProjetAddTacheInputTache, #projetModif form fieldset .addProjetAddTacheInputCollabo {
   width: 100%;
   float: left;
@@ -993,15 +1111,38 @@ body, html {
 #projetModif form fieldset .addProjetAddTacheInputTache span, #projetModif form fieldset .addProjetAddTacheInputCollabo span {
   width: 20%;
   float: left;
-  color: #fff;
+  color: #000;
   height: 40px;
-  background: #212121;
   font-size: 16px;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
-  text-align: center;
   line-height: 2.5;
+  background: no-repeat;
+  text-align: center;
+}
+#projetModif form fieldset .addProjetAddTacheInputTache label, #projetModif form fieldset .addProjetAddTacheInputCollabo label {
+  width: 20%;
+  float: left;
+  height: 40px;
+  background: url(../img/dateaddprojet.png) no-repeat center;
+  background-size: 40%;
 }
 #projetModif form fieldset .addProjetAddTacheInputTache input, #projetModif form fieldset .addProjetAddTacheInputCollabo input {
+  width: 60%;
+  float: left;
+  color: #000;
+  text-indent: 11px;
+  height: 40px;
+  background: #efefef;
+}
+#projetModif form fieldset .addProjetAddTacheInputTache input[type=date], #projetModif form fieldset .addProjetAddTacheInputCollabo input[type=date] {
+  position: absolute;
+  left: -99999px;
+}
+#projetModif form fieldset .addProjetAddTacheInputTache input[type=submit], #projetModif form fieldset .addProjetAddTacheInputCollabo input[type=submit] {
+  position: absolute;
+  left: -99999px;
+}
+#projetModif form fieldset .addProjetAddTacheInputCollabo input {
   width: 80%;
   float: left;
   color: #000;
