@@ -72,7 +72,9 @@ $latolight:'latolight', Arial, Helvetica, sans-serif;
 $latoregular:'latoregular', Arial, Helvetica, sans-serif;
 $latobold:'latobold', Arial, Helvetica, sans-serif;
 
- $SourceSansPro:'Source Sans Pro', Helvetica,  sans-serif;
+$SourceSansPro:'Source Sans Pro', Helvetica,  sans-serif;
+$SourceSansProLight:'SourceSansPro-Light', Helvetica,  sans-serif;
+$SourceSansProExtraLight:'SourceSansPro-ExtraLight', Helvetica,  sans-serif;
 
 $liBaseColor: #1a1a1a;
 $liBaseColorDark: #efefef;
@@ -83,7 +85,6 @@ $redMenu : #d7403f;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-
 body, html{
 	-webkit-user-select: none;
 	-webkit-text-size-adjust: 100%;
