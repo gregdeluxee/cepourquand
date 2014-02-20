@@ -453,6 +453,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 				$idProjet = $(this).data("id-projet");
 				var donnees = $idProjet;
 				if(direction == "right"){
+/*
 					$.ajax({
 						type: "POST",
 						url: './traitementAjax/traitementChekedProjet.php',
@@ -474,6 +475,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 
 					    }
 					});// END PROJET TREATMENT AJAX
+*/
 				}
 				else if(direction == "left"){
 					
