@@ -1,12 +1,40 @@
+//START JAVASCRIPT
+/*function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
+*/
+//END JAVASCRIPT
+
+
+
 //START JQUERY
 $(function(){
-  var contentmove = $(".contentmove");
-  //Are you already logged ?
-  	logedCookie = readCookie('loged');
-	if (logedCookie =="1") {
-		$("#projets").removeClass("displayNone");
-		$("#taches").removeClass("displayNone");
-	};
+  	var contentmove = $(".contentmove");
+  	//Virer le login si deja connecté
+  	$("#login").addClass("displayNone");
+  	$("#login").addClass("translateX");
+	$("#projets").removeClass("displayNone");
 
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
@@ -76,12 +104,6 @@ $(function(){
 		$("#menuAddProjet").addClass("displayNone");
 	})
 
-	$(".menuLateRalGoDeco").swipe( {
-    	tap:function(event, target) {
-      		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
-    	},
-    	threshold:50
-  	});
 
 	$(".menuLateRalGoFiltre").click(function(){
 		$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
@@ -270,8 +292,11 @@ $(".menuAnnulMenuAddProj").click(function(e){
 
 
 //DECONNEXION AJAX TREATMENT
-		$("#unconnected").swipe( {
+        		console.log("COUCOU");
+		//$("#unconnected").click(function(){
+		$("#unconnected").swipe({
         	tap:function(event, target) {
+        		console.log("COUCOU");
         		eraseCookie('loged');
         		eraseCookie('login');
           		//DECONNEXION AJAX
@@ -284,6 +309,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		           		if (answer == "success") {
 		           			$("#login").removeClass("displayNone");
 		           			$("#login").removeClass("translateX");
+		           			$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
 		           		}else if (answer == "failed") {
 		           			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
 		           			console.log('failed');
@@ -296,8 +322,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 				    	console.log("complete");
 				    }
 				});// END DECONNEXION AJAX
-        	},
-        	threshold:50
+        	}
       	});
 
 //ADD PROJET TREATMENT
