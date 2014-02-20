@@ -1,3 +1,7 @@
+//var urlLink ='http://localhost/cepourquand'; //LOCAL
+var urlLink ='http://cepourkan.eu'; //ONLINE
+
+
 //START JAVASCRIPT
 function createCookie(name,value,days) {
 	if (days) {
@@ -40,7 +44,7 @@ $(function(){
 		// LOGINFORM AJAX
 		$.ajax({
 			type: "POST",
-			url: '../traitementAjax/traitementLogin.php',
+			url: urlLink+'/traitementAjax/traitementLogin.php',
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
@@ -56,7 +60,7 @@ $(function(){
 
 					$.ajax({
 						type: "POST",
-						url: '../traitementAjax/traitementDonnees.php',
+						url: urlLink+'/traitementAjax/traitementDonnees.php',
 						dataType: 'html',
 						success: function(answer, statut){
 							$("#content").append(answer);
