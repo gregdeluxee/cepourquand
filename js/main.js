@@ -154,13 +154,7 @@ $(function(){
 
 
 
-	$(".projetsClose").click(function() {
-		$this = $(this);
-		$(".projetsOpen").addClass("displayNone");
-		var projetsOpen = $this.next(".projetsOpen");
-		projetsOpen.toggleClass("displayNone");
-		$this.parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
-	})
+	
 
 
 	$(".addCollaboProjet").click(function(){
@@ -309,11 +303,9 @@ $(".menuAnnulMenuAddProj").click(function(e){
 
 
 //DECONNEXION AJAX TREATMENT
-        		console.log("COUCOU");
 		//$("#unconnected").click(function(){
 		$("#unconnected").swipe({
         	tap:function(event, target) {
-        		console.log("COUCOU");
         		eraseCookie('loged');
         		eraseCookie('login');
           		//DECONNEXION AJAX
@@ -413,6 +405,89 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		    }
 		});// END PROJET TREATMENT AJAX
 	});// END PROJET SUBMIT
+
+
+
+
+	$(".projetsClose").swipe({
+		//excludedElements: "button, input, select, textarea, .noSwipe",
+		allowPageScroll: "vertical",
+		threshold:0,
+		triggerOnTouchLeave:true,
+		fingers:'all',
+		swipeStatus:function(event, phase, direction, distance, duration, fingerCount){
+			console.log(phase);
+			console.log(duration);
+			//On start
+			if(phase == "start"){
+				
+			};
+			//Finger animation
+			if(phase == "move"){
+				if(direction == "right"){
+					
+				}
+				else if(direction == "left"){
+					
+				}
+			};
+			//Redirect when click/tap a link
+			if(phase == "end" && duration < 150 ){
+				console.log("OUVRE");
+				if ($(this).hasClass("xxOpen")) {
+					$(".projetsOpen").addClass("displayNone");
+					$(this).removeClass("xxOpen");
+					console.log("il l'aaaaaaa")
+				}else{
+					$(".projetsOpen").addClass("displayNone");
+					var projetsOpen = $(this).next(".projetsOpen");
+					projetsOpen.toggleClass("displayNone");
+					$(this).parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
+					$(".projetsClose").removeClass("xxOpen");
+					$(this).addClass("xxOpen");
+					console.log("il l'aaaaaaaaaaaaaaaaaaaaaaaaaa")
+				}
+			};
+			//Swipe animation 
+			if(phase == "end" && duration > 150 ){
+				$idProjet = $(this).data("id-projet");
+				var donnees = $idProjet;
+				if(direction == "right"){
+					$.ajax({
+						type: "POST",
+						url: './traitementAjax/traitementChekedProjet.php',
+						data: donnees,
+						dataType : 'text',
+						success : function(answer, statut){
+							console.log(answer);
+							console.log(donnees);
+							if (answer == "success") {
+
+							}else if (answer == "failed") {
+								console.log("failed")
+			           		};
+						},
+					    error : function(resultat, statut, erreur){
+					    	console.log("error")
+					    },
+					    complete : function(resultat, statut){
+
+					    }
+					});// END PROJET TREATMENT AJAX
+				}
+				else if(direction == "left"){
+					
+				}
+			};
+			if(phase == "cancel"){
+				//nothing happen. Normaly impossible to get this phase.
+				//alert(phase);
+			};
+		}
+	});
+
+
+
 
 
 
