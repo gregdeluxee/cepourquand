@@ -660,7 +660,7 @@ body, html {
 #filtre {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  padding-top: 38px;
+  padding-top: 60px;
 }
 #filtre ul li {
   width: 100%;

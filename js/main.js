@@ -45,7 +45,7 @@ $(function(){
 	$(".menuAdd").swipe({
 		tap:function(event, target) {
 			$("#projets, #menu").addClass("displayNone");
-			$("#menuLateral").toggleClass("displayNone");
+			//$("#menuLateral").toggleClass("displayNone");
 			$("#menuAddProjet, #addProjet").removeClass("displayNone");
 		}
 	});
@@ -54,7 +54,7 @@ $(function(){
 
 	$(".menuAnnulMenuAddProjBis").swipe({
 		tap:function(event, target) {
-			$("#menuLateral").toggleClass("displayNone");
+			//$("#menuLateral").toggleClass("displayNone");
 			$("#menu, #projets").removeClass("displayNone");
 			$("#menuModifrojet, #projetModif").addClass("displayNone");
 		}
@@ -64,7 +64,7 @@ $(function(){
 
 	$(".menuAnnulMenuAddProj").swipe({
 		tap:function(event, target) {
-			$("#menuLateral").toggleClass("displayNone");
+			//$("#menuLateral").toggleClass("displayNone");
 			$("#menu, #projets").removeClass("displayNone");
 			$("#menuAddProjet, #addProjet").addClass("displayNone");
 		}
@@ -74,7 +74,7 @@ $(function(){
 
 	$(".projetmodifedit").swipe({
 		tap:function(event, target) {
-			$("#menuLateral").toggleClass("displayNone");
+			//$("#menuLateral").toggleClass("displayNone");
 			$("#menu, #projets").addClass("displayNone");
 			$("#menuModifrojet, #projetModif").removeClass("displayNone");
 		}
@@ -150,11 +150,8 @@ $(function(){
 
 	$(".menuAnnulMenuAddProj").swipe({
 		tap:function(event, target) {
-			$("#addProjet").addClass("displayNone");
-			$("#projets").removeClass("displayNone");
-			$("#menuLateral").removeClass("displayNone");
-			$("#menu").removeClass("displayNone");
-			$("#menuAddProjet").addClass("displayNone");
+			$("#addProjet, #menuAddProjet").addClass("displayNone");
+			$("#projets, #menu").removeClass("displayNone");
 		}
 	});
 
