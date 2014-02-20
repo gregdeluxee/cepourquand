@@ -168,6 +168,12 @@ $(function(){
 		}
 	});
 
+	// $(".addProjetAddTache").click(function(){
+	// 	console.log("kedis");
+	// 	$(".addProjetAddTacheInputTache").toggleClass("displayNone");
+	// 	$(".addProjetAddTacheInputCollabo").addClass("displayNone");
+	// });
+
 	$(".addProjetAddTacheInputCollabo").children("span").swipe({
 		tap:function(event, target) {
 			$(".addProjetAddTacheInputCollabo").addClass("displayNone");
@@ -388,7 +394,7 @@ $(function(){
 							if (answer == "success") {
 								console.log(projet);
 								projet.parent().css("-webkit-transform","translateX(-100%)");
-								setTimeout(function(){	projet.addClass("displayNone");},1000);	
+								setTimeout(function(){	projet.addClass("displayNone");},1000);
 							}else if (answer == "failed") {
 								console.log("failed");
 			           		};
@@ -413,7 +419,7 @@ $(function(){
 							if (answer == "success") {
 								console.log("success");
 								projet.parent().css("-webkit-transform","translateX(100%)");
-								setTimeout(function(){	projet.parent().addClass("displayNone");},1000);								
+								setTimeout(function(){	projet.parent().addClass("displayNone");},1000);
 							}else if (answer == "failed") {
 								console.log("failed");
 			           		};
