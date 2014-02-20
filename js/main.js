@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+//START JAVASCRIPT
+function createCookie(name,value,days) {
+=======
 //START JAVASCRIPT
 /*function createCookie(name,value,days) {
+>>>>>>> 0d1d5ba27f1aba59e0f90635c973ca80e7a40941
 	if (days) {
 		var date = new Date();
 		date.setTime(date.getTime()+(days*24*60*60*1000));
@@ -23,11 +29,22 @@ function readCookie(name) {
 function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
+<<<<<<< HEAD
+
+
+//bouncefix.add('page');
+
+//END JAVASCRIPT
+
+=======
+>>>>>>> 44907e0a440fbae600ca3a0df2651b644483d62a
+=======
 */
 //END JAVASCRIPT
 
 
 
+>>>>>>> 0d1d5ba27f1aba59e0f90635c973ca80e7a40941
 //START JQUERY
 $(function(){
   	var contentmove = $(".contentmove");
