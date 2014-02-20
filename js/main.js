@@ -154,7 +154,7 @@ $(function(){
 
 
 
-	
+
 
 
 	$(".addCollaboProjet").click(function(){
@@ -188,108 +188,8 @@ $(function(){
 
 
 
-///////   SWIPE AMODIFIER
+///////////////////////////////////   MUR DE BERLIN !!!!!!!!! je prend les comuniste !
 
-		// $("#projets > ul > li").click(function() {
-		// 	$this = $(this);
-		// 	$this.css("-webkit-transform", "translateX(0px)");
-		// 	$this.toggleClass("projetsOppenClass");
-		// })
-
-
-// $("#projets > ul > li").swipe( {
-//         swipeStatus:function(event, phase, direction, distance, duration)
-//         {
-// 			$this = $(this);
-
-// 		if (phase == "move")
-// 			$this.css("-webkit-transform", "translateX("+(distance)+"px)");
-// 			$this.toggleClass("projetsOppenClass");
-
-// 			if (phase == "end"){
-// 				if (distance >=250) {
-// 					if (direction == "left") {
-// 						$this.css("-webkit-transform", "translateX(-100px)");
-// 					}else{
-// 						$this.css("-webkit-transform", "translateX(100px)");
-// 					};
-// 				}else{
-// 					$this.css("-webkit-transform", "translateX(0px)");
-// 				};
-
-// 			}
-//           // $this.css("background", "red");
-//         },
-//         // triggerOnTouchEnd:false,
-//         threshold:120
-//       });
-
-
- // $("#projets > ul > li").swipe( {
- //        swipeStatus:function(event, phase, direction, distance, duration)
- //        {
-	// 		$this = $(this);
-
-	// 		if (distance>100)
-	// 			$this.css("-webkit-transform", "translateX(0px)");
-
-	// 		if (distance<100){
-	// 			if (direction == "left") {
-	// 				$this.css("-webkit-transform", "translateX(-100px)");
-	// 			}else{
-	// 				$this.css("-webkit-transform", "translateX(100px)");
-	// 			};
-	// 		}
- //          // $this.css("background", "red");
- //        },
- //        triggerOnTouchEnd:false,
- //        threshold:100
- //      });
-
-
-
-   //     $("#test").swipe( {
-			// swipeStatus:function(event, phase, direction, distance, duration, fingers)
-			// {
-			// 	var str = "<h4>Swipe Phase : " + phase + "<br/>";
-			// 	str += "Direction from inital touch: " + direction + "<br/>";
-			// 	str += "Distance from inital touch: " + distance + "<br/>";
-			// 	str += "Duration of swipe: " + duration + "<br/>";
-			// 	str += "Fingers used: " + fingers + "<br/></h4>";
-
-			// 	//Here we can check the:
-			// 	//phase : 'start', 'move', 'end', 'cancel'
-			// 	//direction : 'left', 'right', 'up', 'down'
-			// 	//distance : Distance finger is from initial touch point in px
-			// 	//duration : Length of swipe in MS
-			// 	//fingerCount : the number of fingers used
-
-			// 	if (phase!="cancel" && phase!="end") {
-			// 		if (duration<5000)
-			// 			str +="Under maxTimeThreshold.<h3>Swipe handler will be triggered if you release at this point.</h3>"
-			// 		else
-			// 			str +="Over maxTimeThreshold. <h3>Swipe handler will be canceled if you release at this point.</h3>"
-
-			// 		if (distance<200)
-			// 			str +="Not yet reached threshold.  <h3>Swipe will be canceled if you release at this point.</h3>"
-			// 		else
-			// 			str +="Threshold reached <h3>Swipe handler will be triggered if you release at this point.</h3>"
-			// 	}
-
-			// 	if (phase=="cancel")
-			// 		str +="<br/>Handler not triggered. <br/> One or both of the thresholds was not met "
-			// 	if (phase=="end")
-			// 		str +="<br/>Handler was triggered."
-
-			// 	$("#test").html(str);
-			// },
-			// threshold:200,
-			// maxTimeThreshold:5000,
-			// fingers:'all'
-			// });
-
-
-///////   SWIPE AMODIFIER FIN
 
 $(".menuAnnulMenuAddProj").click(function(e){
 		e.preventDefault();
@@ -420,15 +320,15 @@ $(".menuAnnulMenuAddProj").click(function(e){
 			console.log(duration);
 			//On start
 			if(phase == "start"){
-				
+
 			};
 			//Finger animation
 			if(phase == "move"){
 				if(direction == "right"){
-					
+
 				}
 				else if(direction == "left"){
-					
+
 				}
 			};
 			//Redirect when click/tap a link
@@ -448,7 +348,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 					console.log("il l'aaaaaaaaaaaaaaaaaaaaaaaaaa")
 				}
 			};
-			//Swipe animation 
+			//Swipe animation
 			if(phase == "end" && duration > 150 ){
 				$idProjet = $(this).data("id-projet");
 				var donnees = $idProjet;
@@ -476,7 +376,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 					});// END PROJET TREATMENT AJAX
 				}
 				else if(direction == "left"){
-					
+
 				}
 			};
 			if(phase == "cancel"){
