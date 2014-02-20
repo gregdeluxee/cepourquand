@@ -114,7 +114,7 @@ $(function(){
 
 // les 4 diferent bouton dans le menu lateral
 
-	})
+
 	$(".menuLateRalGoProjet").swipe({
 		tap:function(event, target) {
 			$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
