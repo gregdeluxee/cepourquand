@@ -107,7 +107,7 @@ $(function(){
 			$("#menuLateral").toggleClass("displayNone");
 			setTimeout(function(){
 				contentmove.toggleClass("menu_actif");
-			},300);
+			},50);
 		}
 	});
 	$(".menuLateRalGoTache").swipe({
@@ -117,7 +117,7 @@ $(function(){
 			$("#menuLateral").toggleClass("displayNone");
 			setTimeout(function(){
 				contentmove.toggleClass("menu_actif");
-			},300);
+			},50);
 		}
 	});
 	$(".menuLateRalGoFiltre").swipe({
@@ -127,7 +127,7 @@ $(function(){
 			$("#menuLateral").toggleClass("displayNone");
 			setTimeout(function(){
 				contentmove.toggleClass("menu_actif");
-			},300);
+			},50);
 		}
 	});
 	$(".menuLateRalGoDeco").swipe({
