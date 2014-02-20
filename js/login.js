@@ -40,7 +40,7 @@ $(function(){
 		// LOGINFORM AJAX
 		$.ajax({
 			type: "POST",
-			url: './traitementAjax/traitementLogin.php',
+			url: '/traitementAjax/traitementLogin.php',
 			data: donnees,
 			dataType : 'text',
 			success : function(answer, statut){
@@ -56,7 +56,7 @@ $(function(){
 
 					$.ajax({
 						type: "POST",
-						url: './traitementAjax/traitementDonnees.php',
+						url: '/traitementAjax/traitementDonnees.php',
 						dataType: 'html',
 						success: function(answer, statut){
 							$("#content").append(answer);
