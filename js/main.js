@@ -156,7 +156,6 @@ $(function(){
 
 	$(".projetsClose").click(function() {
 		$this = $(this);
-		console.log("kedisezfsdfssss");
 		$(".projetsOpen").addClass("displayNone");
 		var projetsOpen = $this.next(".projetsOpen");
 		projetsOpen.toggleClass("displayNone");

@@ -563,6 +563,43 @@ body, html {
 #chat .contentChat {
   float: left;
 }
+#chat .contentChat ul li {
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
+  padding: 10px;
+  width: 100%;
+  float: left;
+}
+#chat .contentChat ul li .nomEtImgage {
+  width: 30%;
+  float: left;
+}
+#chat .contentChat ul li .nomEtImgage img {
+  float: left;
+  padding-top: 10px;
+}
+#chat .contentChat ul li .nomEtImgage span {
+  width: 100%;
+  float: left;
+  text-align: center;
+  color: #fff;
+}
+#chat .contentChat ul li .contentChatContenuEtDate {
+  width: 70%;
+  float: left;
+  padding: 10px;
+}
+#chat .contentChat ul li .contentChatContenuEtDate p {
+  width: 100%;
+  float: left;
+  display: block;
+  background: #fff;
+}
+#chat .contentChat ul li .contentChatContenuEtDate span {
+  width: 100%;
+  float: left;
+  color: #fff;
+  text-align: right;
+}
 #chat .inputChat {
   position: absolute;
   width: 100%;
@@ -578,7 +615,7 @@ body, html {
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 16px;
   color: #000;
-  padding: 0;
+  padding: 0 0 0 15px;
   margin: 0;
   border-radius: 0;
   -webkit-appearance: none;
