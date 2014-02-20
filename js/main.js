@@ -18,7 +18,6 @@ $(function(){
 	var filtreCheck = $("#filtre input");
 	var filtreCheckParent = $("#filtre input").parent("li");
 
-	$("#projets").removeClass("displayNone");////AS UPPPP
 
 
 	$(".menuAddTache").click(function() {
@@ -312,6 +311,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		           		if (answer == "success") {
 		           			$("#login").removeClass("displayNone");
 		           			$("#login").removeClass("translateX");
+							contentmove.removeClass("menu_actif");
 		           			$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
 							$("body script[src='js/main.js']").remove();
 							$("#taches, #projets, #filtre, #chat, #addProjet, #projetModif").remove();
