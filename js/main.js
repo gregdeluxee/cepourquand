@@ -125,7 +125,7 @@ $(function(){
 		$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
 		$(" #projets, #menu").removeClass("displayNone");
 		contentmove.toggleClass("menu_actif");
-				$("#menuLateral").toggleClass("displayNone");
+		$("#menuLateral").toggleClass("displayNone");
 
 	})
 
@@ -145,21 +145,22 @@ $(function(){
 		$this = $(this);
 		var projetsOpen = $this.next(".projetsOpen");
 		projetsOpen.toggleClass("displayNone");
-		console.log("kedis");
 		$this.parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
 	})
 
 
 	$(".addCollaboProjet").click(function(){
 		$(".addProjetAddTacheInputCollabo").toggleClass("displayNone");
+		$(".addProjetAddTacheInputTache").addClass("displayNone")
 	})
+	$(".addProjetAddTache").click(function(){
+		$(".addProjetAddTacheInputTache").toggleClass("displayNone");
+		$(".addProjetAddTacheInputCollabo").addClass("displayNone");
+	})
+
 	$(".addProjetAddTacheInputCollabo").children("span").click(function(){
 		$(".addProjetAddTacheInputCollabo").addClass("displayNone");
 	});
-
-	$(".addProjetAddTache").click(function(){
-		$(".addProjetAddTacheInputTache").toggleClass("displayNone");
-	})
 	$(".addProjetAddTacheInputTache").children("span").click(function(){
 		$(".addProjetAddTacheInputTache").addClass("displayNone");
 	})
@@ -312,6 +313,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		           			$("#login").removeClass("displayNone");
 		           			$("#login").removeClass("translateX");
 							contentmove.removeClass("menu_actif");
+							$("#menuLateral").toggleClass("displayNone");
 		           			$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
 							$("body script[src='js/main.js']").remove();
 							$("#taches, #projets, #filtre, #chat, #addProjet, #projetModif").remove();
