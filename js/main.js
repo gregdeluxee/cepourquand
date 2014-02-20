@@ -119,14 +119,25 @@ $(function(){
 	$(".menuLateRalGoFiltre").click(function(){
 		$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
 		$("#filtre, #menuFiltres").removeClass("displayNone");
+		contentmove.toggleClass("menu_actif");
+		$("#menuLateral").toggleClass("displayNone");
+
+
 	})
 	$(".menuLateRalGoTache").click(function(){
 		$("#filtre, #menuFiltres, #projets, #menu").addClass("displayNone");
 		$("#taches, #menuTache").removeClass("displayNone");
+		contentmove.toggleClass("menu_actif");
+		$("#menuLateral").toggleClass("displayNone");
+
+
 	})
 	$(".menuLateRalGoProjet").click(function(){
 		$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
 		$(" #projets, #menu").removeClass("displayNone");
+		contentmove.toggleClass("menu_actif");
+				$("#menuLateral").toggleClass("displayNone");
+
 	})
 
 
@@ -173,6 +184,7 @@ $(function(){
 	  		$this.parent("li").addClass("liBgNo");
 	  	}
 	})
+
 
 
 
@@ -308,7 +320,7 @@ $(".menuAnnulMenuAddProj").click(function(e){
 					createCookie('loged','1','30');
 					createCookie('login',login,'30');
 					// PROJET TREATMENT AJAX
-					
+
 					$.ajax({
 						type: "POST",
 						url: './traitementAjax/traitementDonnees.php',
@@ -316,9 +328,9 @@ $(".menuAnnulMenuAddProj").click(function(e){
 						success: function(answer, statut){
 							$("#content").append(answer);
 						}
-				
+
 					});// END PROJET TREATMENT AJAX
-					
+
            		}else if (answer == "failed") {
            			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
            			console.log('failed');

@@ -884,10 +884,6 @@ body, html {
   font-size: 16px;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   line-height: 2.5;
-}
-#addProjet form fieldset .addProjetAddTacheInputTache span label, #addProjet form fieldset .addProjetAddTacheInputCollabo span label {
-  background: no-repeat;
-  width: 100%;
   text-align: center;
 }
 #addProjet form fieldset .addProjetAddTacheInputTache label, #addProjet form fieldset .addProjetAddTacheInputCollabo label {
@@ -1116,7 +1112,6 @@ body, html {
   font-size: 16px;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   line-height: 2.5;
-  background: no-repeat;
   text-align: center;
 }
 #projetModif form fieldset .addProjetAddTacheInputTache label, #projetModif form fieldset .addProjetAddTacheInputCollabo label {

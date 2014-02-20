@@ -855,16 +855,11 @@ body{
 					float: left;
 					color: #000;
 					height: 40px;
-					// background: #212121;
 					font-size: 16px;
 					font-family: $SourceSansProLight;
 					line-height: 2.5;
-					label{
-						background: no-repeat;
-						width: 100%;
-						text-align: center;
+					text-align: center;
 
-					}
 				}
 				label{
 					width: 20%;
@@ -1101,11 +1096,9 @@ body{
 					float: left;
 					color: #000;
 					height: 40px;
-					// background: #212121;
 					font-size: 16px;
 					font-family: $SourceSansProLight;
 					line-height: 2.5;
-					background: no-repeat;
 					text-align: center;
 
 				}
