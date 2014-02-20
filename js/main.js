@@ -327,6 +327,8 @@ $(".menuAnnulMenuAddProj").click(function(e){
 		           			$("#login").removeClass("displayNone");
 		           			$("#login").removeClass("translateX");
 		           			$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
+							$("body script[src='js/main.js']").remove();
+							$("#taches, #projets, #filtre, #chat, #addProjet, #projetModif").remove();
 		           		}else if (answer == "failed") {
 		           			//WHAT HAPPEN IF BAD LOGIN OR BAD PASSWORD
 		           			console.log('failed');

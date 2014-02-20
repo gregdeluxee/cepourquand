@@ -49,6 +49,7 @@ $(function(){
            			setTimeout(function(){ $("#login").addClass("displayNone");	}, 600);
 					$("#login").addClass("translateX");
 					$("#projets").removeClass("displayNone");
+					$("#menuTache, #menu, #menuFiltres").removeClass("displayNone");
 					createCookie('loged','1','30');
 					createCookie('login',login,'30');
 					// PROJET TREATMENT AJAX
@@ -59,7 +60,6 @@ $(function(){
 						dataType: 'html',
 						success: function(answer, statut){
 							$("#content").append(answer);
-							$("body").append('<script src="js/jquery.touchSwipe.min.js"></script>');
 							$("body").append('<script src="js/main.js"></script>');
 						}
 
