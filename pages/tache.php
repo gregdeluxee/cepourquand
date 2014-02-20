@@ -1,17 +1,15 @@
 <?php
 	// AFFICHER TITRE PROJET A LA PLACE DE L'ID
 	$tacheManager = new TacheManager($db);
-    $taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);
+	if ($tacheManager->exists($_SESSION['id_user'])) {
+    	$taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);		
+	}
 
-
-	$tacheManager = new TacheManager($db);
-    $tache = $tacheManager->getTacheByUserId("1");
-    print_r($tache);
 
 ?>
 
 
-<div id="taches" class="contentmove"> <!-- displayNone -->
+<div id="taches" class="contentmove displayNone"> <!-- displayNone -->
 	<div id="addTaches" class="displayNone">
 		<form id="addTacheForm" action="#" method="POST">
 			<fieldset>
@@ -26,16 +24,29 @@
 
 	<ul>
 		<?php 
-		foreach ($taches as $tache) {
+		if ($tacheManager->exists($_SESSION['id_user'])) {
+			foreach ($taches as $tache) {
+				?>
+				<li>
+					<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php echo $tache->jourRestant();?></span>j</span>
+					<div>
+						<p><?php echo $tache->titre_tache(); ?></p>
+						<span class="tacheProjectName"><?php echo $tache->id_projet_tache(); ?></span>
+					</div>
+				</li>
+				<?php 
+			}
+		}else{
 			?>
 			<li>
-				<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php echo $tache->jourRestant();?></span>j</span>
+				<span class="joursTache" ><span class="nbr_jours_tache_tache">1</span>j</span>
 				<div>
-					<p><?php echo $tache->titre_tache(); ?></p>
-					<span class="tacheProjectName"><?php echo $tache->id_projet_tache(); ?></span>
+					<p>Appuie sur + pour ajouter une tâche ;)</p>
+					<span class="tacheProjectName"></span>
 				</div>
 			</li>
-			<?php 
+			<li>
+			<?php
 		}
 
 		?>

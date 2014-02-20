@@ -1,7 +1,7 @@
 <?php 
 
 include('../core/init.php');
-$_SESSION['id_user'] = 1;
+//$_SESSION['id_user'] = 1;
 if (isset($_POST['titre']) AND isset($_POST['date']) AND strlen($_POST['titre'])>0) {
 
 	$projet = new Projet(array(
@@ -13,13 +13,13 @@ if (isset($_POST['titre']) AND isset($_POST['date']) AND strlen($_POST['titre'])
 	));
 	$projetManager = new ProjetManager($db);
 	$projetId = $projetManager->addProjet($projet);
-	print_r($projetId);
-	if (isset($_POST['collaborateurs'])) {
+	$projetManager->addCollaborateur($projetId, $_SESSION['id_user']);
+	print_r($_POST['collaborateurs']);
+	if (isset($_POST['collaborateurs']) AND strlen($_POST['collaborateurs'])>0) {
 		$collaborateurs = $_POST['collaborateurs'];
 		$collaborateurs = trim($collaborateurs);
 		$collaborateurs = preg_replace('/\s{2,}/', ' ', $collaborateurs);
 		$collaborateur = explode(' ',$collaborateurs);
-		print_r($collaborateur);
 
 		foreach ($collaborateur as $value) {
 			$userManager = new UserManager($db);

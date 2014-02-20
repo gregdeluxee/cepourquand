@@ -3,7 +3,6 @@
     if (isset($_COOKIE['login'])) {
         $_SESSION['login'] = $_COOKIE['login'];
     }
-    print_r($_COOKIE);
  ?>
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
@@ -47,8 +46,6 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     </head>
     <body>
-        <p>TEST</p>
-
 
 
 <?php
@@ -59,35 +56,33 @@
     //$projetManager = new ProjetManager($db);
     //$projets = $projetManager->getProjetByUserId("1");
     //print_r($projets);
-
 ?>
 
-        <p>TEST</p>
         <!-- NAV -->
-        <?php// include('inc/menu.php'); ?>
-        <?php// include('inc/menuLateral.php'); ?>
+        <?php include('inc/menu.php'); ?>
+        <?php include('inc/menuLateral.php'); ?>
         <?php include('inc/menuTache.php'); ?>
         <?php include('inc/menuAddTache.php'); ?>
-        <?php// include('inc/menuFiltres.php'); ?>
-        <?php// include('inc/menuChat.php'); ?>
+        <?php include('inc/menuFiltres.php'); ?>
+        <?php include('inc/menuChat.php'); ?>
         <?php include('inc/menuAddProjet.php'); ?>
-        <?php// include('inc/menuModifProjet.php'); ?>
+        <?php include('inc/menuModifProjet.php'); ?>
         <!-- END NAV -->
 
         <!-- CONTENT  -->
         <div id="content">
 
             <?php
-            if (!isset($_COOKIE['loged']) OR $_COOKIE['loged'] == "0") {
-                include('pages/login.php'); 
-            }
+                if (!isset($_COOKIE['loged']) OR $_COOKIE['loged'] == "0") {
+                    include('pages/login.php'); 
+                }
             ?>
-            <?php// include('pages/projet.php'); ?>
-            <?php// include('pages/tache.php'); ?>
-            <?php// include('pages/filtre.php'); ?>
-            <?php// include('pages/chat.php'); ?>
+            <?php include('pages/projet.php'); ?>
+            <?php include('pages/tache.php'); ?>
+            <?php include('pages/filtre.php'); ?>
+            <?php include('pages/chat.php'); ?>
             <?php include('pages/addProjet.php'); ?>
-            <?php// include('pages/modifProjet.php'); ?>
+            <?php include('pages/modifProjet.php'); ?>
 
         </div>
         <!-- END CONTENT -->

@@ -1,7 +1,6 @@
 <?php 
 
 include('../core/init.php');
-$_SESSION['id_user'] = 1;
 if (isset($_POST['titre']) AND isset($_POST['date'])) {
 
 	$tache = new Tache(array(
@@ -12,8 +11,6 @@ if (isset($_POST['titre']) AND isset($_POST['date'])) {
 	  'checked_tache' => "0",
 	  'deleted_tache' => "0"
 	));
-	print_r($tache);
-	print_r($_SESSION['id_user']);
 
 	$tacheManager = new TacheManager($db);
 	$tacheManager->addTache($tache);

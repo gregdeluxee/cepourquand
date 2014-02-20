@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="menuTache" class="contentmove displayNone">
+<div id="menuTache" class="contentmove displayNone"> <!--displayNone-->
 	<nav>
 		<ul>
 			<li class="menuMenu">

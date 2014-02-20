@@ -4,5 +4,25 @@ Ajouter projet :
 	En javascript, lors qu'on valide la tache, l'afficher et introduire un nouveau input pour ajouter une autre tache et ainsi de suite.
 	name tache => tache1,tache2,tache3, etc
 	name date tache => dateTache1,dateTache2,dateTache3, etc
+	Même design que l'ajout de tache sur la page projet stp ;) j'ai pas reussi à le mettre !
 
-	Il n'y a pas de différence visible entre ajouter collaborateur et ajouter une tache mis à part le placeholder. Je pense il faut pas permettre les deux en même temps d'une facon ou d'une autre.
+Modifier projet : idem que ajouter projet
+
+Projet :
+	Même que pr Ajouter projet avec les taches, les afficher etc..
+
+Tache : 
+	Même principe
+
+
+Demain je suis là debut aprem, sinon jserai trop claqué. Faut vraiment que tout soit nikel en JS et css excepté la suite ici :
+
+On changera ensemble tes click par des tap (pour plus de fluiditer...) et on fera le swipe
+Essaye d'uniformiser les typos si cest pas finis et de gérer l'affichage de 1 jour, 22 jour ou 333 jours  pour les taches et projet, faire un truc propre.
+
+Si t'as du retard, ça va tous nous mettre mal car je depends de tes dernieres modifs, surtout le html.
+Garde en tête qu'il faut compter 3-4h de debug en groupe, ça serait mieux de le faire à l'école que sur skype et il y a la journée de vdd à prévoir.
+
+A taleur, bon boulot ;)
+
+Encore un truc, n'insère rien ENTRE les traitements ajax stp. Organise toi comme tu le sens au dessus et moi en dessous ;) Et surtout, COMMENTE TON CODE ! J'ai voulu regarder un peu c'est bon j'ai abandoné après 15 secondes... si on doit débug et qu'il y a aucun coms, c'est la mort assurée ;) xD

@@ -51,7 +51,8 @@ class TacheManager{
     public function getTacheByUserId($id_user){
       $sql = 'SELECT * 
       FROM tache 
-      WHERE auteur_tache= :id_user';
+      WHERE auteur_tache= :id_user
+      ORDER BY date_remise_tache';
       $q = $this->_db->prepare($sql);
       $q->execute(array(':id_user' => $id_user));
       while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
@@ -66,5 +67,9 @@ class TacheManager{
     $projet = $projetManager->getProjetById($id_projet);
     return $projet->titre_projet();
   }//End function titreProjet
+
+    public function exists($info){
+        return (bool) $this->_db->query('SELECT COUNT(*) FROM tache WHERE auteur_tache = '.$info)->fetchColumn();
+    }
 
 } //End class TacheManager

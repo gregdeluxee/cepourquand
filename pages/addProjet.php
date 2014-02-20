@@ -1,6 +1,6 @@
 <?php  ?>
 
-<div id="addProjet" class=""><!--displayNone-->
+<div id="addProjet" class="displayNone"><!--displayNone-->
 	<form id="addProjetForm" action="#" method="POST">
 		<fieldset>
 			<div class="dateName" >
@@ -10,7 +10,15 @@
 			</div>
 			<div class="addProjetAddTacheInputTache displayNone">
 				<span>OK</span>
-				<input placeholder="Ajoute ta tâche ici..." name="addTacheProjet" id="addTacheProjet" type="text">
+				<input placeholder="Ajoute ta tâche ici..." name="tache1" id="addTacheProjet" type="text">
+				<input id="dateAddTacheprojet" type="hidden" name="dateTache1"> <!-- A SUP, c'est juste pr tester mon php le temps que tu fasses la modif -->
+<!--
+
+	CA ICI EN COM C'EST LE HTML DE LA PAGE PROJET AJOUT D'UNE TACHE. J'ai essayé de le placer mais ça foire. Surement à cause du css trop ciblé. Faut que t'arrange ça, avoir la même chose que sur la page. thx ;)
+				<label for="dateAddTacheprojet"></label>
+				<input id="dateAddTacheprojet" type="date" name="dateTache1">
+				<input type="text" placeholder="Nom de la Tâche..." name="tache1" id="addTacheProjet">
+-->
 			</div>
 			<div class="addProjetAddTacheInputCollabo displayNone">
 				<span>OK</span>
