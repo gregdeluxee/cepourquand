@@ -139,10 +139,10 @@ $(function(){
 
 
 
-
-
-	$("#projets .projetsClose").click(function() {
+	$(".projetsClose").click(function() {
 		$this = $(this);
+		console.log("kedisezfsdfssss");
+		$(".projetsOpen").addClass("displayNone");
 		var projetsOpen = $this.next(".projetsOpen");
 		projetsOpen.toggleClass("displayNone");
 		$this.parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
