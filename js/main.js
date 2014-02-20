@@ -8,8 +8,7 @@ $(function(){
 
 //Virer le login si deja connecté
 
-	$("#login").addClass("displayNone");
-	$("#login").addClass("translateX");
+	$("#login").addClass("translateX").addClass("displayNone");
 	$("#projets").removeClass("displayNone");
 
 //click sur ok dans ajout de tache
@@ -36,7 +35,6 @@ $(function(){
 
 	$(".menuMenu").swipe({
 		tap:function(event, target) {
-			e.preventDefault();
 			contentmove.toggleClass("menu_actif");
 			$("#menuLateral").toggleClass("displayNone");
 		}
@@ -46,11 +44,9 @@ $(function(){
 
 	$(".menuAdd").swipe({
 		tap:function(event, target) {
-			$("#addProjet").removeClass("displayNone");
-			$("#projets").addClass("displayNone");
+			$("#projets, #menu").addClass("displayNone");
 			$("#menuLateral").toggleClass("displayNone");
-			$("#menu").addClass("displayNone");
-			$("#menuAddProjet").removeClass("displayNone");
+			$("#menuAddProjet, #addProjet").removeClass("displayNone");
 		}
 	});
 
@@ -58,11 +54,9 @@ $(function(){
 
 	$(".menuAnnulMenuAddProjBis").swipe({
 		tap:function(event, target) {
-			$("#projetModif").addClass("displayNone");
-			$("#projets").removeClass("displayNone");
 			$("#menuLateral").toggleClass("displayNone");
-			$("#menu").removeClass("displayNone");
-			$("#menuModifrojet").addClass("displayNone");
+			$("#menu, #projets").removeClass("displayNone");
+			$("#menuModifrojet, #projetModif").addClass("displayNone");
 		}
 	});
 
@@ -70,11 +64,9 @@ $(function(){
 
 	$(".menuAnnulMenuAddProj").swipe({
 		tap:function(event, target) {
-			$("#addProjet").addClass("displayNone");
-			$("#projets").removeClass("displayNone");
 			$("#menuLateral").toggleClass("displayNone");
-			$("#menu").removeClass("displayNone");
-			$("#menuAddProjet").addClass("displayNone");
+			$("#menu, #projets").removeClass("displayNone");
+			$("#menuAddProjet, #addProjet").addClass("displayNone");
 		}
 	});
 
@@ -82,11 +74,9 @@ $(function(){
 
 	$(".projetmodifedit").swipe({
 		tap:function(event, target) {
-			$("#projets").addClass("displayNone");
-			$("#projetModif").removeClass("displayNone");
 			$("#menuLateral").toggleClass("displayNone");
-			$("#menu").addClass("displayNone");
-			$("#menuModifrojet").removeClass("displayNone");
+			$("#menu, #projets").addClass("displayNone");
+			$("#menuModifrojet, #projetModif").removeClass("displayNone");
 		}
 	});
 
@@ -94,10 +84,8 @@ $(function(){
 
 	$(".menuChatRetour").swipe({
 		tap:function(event, target) {
-			$("#projets").removeClass("displayNone");
-			$("#menu").removeClass("displayNone");
-			$("#menuChat").addClass("displayNone");
-			$("#chat").addClass("displayNone");
+			$("#menu, #projets").removeClass("displayNone");
+			$("#menuChat, #chat").addClass("displayNone");
 		}
 	});
 
@@ -105,39 +93,41 @@ $(function(){
 
 	$(".projetDiscussion").swipe({
 		tap:function(event, target) {
-			$("#projets").addClass("displayNone");
-			$("#menu").addClass("displayNone");
-			$("#menuChat").removeClass("displayNone");
-			$("#chat").removeClass("displayNone");
+			$("#menu, #projets").addClass("displayNone");
+			$("#menuChat, #chat").removeClass("displayNone");
 		}
 	});
 
 // les 4 diferent bouton dans le menu lateral
 
-
 	$(".menuLateRalGoProjet").swipe({
 		tap:function(event, target) {
 			$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
-			$(" #projets, #menu").removeClass("displayNone");
-			contentmove.toggleClass("menu_actif");
+			$("#projets, #menu").removeClass("displayNone");
 			$("#menuLateral").toggleClass("displayNone");
+			setTimeout(function(){
+				contentmove.toggleClass("menu_actif");
+			},300);
 		}
 	});
 	$(".menuLateRalGoTache").swipe({
 		tap:function(event, target) {
 			$("#filtre, #menuFiltres, #projets, #menu").addClass("displayNone");
 			$("#taches, #menuTache").removeClass("displayNone");
-			contentmove.toggleClass("menu_actif");
 			$("#menuLateral").toggleClass("displayNone");
-
+			setTimeout(function(){
+				contentmove.toggleClass("menu_actif");
+			},300);
 		}
 	});
 	$(".menuLateRalGoFiltre").swipe({
 		tap:function(event, target) {
 			$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
 			$("#filtre, #menuFiltres").removeClass("displayNone");
-			contentmove.toggleClass("menu_actif");
 			$("#menuLateral").toggleClass("displayNone");
+			setTimeout(function(){
+				contentmove.toggleClass("menu_actif");
+			},300);
 		}
 	});
 	$(".menuLateRalGoDeco").swipe({
