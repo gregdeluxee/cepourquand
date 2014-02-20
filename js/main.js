@@ -101,6 +101,21 @@ $(function(){
 	})
 
 
+	$(".projetDiscussion").click(function(){
+		$("#projets").addClass("displayNone");
+		$("#menu").addClass("displayNone");
+		$("#menuChat").removeClass("displayNone");
+		$("#chat").removeClass("displayNone");
+	})
+
+	$(".menuChatRetour").click(function(){
+		$("#projets").removeClass("displayNone");
+		$("#menu").removeClass("displayNone");
+		$("#menuChat").addClass("displayNone");
+		$("#chat").addClass("displayNone");
+	})
+
+
 
 	$(".menuLateRalGoDeco").click(function(){
 		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
