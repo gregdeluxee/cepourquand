@@ -8,21 +8,23 @@
 				<input id="dataAddProjet" type="date" name="date">
 				<input type="text" placeholder="Nom du projet..." name="titre">
 			</div>
+			<ul>
+			<!--
+				<li>
+					<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+					<p>Cohérence dsfsdfdsfgd dsgnxvn nfxb ioxfnv cofn cjngvc, ogne dfngld dng ng ijb dingoidhgo  oigndskfns  à revoir.</p>
+				</li>
+			-->
+			</ul>
 			<div class="addProjetAddTacheInputTache displayNone">
-				<span>OK</span>
-				<input placeholder="Ajoute ta tâche ici..." name="tache1" id="addTacheProjet" type="text">
-				<input id="dateAddTacheprojet" type="hidden" name="dateTache1"> <!-- A SUP, c'est juste pr tester mon php le temps que tu fasses la modif -->
-<!--
-
-	CA ICI EN COM C'EST LE HTML DE LA PAGE PROJET AJOUT D'UNE TACHE. J'ai essayé de le placer mais ça foire. Surement à cause du css trop ciblé. Faut que t'arrange ça, avoir la même chose que sur la page. thx ;)
 				<label for="dateAddTacheprojet"></label>
 				<input id="dateAddTacheprojet" type="date" name="dateTache1">
 				<input type="text" placeholder="Nom de la Tâche..." name="tache1" id="addTacheProjet">
--->
+				<span>OK</span>
 			</div>
 			<div class="addProjetAddTacheInputCollabo displayNone">
-				<span>OK</span>
 				<input placeholder="prenom.nom prenom.nom 3tid2 3tid1" name="collaborateurs" id="addCollaboProj" type="text">
+				<span>OK</span>
 			</div>
 			<label class="addProjetAddTache" for="addTacheProjet">
 				<div>

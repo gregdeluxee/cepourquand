@@ -8,13 +8,32 @@
 				<input id="dataAddProjet" type="date" name="date">
 				<input type="text" placeholder="Nom du projet..." name="titre">
 			</div>
-			<div class="addProjetAddTacheInputTache displayNone">
-				<span>OK</span>
-				<input placeholder="Ajoute ta tâche ici..." name="addTacheProjet" id="addTacheProjet" type="text">
+			<ul>
+				<li>
+					<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+					<p>Cohérence dsfsdfdsfgd dsgnxvn nfxb ioxfnv cofn cjngvc, ogne dfngld dng ng ijb dingoidhgo  oigndskfns  à revoir.</p>
+				</li>
+				<li>
+					<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+					<p>Cohérence graphique à revoir.</p>
+				</li>
+				<li>
+					<span class="projetJoursTache" ><span class="nbr_jours_tache">1</span>j</span>
+					<p>Cohérence graphique à revoir.</p>
+				</li>
+			</ul>
+			<div action="#" method="POST" class="addProjetAddTacheInputTache displayNone">
+				<label for="dateAddTacheprojet"></label>
+				<input id="dateAddTacheprojet" type="date" name="dateTache1">
+				<input type="text" placeholder="Nom de la Tâche..." name="tache1" id="addTacheProjet">
+				<span><label for="addtacheDansProjet">OK</label></span>
+				<input id="addtacheDansProjet" type="submit">
+
 			</div>
-			<div class="addProjetAddTacheInputCollabo displayNone">
-				<span>OK</span>
-				<input placeholder="prenom.nom prenom.nom 3tid2 3tid1" name="addCollaboProj" id="addCollaboProj" type="text">
+			<div action="#" method="POST" class="addProjetAddTacheInputCollabo displayNone">
+				<input placeholder="prenom.nom prenom.nom 3tid2 3tid1" name="collaborateurs" id="addCollaboProj" type="text">
+				<span><label for="addtacheDansProjet">OK</label></span>
+				<input id="addtacheDansProjet" type="submit">
 			</div>
 			<label class="addProjetAddTache" for="addTacheProjet">
 				<div>
@@ -36,6 +55,6 @@
 			<div class="addCollaboProjet" >Collaborateurs</div>
 
 		</fieldset>
-		<input id="projetEditSubmit" type="submit" name="submit">
+		<input id="projetAddSubmit" type="submit" name="submit">
 	</form>
 </div><!-- End addProjet -->
