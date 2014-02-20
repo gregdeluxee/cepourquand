@@ -130,8 +130,7 @@ body{
 	position: absolute;
 	z-index: 0;
 	color: #fff;
-	font-family: $SourceSansPro;
-	font-weight: 200;
+	font-family: $SourceSansProExtraLight;
 	font-size: 23px;
 	padding: 10px 0 0 10px;
 	.menuLateralTop{
@@ -210,8 +209,7 @@ body{
 			li{
 				padding: 12px 5px;
 				line-height: 1;
-				font-family: $SourceSansPro;
-				font-weight: 300;
+				font-family: $SourceSansProLight;
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 				div{
@@ -276,7 +274,7 @@ body{
 			li{
 				padding: 12px 5px;
 				line-height: 1;
-				font-family: $latolight;
+				font-family: $SourceSansProLight;
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
@@ -324,7 +322,7 @@ body{
 			li{
 				padding: 12px 5px;
 				line-height: 1;
-				font-family: $latolight;
+				font-family: $SourceSansProLight;
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
@@ -373,7 +371,7 @@ body{
 			li{
 				padding: 12px 5px;
 				line-height: 1;
-				font-family: $latolight;
+				font-family: $SourceSansProLight;
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 				div{
@@ -440,7 +438,7 @@ body{
 			li{
 				padding: 12px 5px;
 				line-height: 1;
-				font-family: $latolight;
+				font-family: $SourceSansProLight;
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 				div{
@@ -495,7 +493,7 @@ body{
 			li{
 				padding: 12px 5px;
 				line-height: 1;
-				font-family: $latolight;
+				font-family: $SourceSansProLight;
 				-webkit-font-smoothing: antialiased;
 				font-smoothing: antialiased;
 			}
@@ -540,8 +538,7 @@ body{
 			float: left;
 			width: 75%;
 			height: 100%;
-			font-family: $SourceSansPro;
-			font-weight: 300;
+			font-family: $SourceSansProLight;
 			font-size: 16px;
 			color: #000;
 			padding: 0;
@@ -554,8 +551,7 @@ body{
 		}
 		::-webkit-input-placeholder {
 			color: #9f9f9f;
-			font-family: $SourceSansPro;
-			font-weight: 200;
+			font-family: $SourceSansProExtraLight;
 		}
 		input:focus::-webkit-input-placeholder {
 			opacity: 0;
@@ -594,8 +590,7 @@ body{
 				height: 50px;
 				width: 100%;
 				color: #fff;
-				font-family: $SourceSansPro;
-				font-weight: 200;
+				font-family: $SourceSansProExtraLight;
 				font-size: 25px;
 			}
 		}
@@ -645,8 +640,7 @@ body{
 			width: 230px;
 			border-radius: 0;
 			border:none;
-			font-family: $SourceSansPro;
-			font-weight: 300;
+			font-family: $SourceSansProLight;
 			font-size: 20px;
 			float: left;
 			color: #000;
@@ -703,13 +697,11 @@ body{
 				display: block;
 				padding: 13px 0;
 				p{
-					font-family: $SourceSansPro;
-					font-weight: 200;
+					font-family: $SourceSansProExtraLight;
 					font-size: 18px;
 				}
 				.tacheProjectName{
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					font-size: 11px;
 					color: $redMenu;
 				}
@@ -777,8 +769,7 @@ body{
 					left: -99999px;
 				}
 				input{
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					font-size: 32px;
 					float: left;
 					background: #282828;
@@ -815,8 +806,7 @@ body{
 					height: 40px;
 					background: #212121;
 					font-size: 16px;
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					text-align: center;
 					line-height: 2.5;
 				}
@@ -869,8 +859,7 @@ body{
 				height: 40px;
 				color: #fff;
 				font-size: 16px;
-				font-family: $SourceSansPro;
-				font-weight: 300;
+				font-family: $SourceSansProLight;
 				line-height: 2.8;
 				text-indent: 41px;
 				background: url(../img/collabo.png) no-repeat 6% 50% #212121;
@@ -888,8 +877,7 @@ body{
 				background: $redMenu;
 				p{
 					float: left;
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					font-size: 14px;
 					line-height: 2.8;
 				}
@@ -944,8 +932,7 @@ body{
 					left: -99999px;
 				}
 				input{
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					font-size: 32px;
 					float: left;
 					background: #282828;
@@ -982,8 +969,7 @@ body{
 					height: 40px;
 					background: #212121;
 					font-size: 16px;
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					text-align: center;
 					line-height: 2.5;
 				}
@@ -1035,8 +1021,7 @@ body{
 				height: 40px;
 				color: #fff;
 				font-size: 16px;
-				font-family: $SourceSansPro;
-				font-weight: 300;
+				font-family: $SourceSansProLight;
 				line-height: 2.8;
 				text-indent: 41px;
 				background: url(../img/collabo.png) no-repeat 6% 50% #212121;
@@ -1054,8 +1039,7 @@ body{
 				background: $redMenu;
 				p{
 					float: left;
-					font-family: $SourceSansPro;
-					font-weight: 300;
+					font-family: $SourceSansProLight;
 					font-size: 14px;
 					line-height: 2.8;
 				}
@@ -1149,7 +1133,7 @@ body{
 						margin-right: 6%;
 						span{
 							color: $redMenu;
-							font-family: $latohairline;
+							font-family: $SourceSansProExtraLight;
 							font-size: 31px;
 							text-align: right;
 							float: right;
@@ -1170,7 +1154,7 @@ body{
 						width: 68%;
 						margin-right: 6%;
 						color: #fff;
-						font-family: $latolight;
+						font-family: $SourceSansProLight;
 						-webkit-font-smoothing: antialiased;
 						font-smoothing: antialiased;
 						h1{
@@ -1184,12 +1168,9 @@ body{
 							font-size: 10px;
 							width: 50%;
 							float: left;
-
-
 						}
 						.projetCreat{
 							font-size: 10px;
-							//font-family: $latohairline;
 							width: 50%;
 							float: left;
 							text-align: right;
@@ -1220,8 +1201,7 @@ body{
 							width: 200px;
 							border-radius: 0;
 							border:none;
-							font-family: $SourceSansPro;
-							font-weight: 300;
+							font-family: $SourceSansProLight;
 							font-size: 20px;
 							float: left;
 							color: #000;
@@ -1251,8 +1231,7 @@ body{
 							width: 42px;
 							float: left;
 							margin: 0;
-							font-family: $SourceSansPro;
-							font-weight: 300;
+							font-family: $SourceSansProLight;
 							font-size: 20px;
 							line-height: 3;
 
@@ -1264,7 +1243,7 @@ body{
 						width: 100%;
 						background: darken($liBaseColorDark, 0);
 						li{
-							font-family: $latolight;
+							font-family: $SourceSansProLight;
 							font-size: 18px;
 							width: 100%;
 							height:100%;
@@ -1402,9 +1381,7 @@ body{
 						}
 					}
 				}
-
 			}
-
 		}
 	}
 }
@@ -1426,6 +1403,10 @@ body{
 	.loginLogo{
 		float: left;
 		width: 100%;
+		height: 230px;
+		background: url(../img/logo_grand.png) no-repeat center;
+		background-size: 40%;
+
 	}
 	form{
 		float: left;
@@ -1435,6 +1416,7 @@ body{
 			bottom: 90px;
 			right: 0;
 			left: 0;
+			font-family: $SourceSansProLight;
 		}
 		input{
 			width: 70%;
@@ -1451,6 +1433,7 @@ body{
 			-webkit-border-radius: 0;
 			border-radius: 0;
 			font-size: 24px;
+			font-family: $SourceSansProLight;
 		}
 		::-webkit-input-placeholder {
 			color: #9f9f9f;
@@ -1460,6 +1443,7 @@ body{
 		}
 
 		input[type="submit"]{
+			font-family: $SourceSansProLight;
 			width: 100%;
 			height: 90px;
 			margin: 0;

@@ -1,7 +1,6 @@
 <?php  ?>
 <div id="login">
 	<div class="loginLogo">
-		LOGO LES PLOWW
 	</div>
 	<form id="loginForm" action="#" method="POST">
 		<fieldset>

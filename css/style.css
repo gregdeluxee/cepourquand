@@ -90,16 +90,16 @@ table {
 
 @font-face {
   font-family: 'SourceSansPro-Light';
-  src: url("fonts/SourceSansPro-Light.eot");
-  src: local("☺"), url("fonts/SourceSansPro-Light.woff") format("woff"), url("fonts/SourceSansPro-Light.ttf") format("truetype"), url("fonts/SourceSansPro-Light.svg") format("svg");
+  src: url("../fonts/SourceSansPro-Light.eot");
+  src: local("☺"), url("../fonts/SourceSansPro-Light.woff") format("woff"), url("../fonts/SourceSansPro-Light.ttf") format("truetype"), url("../fonts/SourceSansPro-Light.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SourceSansPro-ExtraLight';
-  src: url("fonts/SourceSansPro-ExtraLight.eot");
-  src: local("☺"), url("fonts/SourceSansPro-ExtraLight.woff") format("woff"), url("fonts/SourceSansPro-ExtraLight.ttf") format("truetype"), url("fonts/SourceSansPro-ExtraLight.svg") format("svg");
+  src: url("../fonts/SourceSansPro-ExtraLight.eot");
+  src: local("☺"), url("../fonts/SourceSansPro-ExtraLight.woff") format("woff"), url("../fonts/SourceSansPro-ExtraLight.ttf") format("truetype"), url("../fonts/SourceSansPro-ExtraLight.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -207,8 +207,7 @@ body, html {
   position: absolute;
   z-index: 0;
   color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 200;
+  font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
   font-size: 23px;
   padding: 10px 0 0 10px;
 }
@@ -278,8 +277,7 @@ body, html {
 #menuTache nav ul li {
   padding: 12px 5px;
   line-height: 1;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -338,7 +336,7 @@ body, html {
 #menuAddTache nav ul li {
   padding: 12px 5px;
   line-height: 1;
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -383,7 +381,7 @@ body, html {
 #menuAddProjet nav ul li, #menuModifrojet nav ul li {
   padding: 12px 5px;
   line-height: 1;
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -428,7 +426,7 @@ body, html {
 #menu nav ul li {
   padding: 12px 5px;
   line-height: 1;
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -487,7 +485,7 @@ body, html {
 #menuFiltres nav ul li {
   padding: 12px 5px;
   line-height: 1;
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -536,7 +534,7 @@ body, html {
 #menuChat nav ul li {
   padding: 12px 5px;
   line-height: 1;
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -577,8 +575,7 @@ body, html {
   float: left;
   width: 75%;
   height: 100%;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 16px;
   color: #000;
   padding: 0;
@@ -591,8 +588,7 @@ body, html {
 }
 #chat .inputChat ::-webkit-input-placeholder {
   color: #9f9f9f;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 200;
+  font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
 }
 #chat .inputChat input:focus::-webkit-input-placeholder {
   opacity: 0;
@@ -630,8 +626,7 @@ body, html {
   height: 50px;
   width: 100%;
   color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 200;
+  font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
   font-size: 25px;
 }
 #filtre ul li:nth-child(1) {
@@ -678,8 +673,7 @@ body, html {
   width: 230px;
   border-radius: 0;
   border: none;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 20px;
   float: left;
   color: #000;
@@ -737,13 +731,11 @@ body, html {
   padding: 13px 0;
 }
 #taches ul li div p {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 200;
+  font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
   font-size: 18px;
 }
 #taches ul li div .tacheProjectName {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 11px;
   color: #d7403f;
 }
@@ -808,8 +800,7 @@ body, html {
   left: -99999px;
 }
 #addProjet form fieldset .dateName input {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 32px;
   float: left;
   background: #282828;
@@ -846,8 +837,7 @@ body, html {
   height: 40px;
   background: #212121;
   font-size: 16px;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   text-align: center;
   line-height: 2.5;
 }
@@ -897,8 +887,7 @@ body, html {
   height: 40px;
   color: #fff;
   font-size: 16px;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   line-height: 2.8;
   text-indent: 41px;
   background: url(../img/collabo.png) no-repeat 6% 50% #212121;
@@ -917,8 +906,7 @@ body, html {
 }
 #addProjet form fieldset .addProjetAddTache p {
   float: left;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 2.8;
 }
@@ -972,8 +960,7 @@ body, html {
   left: -99999px;
 }
 #projetModif form fieldset .dateName input {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 32px;
   float: left;
   background: #282828;
@@ -1010,8 +997,7 @@ body, html {
   height: 40px;
   background: #212121;
   font-size: 16px;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   text-align: center;
   line-height: 2.5;
 }
@@ -1061,8 +1047,7 @@ body, html {
   height: 40px;
   color: #fff;
   font-size: 16px;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   line-height: 2.8;
   text-indent: 41px;
   background: url(../img/collabo.png) no-repeat 6% 50% #212121;
@@ -1081,8 +1066,7 @@ body, html {
 }
 #projetModif form fieldset .addProjetAddTache p {
   float: left;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 2.8;
 }
@@ -1169,7 +1153,7 @@ body, html {
 }
 #projets ul li .projetContainer .projetsClose .jours span {
   color: #d7403f;
-  font-family: "latohairline", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
   font-size: 31px;
   text-align: right;
   float: right;
@@ -1189,7 +1173,7 @@ body, html {
   width: 68%;
   margin-right: 6%;
   color: #fff;
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
@@ -1234,8 +1218,7 @@ body, html {
   width: 200px;
   border-radius: 0;
   border: none;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 20px;
   float: left;
   color: #000;
@@ -1264,8 +1247,7 @@ body, html {
   width: 42px;
   float: left;
   margin: 0;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 20px;
   line-height: 3;
 }
@@ -1276,7 +1258,7 @@ body, html {
   background: #efefef;
 }
 #projets ul li .projetContainer .projetsOpen ul li {
-  font-family: "latolight", Arial, Helvetica, sans-serif;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 18px;
   width: 100%;
   height: 100%;
@@ -1416,6 +1398,9 @@ body, html {
 #login .loginLogo {
   float: left;
   width: 100%;
+  height: 230px;
+  background: url(../img/logo_grand.png) no-repeat center;
+  background-size: 40%;
 }
 #login form {
   float: left;
@@ -1426,6 +1411,7 @@ body, html {
   bottom: 90px;
   right: 0;
   left: 0;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
 }
 #login form input {
   width: 70%;
@@ -1442,6 +1428,7 @@ body, html {
   -webkit-border-radius: 0;
   border-radius: 0;
   font-size: 24px;
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
 }
 #login form ::-webkit-input-placeholder {
   color: #9f9f9f;
@@ -1450,6 +1437,7 @@ body, html {
   opacity: 0;
 }
 #login form input[type="submit"] {
+  font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   width: 100%;
   height: 90px;
   margin: 0;

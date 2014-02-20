@@ -58,7 +58,7 @@
 
         <!-- CONTENT -->
         <div id="content">
-             <?php //include('pages/login.php'); ?>
+            <?php include('pages/login.php'); ?>
             <?php include('inc/menuLateral.php'); ?>
             <?php include('pages/projet.php'); ?>
             <?php include('pages/tache.php'); ?>

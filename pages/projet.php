@@ -1,19 +1,20 @@
-<?php 
+<?php
 
  	$projetManager = new ProjetManager($db);
  	if ($projetManager->exists($_SESSION['id_user'])) {
-    	$projets = $projetManager->getProjetByUserId($_SESSION['id_user']);	
+    	$projets = $projetManager->getProjetByUserId($_SESSION['id_user']);
 	}
-    
+
     $tacheManager = new TacheManager($db);
 	if ($tacheManager->exists($_SESSION['id_user'])) {
-    	$taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);		
+    	$taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);
 	}
 
 ?>
+
 <div id="projets" class="contentmove">
 	<ul>
-	<?php 
+	<?php
 	if ($projetManager->exists($_SESSION['id_user'])) {
 		foreach ($projets as $projet) {
 			?>
@@ -33,7 +34,7 @@
 					</div>
 					<div class="projetsOpen">
 						<ul>
-							<?php  
+							<?php
 								foreach ($taches as $tache) {
 									if ($tache->id_projet_tache() == $projet->id_projet()) {
 										?>
@@ -43,7 +44,7 @@
 											</li>
 										<?php
 									}
-								}  
+								}
 							?>
 						</ul>
 						<div class="addTachesprojet displayNone">
@@ -75,8 +76,8 @@
 						</nav>
 					</div>
 				</div>
-			</li>	
-			<?php	
+			</li>
+			<?php
 		}
 	}else{
 		?>
@@ -131,7 +132,7 @@
 					</div>
 				</div>
 			</li>
-		<?php 
+		<?php
 	}
 	?>
 
