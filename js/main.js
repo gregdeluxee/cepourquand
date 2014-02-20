@@ -110,12 +110,13 @@ $(function(){
 		$("#menuAddProjet").addClass("displayNone");
 	})
 
+	$(".menuLateRalGoDeco").swipe( {
+    	tap:function(event, target) {
+      		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
+    	},
+    	threshold:50
+  	});
 
-
-
-	$(".menuLateRalGoDeco").click(function(){
-		$("#taches, #menuTache, #projets, #menu, #filtre, #menuFiltres").addClass("displayNone");
-	})
 	$(".menuLateRalGoFiltre").click(function(){
 		$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
 		$("#filtre, #menuFiltres").removeClass("displayNone");
