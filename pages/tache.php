@@ -4,6 +4,12 @@
 	if ($tacheManager->exists($_SESSION['id_user'])) {
     	$taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);		
 	}
+
+	$projetManager = new ProjetManager($db);
+ 	if ($projetManager->exists($_SESSION['id_user'])) {
+    	$projets = $projetManager->getProjetByUserId($_SESSION['id_user']);
+	}
+
 ?>
 
 
@@ -29,7 +35,15 @@
 					<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php echo $tache->jourRestant();?></span>j</span>
 					<div>
 						<p><?php echo $tache->titre_tache(); ?></p>
-						<span class="tacheProjectName"><?php echo $tache->id_projet_tache(); ?></span>
+						<span class="tacheProjectName">
+							<?php
+								foreach ($projets as $projet) {
+									if ($projet->id_projet() == $tache->id_projet_tache()) {
+										echo $projet->titre_projet();
+									}
+								}
+							?>
+						</span>
 					</div>
 				</li>
 				<?php 
