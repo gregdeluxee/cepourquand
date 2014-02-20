@@ -31,7 +31,7 @@ class ProjetManager{
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
     	$q->execute() or die(print_r($q->errorInfo()));
-      return $this->_db->lastInsertId();
+      //return $this->_db->lastInsertId();
       $q->closeCursor();
   	}
 

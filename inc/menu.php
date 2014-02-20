@@ -10,7 +10,7 @@
 					<span></span>
 				</div>
 			</li>
-			<li class="menuTitre">Project</li>
+			<li class="menuTitre">Projet</li>
 			<li class="menuAdd">
 				<div>
 					<span></span>

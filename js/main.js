@@ -267,6 +267,7 @@ $(function(){
 	$("#addProjetForm").submit(function(e) {
 		e.preventDefault();
 		var donnees = $(this).serialize();
+		console.log(donnees);
 		// ADD PROJET TREATMENT AJAX
 		$.ajax({
 			type: "POST",
@@ -277,14 +278,11 @@ $(function(){
 				console.log(answer);
 				console.log(donnees);
 				if (answer == "success") {
-					console.log("success")
-
 					$("#addProjet").addClass("displayNone");
 					$("#projets").removeClass("displayNone");
 					$("#menuLateral").removeClass("displayNone");
 					$("#menu").removeClass("displayNone");
 					$("#menuAddProjet").addClass("displayNone");
-
 				}else if (answer == "failed") {
 					console.log("failed")
            		};
