@@ -103,25 +103,31 @@ $(function(){
 	$(".menuLateRalGoProjet").swipe({
 		tap:function(event, target) {
 			$("#taches, #menuTache, #filtre, #menuFiltres").addClass("displayNone");
-			$(" #projets, #menu").removeClass("displayNone");
-			contentmove.toggleClass("menu_actif");
+			$("#projets, #menu").removeClass("displayNone");
 			$("#menuLateral").toggleClass("displayNone");
+			setTimeout(function(){
+				contentmove.toggleClass("menu_actif");
+			},300);
 		}
 	});
 	$(".menuLateRalGoTache").swipe({
 		tap:function(event, target) {
 			$("#filtre, #menuFiltres, #projets, #menu").addClass("displayNone");
 			$("#taches, #menuTache").removeClass("displayNone");
-			contentmove.toggleClass("menu_actif");
 			$("#menuLateral").toggleClass("displayNone");
+			setTimeout(function(){
+				contentmove.toggleClass("menu_actif");
+			},300);
 		}
 	});
 	$(".menuLateRalGoFiltre").swipe({
 		tap:function(event, target) {
 			$("#taches, #menuTache, #projets, #menu").addClass("displayNone");
 			$("#filtre, #menuFiltres").removeClass("displayNone");
-			contentmove.toggleClass("menu_actif");
 			$("#menuLateral").toggleClass("displayNone");
+			setTimeout(function(){
+				contentmove.toggleClass("menu_actif");
+			},300);
 		}
 	});
 	$(".menuLateRalGoDeco").swipe({
