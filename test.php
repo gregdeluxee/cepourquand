@@ -85,6 +85,8 @@
                     if ($userInfos->exists($login)) {
                         $user = $userInfos->get($login);
                         $_SESSION['id_user'] = $user->id_user();
+                        $_SESSION['prenom_user'] = $user->prenom_user();
+                        $_SESSION['nom_user'] = $user->nom_user();
                     }
                     include('traitementAjax/rafraichir.php'); 
                 } 

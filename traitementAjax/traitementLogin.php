@@ -11,6 +11,8 @@ if (isset($_POST['login']) AND isset($_POST['password'])) {
 		$user = $userInfos->get($login);
 		if ($user->password_user() == $password) {
 			$_SESSION['id_user'] = $user->id_user();
+			$_SESSION['prenom_user'] = $user->prenom_user();
+			$_SESSION['nom_user'] = $user->nom_user();
 			echo "success";
 		}else{
 			echo "failed";

@@ -10,6 +10,7 @@
     	$taches = $tacheManager->getTacheByUserId($_SESSION['id_user']);
 	}
 
+
 ?>
 
 <div id="projets" class="contentmove">
@@ -29,7 +30,7 @@
 						<div class="projetContent">
 							<h1><?php echo $projet->titre_projet() ?></h1>
 							<div class="projetProf"><?php echo $projet->cours_projet(); ?></div>
-							<div class="projetCreat"><?php echo $projet->auteur_projet(); ?></div>
+							<div class="projetCreat"><?php echo $projet->auteur_prenom_projet(); ?></div>
 						</div>
 					</div>
 					<div class="projetsOpen">

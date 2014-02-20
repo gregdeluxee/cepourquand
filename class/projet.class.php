@@ -4,7 +4,8 @@ class Projet{
 	private $_id_projet;
 	private $_titre_projet;
 	private $_date_remise_projet;
-	private $_auteur_projet;
+	private $_auteur_id_projet;
+	private $_auteur_prenom_projet;
 	private $_cours_projet;
 	private $_briefing_projet;
 
@@ -28,7 +29,8 @@ class Projet{
 	public function id_projet(){ return $this->_id_projet; }
 	public function titre_projet(){ return $this->_titre_projet; }
 	public function date_remise_projet(){ return $this->_date_remise_projet; }
-	public function auteur_projet(){ return $this->_auteur_projet; }
+	public function auteur_id_projet(){ return $this->_auteur_id_projet; }
+	public function auteur_prenom_projet(){ return $this->_auteur_prenom_projet; }
 	public function cours_projet(){ return $this->_cours_projet; }
 	public function briefing_projet(){ return $this->_briefing_projet; }
 	//SETTERS
@@ -46,10 +48,15 @@ class Projet{
 	public function setDate_remise_projet($date_remise_projet){
 		$this->_date_remise_projet = $date_remise_projet;
 	}
-	public function setAuteur_projet($auteur_projet){
-		$auteur_projet = (int) $auteur_projet;
-		if ($auteur_projet > 0){
-			$this->_auteur_projet = $auteur_projet;
+	public function setAuteur_id_projet($auteur_id_projet){
+		$auteur_id_projet = (int) $auteur_id_projet;
+		if ($auteur_id_projet > 0){
+			$this->_auteur_id_projet = $auteur_id_projet;
+		}
+	}
+	public function setAuteur_prenom_projet($auteur_prenom_projet){
+		if (is_string($auteur_prenom_projet)){
+			$this->_auteur_prenom_projet = $auteur_prenom_projet;
 		}
 	}
 	public function setCours_projet($cours_projet){
@@ -72,5 +79,9 @@ class Projet{
 		$jours = $difference/(60*60*24);
 		return floor($jours);
 	}//End function jourRestant
+
+	public function auteurPrenomNom(){
+
+	}
 
 } //End class Projet

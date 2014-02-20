@@ -7,7 +7,8 @@ if (isset($_POST['titre']) AND isset($_POST['date']) AND strlen($_POST['titre'])
 	$projet = new Projet(array(
 	  'titre_projet' => $_POST['titre'],
 	  'date_remise_projet' => $_POST['date'],
-	  'auteur_projet' => $_SESSION['id_user'],
+	  'auteur_id_projet' => $_SESSION['id_user'],
+	  'auteur_prenom_projet' => $_SESSION['prenom_user']." ".$_SESSION['nom_user'],
 	  'cours_projet' =>  $_POST['cours'],
 	  'briefing_projet' =>  $_POST['briefing']
 	));

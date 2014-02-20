@@ -18,14 +18,16 @@ class ProjetManager{
         SET 
         titre_projet = :titre_projet, 
         date_remise_projet = :date_remise_projet,
-        auteur_projet = :auteur_projet,
+        auteur_id_projet = :auteur_id_projet,
+        auteur_prenom_projet = :auteur_prenom_projet,
         cours_projet = :cours_projet,
         briefing_projet = :briefing_projet';
 
   		$q = $this->_db->prepare($sql);
     	$q->bindValue(':titre_projet', $projet->titre_projet());
       $q->bindValue(':date_remise_projet', $projet->date_remise_projet());
-      $q->bindValue(':auteur_projet', $projet->auteur_projet());
+      $q->bindValue(':auteur_id_projet', $projet->auteur_id_projet());
+      $q->bindValue(':auteur_prenom_projet', $projet->auteur_prenom_projet());
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
     	$q->execute() or die(print_r($q->errorInfo()));
