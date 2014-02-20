@@ -25,6 +25,7 @@
 				<div class="projetContainer" >
 					<div class="projetsClose">
 						<div class="jours">
+							<!-- AJOUTER ICI TACHE CHECKED OU PAS -->
 							<span><span class="nbr_jours"><?php echo $projet->jourRestant(); ?></span>j</span>
 						</div>
 						<div class="projetContent">
