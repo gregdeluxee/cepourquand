@@ -2,6 +2,7 @@
 //START JQUERY
 $(function(){
 
+
 	var contentmove = $(".contentmove");
 	var filtreCheck = $("#filtre input");
 	var filtreCheckParent = $("#filtre input").parent("li");
