@@ -1484,6 +1484,9 @@ body, html {
   font-smoothing: antialiased;
   line-height: 1;
 }
+#projets ul li .projetContainer .projetsOpen ul li .projetJoursTache .nbr_jours_tache {
+  line-height: 1.6;
+}
 #projets ul li .projetContainer .projetsOpen ul li p {
   float: right;
   width: 68%;
