@@ -1,5 +1,5 @@
-//var urlLink ='http://localhost/cepourquand'; //LOCAL
-var urlLink ='http://cepourkan.eu'; //ONLINE
+var urlLink ='http://localhost/cepourquand'; //LOCAL
+//var urlLink ='http://cepourkan.eu'; //ONLINE
 
 //START JQUERY
 $(function(){
@@ -162,29 +162,38 @@ $(function(){
 	});
 
 	$(".addProjetAddTache").swipe({
+		excludedElements: "button, input, select, textarea, .noSwipe",
 		tap:function(event, target) {
+			console.log("kedis");
 			$(".addProjetAddTacheInputTache").toggleClass("displayNone");
 			$(".addProjetAddTacheInputCollabo").addClass("displayNone");
 		}
 	});
-
-	// $(".addProjetAddTache").click(function(){
-	// 	console.log("kedis");
-	// 	$(".addProjetAddTacheInputTache").toggleClass("displayNone");
-	// 	$(".addProjetAddTacheInputCollabo").addClass("displayNone");
-	// });
 
 	$(".addProjetAddTacheInputCollabo").children("span").swipe({
 		tap:function(event, target) {
 			$(".addProjetAddTacheInputCollabo").addClass("displayNone");
 		}
 	});
-
+	//appuie sur ok ajout tache add projet
 	$(".addProjetAddTacheInputTache").children("span").swipe({
 		tap:function(event, target) {
 			$(".addProjetAddTacheInputTache").addClass("displayNone");
 		}
 	});
+
+/*
+	//appuie sur ok ajout tache add projet
+	var nbTache = 1, nbTacheNext;
+	$(".addProjetAddTacheInputTache").children("span").swipe({
+		tap:function(event, target) {
+			$(this).parent($(".addProjetAddTacheInputTache")).addClass("displayNone");
+			nbTacheNext = nbTache+1;
+			$(".addProjetAddTacheInputTache[data-nb="+nbTache+"]").after('<div class="addProjetAddTacheInputTache" data-nb="'+nbTacheNext+'"><label for="dateAddTacheprojet"></label><input id="dateAddTacheprojet" type="date" name="dateTache'+nbTacheNext+'"><input type="text" placeholder="Nom de la Tâche..." name="tache'+nbTacheNext+'" id="addTacheProjet"><span>OK</span></div>');
+			nbTache+=1;
+		}
+	});
+*/
 
 // Filtre les input qui change
 
@@ -283,6 +292,7 @@ $(function(){
 					$("#menuLateral").removeClass("displayNone");
 					$("#menu").removeClass("displayNone");
 					$("#menuAddProjet").addClass("displayNone");
+					$("#xxProjetPull").removeClass("displayNone");
 				}else if (answer == "failed") {
 					console.log("failed")
            		};
@@ -296,6 +306,40 @@ $(function(){
 		});// END PROJET TREATMENT AJAX
 	});// END PROJET SUBMIT
 
+//ADD TACHE IN PROJET TREATMENT
+	$(".addTacheFormprojet").submit(function(e) {
+		e.preventDefault();
+		var date = $(this).find("input[name=date]").val();
+		var titre = $(this).find("input[name=titre]").val();
+		var donnees = $(this).serialize();
+		var thisForm = $(this);
+		// ADD PROJET TREATMENT AJAX
+		$.ajax({
+			type: "POST",
+			url: urlLink+'/traitementAjax/traitementAjoutTache.php',
+			data: donnees,
+			dataType : 'text',
+			success : function(answer, statut){
+				if (answer == "success") {
+					var date1 = new Date(date); date1 = date1.getTime()/1000;
+					var today = new Date(); today = today.getTime()/1000;
+					var result = date1 - today; result = Math.floor(result/(60*60*24)); 
+					console.log("success");
+					thisForm.parent().prev("ul").append('<li><span class="projetJoursTache" ><span class="nbr_jours_tache">'+result+'</span>j</span><p>'+titre+'</p></li>');
+					thisForm.find("input[name=date]").val("");
+					thisForm.find("input[name=titre]").val("");
+				}else if (answer == "failed") {
+					console.log("failed");
+           		};
+			},
+		    error : function(resultat, statut, erreur){
+		    	console.log("error");
+		    },
+		    complete : function(resultat, statut){
+
+		    }
+		});// END TACHE IN PROJET TREATMENT AJAX
+	});// END TACHE IN PROJET TREATMENT
 
 
 //ADD TACHE TREATMENT
@@ -316,12 +360,13 @@ $(function(){
 					$("#addTaches").toggleClass("displayNone");
 					$("#menuTache").removeClass("displayNone");
 					$("#menuAddTache").addClass("displayNone");
+					$("#xxTachePull").removeClass("displayNone");
 				}else if (answer == "failed") {
-					console.log("failed")
+					console.log("failed");
            		};
 			},
 		    error : function(resultat, statut, erreur){
-		    	console.log("error")
+		    	console.log("error");
 		    },
 		    complete : function(resultat, statut){
 
@@ -331,7 +376,7 @@ $(function(){
 
 
 
-
+// PROJET SWIPE CHECK OR HIDE
 	$(".projetsClose").swipe({
 		//excludedElements: "button, input, select, textarea, .noSwipe",
 		allowPageScroll: "vertical",
@@ -349,23 +394,21 @@ $(function(){
 			//Finger animation
 			if(phase == "move"){
 				if(direction == "right"){
-					projet.parent().prevAll(".projetSup").removeClass("displayNone");
-					projet.parent().prevAll(".projetValide").addClass("displayNone");
-					projet.parent().css("-webkit-transform","translateX("+distance+"px)");
-				}
-				else if(direction == "left"){
 					projet.parent().prevAll(".projetValide").removeClass("displayNone");
 					projet.parent().prevAll(".projetSup").addClass("displayNone");
+					projet.parent().css("-webkit-transform","translateX(+"+distance+"px)");
+				}
+				else if(direction == "left"){
+					projet.parent().prevAll(".projetSup").removeClass("displayNone");
+					projet.parent().prevAll(".projetValide").addClass("displayNone");
 					projet.parent().css("-webkit-transform","translateX(-"+distance+"px)");
 				}
 			};
 			//Redirect when click/tap a link
-			if(phase == "end" && duration < 300 ){
-				console.log("OUVRE");
+			if(phase == "end" && duration < 300 && distance <20 ){
 				if ($(this).hasClass("xxOpen")) {
 					$(".projetsOpen").addClass("displayNone");
 					$(this).removeClass("xxOpen");
-					console.log("il l'aaaaaaa")
 				}else{
 					$(".projetsOpen").addClass("displayNone");
 					var projetsOpen = $(this).next(".projetsOpen");
@@ -373,39 +416,13 @@ $(function(){
 					$(this).parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
 					$(".projetsClose").removeClass("xxOpen");
 					$(this).addClass("xxOpen");
-					console.log("il l'aaaaaaaaaaaaaaaaaaaaaaaaaa");
 				}
 			};
 			//Swipe animation
-			if(phase == "end" && duration > 300 && distance >100){
+			if(phase == "end" && duration > 100 && distance >80){
 				$idProjet = $(this).data("id-projet");
 				var donnees = 'id-projet='+$idProjet;
 				if(direction == "right"){
-					$.ajax({
-						type: "POST",
-						url: urlLink+'/traitementAjax/traitementHiddenProjet.php',
-						data: donnees,
-						dataType : 'text',
-						success : function(answer, statut){
-							console.log(answer);
-							console.log(donnees);
-							if (answer == "success") {
-								console.log(projet);
-								projet.parent().css("-webkit-transform","translateX(-100%)");
-								setTimeout(function(){	projet.addClass("displayNone");},1000);
-							}else if (answer == "failed") {
-								console.log("failed");
-			           		};
-						},
-					    error : function(resultat, statut, erreur){
-					    	console.log("error");
-					    },
-					    complete : function(resultat, statut){
-
-					    }
-					});// END PROJET TREATMENT AJAX
-				}
-				else if(direction == "left"){
 					$.ajax({
 						type: "POST",
 						url: urlLink+'/traitementAjax/traitementChekedProjet.php',
@@ -430,6 +447,83 @@ $(function(){
 					    }
 					});// END PROJET TREATMENT AJAX
 				}
+				else if(direction == "left"){
+					$.ajax({
+						type: "POST",
+						url: urlLink+'/traitementAjax/traitementHiddenProjet.php',
+						data: donnees,
+						dataType : 'text',
+						success : function(answer, statut){
+							console.log(answer);
+							console.log(donnees);
+							if (answer == "success") {
+								console.log(projet);
+								projet.parent().css("-webkit-transform","translateX(-100%)");
+								setTimeout(function(){	projet.addClass("displayNone");},1000);
+							}else if (answer == "failed") {
+								console.log("failed");
+			           		};
+						},
+					    error : function(resultat, statut, erreur){
+					    	console.log("error");
+					    },
+					    complete : function(resultat, statut){
+
+					    }
+					});// END PROJET TREATMENT AJAX
+				}
+			}else if (phase == "end" && duration < 100 || distance < 80) {
+				projet.parent().css("-webkit-transform","translateX(0)");
+			};
+			if(phase == "cancel"){
+				//nothing happen. Normaly impossible to get this phase.
+				//alert(phase);
+			};
+		}
+	});
+
+
+// BODY SWIPE UP TO REFRESH ALL
+	$("#xxProjetPull .projetsClose").swipe("destroy");
+	$("#xxProjetPull, #xxTachePull").swipe({
+		excludedElements: "button, input, select, textarea, .noSwipe",
+		allowPageScroll: "none",
+		threshold:30,
+		triggerOnTouchLeave:false,
+		fingers:'all',
+		swipeStatus:function(event, phase, direction, distance, duration, fingerCount){
+			//Finger animation
+			if(phase == "move" && direction == "down"){
+				$("#content").css("-webkit-transform","translateY(+"+distance+"px)");
+			};
+			if(phase == "end" && direction == "down" && distance > 100 ){
+				console.log("coucou");
+				$.ajax({
+					type: "POST",
+					url: urlLink+'/traitementAjax/pullToRefresh.php',
+					dataType : 'html',
+					success : function(answer, statut){
+						console.log("SUCESS");
+						$("#projets").remove();
+						$("#taches").remove();
+						$("#filtre").remove();
+						$("#chat").remove();
+						$("#addProjet").remove();
+						$("#projetModif").remove();
+						$("#content").append(answer);
+						$("script[src='js/main.js']").remove();
+						$("body").append('<script src="js/main.js"></script>');						
+					},
+				    error : function(resultat, statut, erreur){
+				    	console.log("error");
+				    },
+				    complete : function(resultat, statut){
+
+				    }
+				});// END PROJET TREATMENT AJAX
+			};
+			if(phase == "end"){
+				$("#content").css("-webkit-transform","translateY(0px)");
 			};
 			if(phase == "cancel"){
 				//nothing happen. Normaly impossible to get this phase.

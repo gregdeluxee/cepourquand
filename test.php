@@ -77,6 +77,7 @@
 
         <!-- CONTENT  -->
         <div id="content">
+        <div style="background: #282828; position:absolute; width:100%; height:100%" class="contentmove"></div>
 
             <?php
                 if (!isset($_COOKIE['loged']) OR $_COOKIE['loged'] == "0") {
@@ -96,7 +97,6 @@
                     include('traitementAjax/rafraichir.php'); 
                 } 
             ?>
-
         </div>
         <!-- END CONTENT -->
 

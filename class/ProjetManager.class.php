@@ -31,7 +31,7 @@ class ProjetManager{
     	$q->bindValue(':cours_projet', $projet->cours_projet());
     	$q->bindValue(':briefing_projet', $projet->briefing_projet());
     	$q->execute() or die(print_r($q->errorInfo()));
-      //return $this->_db->lastInsertId();
+      return $this->_db->lastInsertId();
       $q->closeCursor();
   	}
 
@@ -59,7 +59,7 @@ class ProjetManager{
   		INNER JOIN projet_gestion 
   		ON projet_gestion.id_projet = projet.id_projet 
   		WHERE projet_gestion.id_user = :id_user AND projet_gestion.hidden_projet = "0"
-      ORDER BY date_remise_projet, checked_projet';
+      ORDER BY checked_projet, date_remise_projet';
   		$q = $this->_db->prepare($sql);
       	$q->execute(array(':id_user' => $id_user)) or die(print_r($q->errorInfo()));;
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){

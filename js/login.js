@@ -1,5 +1,5 @@
-//var urlLink ='http://localhost/cepourquand'; //LOCAL
-var urlLink ='http://cepourkan.eu'; //ONLINE
+var urlLink ='http://localhost/cepourquand'; //LOCAL
+//var urlLink ='http://cepourkan.eu'; //ONLINE
 
 
 //START JAVASCRIPT

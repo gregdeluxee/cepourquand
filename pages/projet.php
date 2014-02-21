@@ -15,6 +15,22 @@
 
 <div id="projets" class="contentmove">
 	<ul>
+		<li class="displayNone" id="xxProjetPull">
+			<div class="projetValide"></div>
+			<div class="projetSup"></div>
+			<div class="projetContainer" >
+				<div class="projetsClose">
+					<div class="jours">
+						<span><span class="nbr_jours"></span></span>
+					</div>
+					<div class="projetContent">
+						<h1>Projet/tâche ajouté. Tirer vers le bas pour rafraichir !</h1>
+						<div class="projetProf"></div>
+						<div class="projetCreat"></div>
+					</div>
+				</div>
+			</div>
+		</li>
 	<?php
 	if ($projetManager->exists($_SESSION['id_user'])) {
 		foreach ($projets as $projet) {
@@ -92,7 +108,7 @@
 							<span><span class="nbr_jours">3</span>j</span>
 						</div>
 						<div class="projetContent">
-							<h1>Appuie sur la croix pour ajouter un projet</h1>
+							<h1>Appuie sur + pour ajouter un projet</h1>
 							<div class="projetProf">Le cours</div>
 							<div class="projetCreat">L'auteur du projet</div>
 						</div>

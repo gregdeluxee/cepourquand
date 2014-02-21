@@ -27,6 +27,13 @@
 	</div><!-- End ADD TACHE -->
 
 	<ul>
+		<li class="displayNone" id="xxTachePull">
+			<span class="joursTache" ><span class="nbr_jours_tache_tache"></span></span>
+			<div>
+				<p>Tâche ajoutée. Tirer vers le bas pour rafraichir !</p>
+				<span class="tacheProjectName"></span>
+			</div>
+		</li>
 		<?php 
 		if ($tacheManager->exists($_SESSION['id_user'])) {
 			foreach ($taches as $tache) {
@@ -57,7 +64,6 @@
 					<span class="tacheProjectName"></span>
 				</div>
 			</li>
-			<li>
 			<?php
 		}
 
