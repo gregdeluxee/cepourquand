@@ -740,6 +740,19 @@ body, html {
   float: left;
   width: 100%;
   box-shadow: inset 0px 0px 1px 0px #d5d5d5;
+  position: relative;
+}
+#taches ul li .projetValide {
+  position: absolute;
+  background: url(../img/swipe_v.png) no-repeat center #3aa642;
+  width: 100%;
+  height: 100%;
+}
+#taches ul li .projetSup {
+  position: absolute;
+  background: url(../img/swipe_x.png) no-repeat center #de3a17;
+  width: 100%;
+  height: 100%;
 }
 #taches ul li .joursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
