@@ -736,7 +736,6 @@ body, html {
   background: #efefef;
 }
 #taches ul li {
-  background: #aaaaaa;
   float: left;
   width: 100%;
   box-shadow: inset 0px 0px 1px 0px #d5d5d5;
@@ -754,7 +753,10 @@ body, html {
   width: 100%;
   height: 100%;
 }
-#taches ul li .joursTache {
+#taches ul li .liContentTache {
+  background: #aaaaaa;
+}
+#taches ul li .liContentTache .joursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
   font-size: 25px;
   float: left;
@@ -768,53 +770,53 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-#taches ul li .joursTache .nbr_jours_tache_tache {
+#taches ul li .liContentTache .joursTache .nbr_jours_tache_tache {
   font-size: 36px;
 }
-#taches ul li div {
+#taches ul li .liContentTache div {
   float: right;
   width: 68%;
   margin-right: 6%;
   display: block;
   padding: 13px 0;
 }
-#taches ul li div p {
+#taches ul li .liContentTache div p {
   font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
   font-size: 18px;
 }
-#taches ul li div .tacheProjectName {
+#taches ul li .liContentTache div .tacheProjectName {
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
   font-size: 11px;
   color: #d7403f;
 }
-#taches ul li:nth-child(1) {
+#taches ul li:nth-child(1) .liContentTache {
   background: #efefef;
 }
-#taches ul li:nth-child(2) {
+#taches ul li:nth-child(2) .liContentTache {
   background: #e7e7e7;
 }
-#taches ul li:nth-child(3) {
+#taches ul li:nth-child(3) .liContentTache {
   background: #e0e0e0;
 }
-#taches ul li:nth-child(4) {
+#taches ul li:nth-child(4) .liContentTache {
   background: #d8d8d8;
 }
-#taches ul li:nth-child(5) {
+#taches ul li:nth-child(5) .liContentTache {
   background: #d0d0d0;
 }
-#taches ul li:nth-child(6) {
+#taches ul li:nth-child(6) .liContentTache {
   background: #c9c9c9;
 }
-#taches ul li:nth-child(7) {
+#taches ul li:nth-child(7) .liContentTache {
   background: #c1c1c1;
 }
-#taches ul li:nth-child(8) {
+#taches ul li:nth-child(8) .liContentTache {
   background: #b9b9b9;
 }
-#taches ul li:nth-child(9) {
+#taches ul li:nth-child(9) .liContentTache {
   background: #b2b2b2;
 }
-#taches ul li:nth-child(10) {
+#taches ul li:nth-child(10) .liContentTache {
   background: #aaaaaa;
 }
 
