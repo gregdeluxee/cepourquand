@@ -1378,6 +1378,11 @@ body, html {
   line-height: 1;
   margin-top: 0px;
 }
+#projets ul li .projetContainer .projetsClose .jours span .projet_cheked {
+  background: url(../img/projet_checked.png) no-repeat center;
+  height: 62px;
+  width: 45px;
+}
 #projets ul li .projetContainer .projetsClose .projetContent {
   float: left;
   height: 100%;
