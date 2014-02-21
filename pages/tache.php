@@ -39,18 +39,22 @@
 			foreach ($taches as $tache) {
 				?>
 				<li>
-					<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php echo $tache->jourRestant();?></span>j</span>
-					<div>
-						<p><?php echo $tache->titre_tache(); ?></p>
-						<span class="tacheProjectName">
-							<?php
-								foreach ($projets as $projet) {
-									if ($projet->id_projet() == $tache->id_projet_tache()) {
-										echo $projet->titre_projet();
+					<div class="projetValide"></div>
+   					<div class="projetSup"></div>
+   					<div class="liContentTache">
+						<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php echo $tache->jourRestant();?></span>j</span>
+						<div>
+							<p><?php echo $tache->titre_tache(); ?></p>
+							<span class="tacheProjectName">
+								<?php
+									foreach ($projets as $projet) {
+										if ($projet->id_projet() == $tache->id_projet_tache()) {
+											echo $projet->titre_projet();
+										}
 									}
-								}
-							?>
-						</span>
+								?>
+							</span>
+						</div>
 					</div>
 				</li>
 				<?php 
