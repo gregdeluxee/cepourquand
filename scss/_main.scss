@@ -138,6 +138,14 @@ body{
 		width: 100%;
 		div{
 			float: left;
+			img{
+				vertical-align: middle;
+				border-radius: 31px;
+				overflow: hidden;
+				border: 1px rgb(159, 159, 159) solid;
+				width: 41px;
+				height: 41px;
+			}
 		}
 		h1{
 			float: left;
