@@ -202,6 +202,14 @@ body, html {
 #menuLateral .menuLateralTop div {
   float: left;
 }
+#menuLateral .menuLateralTop div img {
+  vertical-align: middle;
+  border-radius: 31px;
+  overflow: hidden;
+  border: 1px #9f9f9f solid;
+  width: 41px;
+  height: 41px;
+}
 #menuLateral .menuLateralTop h1 {
   float: left;
   margin: 4px 0 0 30px;
