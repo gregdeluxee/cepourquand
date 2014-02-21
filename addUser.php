@@ -48,36 +48,34 @@
 
 
 <?php
-$user = new User(array(
-  'prenom_user' => 'user',
-  'nom_user' => 'prof',
-  'classe_user' => '3tid2',
-  'password_user' => '123456',
-  'url_img_user' => 'test'
-));
-$user->setLogin_user("test");
-$user->passwordHash($user->password_user());
+if (isset($_POST['prenom']) AND isset($_POST['nom'])) {
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $classe = $_POST['classe'];
+    $user = new User(array(
+      'prenom_user' => $prenom,
+      'nom_user' => $nom,
+      'classe_user' => $classe,
+      'password_user' => '123456',
+      'url_img_user' => 'img/users/'.$prenom.'.'.$nom.'.jpg'
+    ));
+    $user->setLogin_user("test");
+    $user->passwordHash($user->password_user());
+    $manager = new UserManager($db);  
+    $manager->add($user);
+    echo $prenom.$nom.' AJOUTE !';
+}
 
-$manager = new UserManager($db);  
-$manager->add($user);
 ?>
 
-        <p>TEST</p>
-        <!-- NAV -->
-        <?php// include('inc/menu.php'); ?>
-        <!-- END NAV -->
-
-        <!-- CONTENT 
-        <div id="content">
-
-            <?php include('pages/login.php'); ?>
-            <?php include('pages/projet.php'); ?>
-            <?php include('pages/tache.php'); ?>
-            <?php include('pages/commentaire.php'); ?>
-            <?php include('pages/addProjet.php'); ?>
-
-        </div> -->
-        <!-- END CONTENT -->
+       <form method="post" action='#'>
+            <label>prenom</label>
+            <input type="text" name="prenom">
+            <label>nom</label>
+            <input type="text" name="nom">
+            <label>classe</label>
+            <input type="text" name="classe">
+       </form>
 
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
