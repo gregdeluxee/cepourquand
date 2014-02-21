@@ -17,8 +17,8 @@
 			-->
 			</ul>
 			<div class="addProjetAddTacheInputTache displayNone" data-nb="1">
-				<label for="dateAddTacheprojet"></label>
-				<input id="dateAddTacheprojet" type="date" name="dateTache1">
+				<label for="dateAddTacheprojetxxx"></label>
+				<input id="dateAddTacheprojetxxx" type="date" name="dateTache1">
 				<input type="text" placeholder="Nom de la Tâche..." name="tache1" id="addTacheProjet">
 				<span>OK</span>
 			</div>
