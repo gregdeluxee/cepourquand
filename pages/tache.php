@@ -51,7 +51,7 @@
 								echo '<span class="projet_cheked"></span>';
 							}else{ ?>
 							<span class="nbr_jours_tache_tache"><?php if (strlen($tache->jourRestant())>3) {echo "999";}else{echo $tache->jourRestant();};?></span>j
-							 <?php} ?>
+							<?php }; ?>
 						</span>
 						<div>
 							<p><?php echo $tache->titre_tache(); ?></p>

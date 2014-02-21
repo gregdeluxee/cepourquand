@@ -52,7 +52,7 @@ class TacheManager{
       $sql = 'SELECT * 
       FROM tache 
       WHERE auteur_tache= :id_user
-      ORDER BY date_remise_tache';
+      ORDER BY checked_tache, date_remise_tache';
       $q = $this->_db->prepare($sql);
       $q->execute(array(':id_user' => $id_user));
       while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
@@ -68,7 +68,7 @@ class TacheManager{
     return $projet->titre_projet();
   }//End function titreProjet
 
-    public function updateChekedTache($auteur_tache, $id_projet){
+    public function updateChekedTache($auteur_tache, $id_tache){
       $sql = 'UPDATE tache SET checked_tache = "1" WHERE id_tache = :id_tache AND auteur_tache = :auteur_tache';
       $q = $this->_db->prepare($sql);
       $q->bindValue(':id_tache', $id_tache);
@@ -80,7 +80,7 @@ class TacheManager{
     public function updateHiddenTache($auteur_tache, $id_tache){
       $sql = 'UPDATE tache SET hidden_tache = "1" WHERE id_tache = :id_tache AND auteur_tache = :auteur_tache';
       $q = $this->_db->prepare($sql);
-      $q->bindValue(':id_tache', $id_projet);
+      $q->bindValue(':id_tache', $id_tache);
       $q->bindValue(':auteur_tache', $auteur_tache);
       $q->execute() or die(print_r($q->errorInfo()));
       $q->closeCursor();

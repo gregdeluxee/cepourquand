@@ -80,6 +80,19 @@ class ProjetManager{
       return new Projet($donnees);
     }
 
+    public function isProjetCheked($id_projet, $id_user){
+      $sql = 'SELECT checked_projet 
+      FROM projet_gestion
+      WHERE id_projet = :id_projet AND id_user = :id_user';
+      $q = $this->_db->prepare($sql);
+      $q->bindValue(':id_projet', $id_projet);
+      $q->bindValue(':id_user', $id_user);
+      $q->execute() or die(print_r($q->errorInfo()));
+      $donnees = $q->fetchColumn();
+      $q->closeCursor();
+      return (bool) $donnees;
+    }
+
     public function updateChekedProjet($id_user, $id_projet){
       $sql = 'UPDATE projet_gestion SET checked_projet = "1" WHERE id_projet = :id_projet AND id_user = :id_user';
       $q = $this->_db->prepare($sql);

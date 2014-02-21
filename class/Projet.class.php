@@ -80,8 +80,6 @@ class Projet{
 		return floor($jours);
 	}//End function jourRestant
 
-	public function auteurPrenomNom(){
-
-	}
+	
 
 } //End class Projet

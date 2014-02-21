@@ -23,7 +23,7 @@
 				<span>OK</span>
 			</div>
 			<div class="addProjetAddTacheInputCollabo displayNone">
-				<input placeholder="prenom.nom prenom.nom 3tid2 3tid1" name="collaborateurs" id="addCollaboProj" type="text">
+				<input placeholder="prenom.nom prenom.nom" name="collaborateurs" id="addCollaboProj" type="text">
 				<span>OK</span>
 			</div>
 			<label class="addProjetAddTache" for="addTacheProjet">

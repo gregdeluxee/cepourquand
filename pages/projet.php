@@ -42,7 +42,13 @@
 					<div class="projetsClose" data-id-projet="<?php echo $projet->id_projet(); ?>">
 						<div class="jours">
 							<!-- AJOUTER ICI TACHE CHECKED OU PAS -->
-							<span><span class="nbr_jours"><?php if (strlen($projet->jourRestant())>3) {echo "999";}else{echo $projet->jourRestant();};?></span>j</span>
+							<span>
+								<?php if ($projetManager->isProjetCheked($projet->id_projet(), $_SESSION['id_user']) == "1"){
+									echo '<span><span class="projet_cheked"></span></span>';
+								}else{ ?>
+									<span class="nbr_jours"><?php if (strlen($projet->jourRestant())>3) {echo "999";}else{echo $projet->jourRestant();};?></span>j
+								<?php }; ?>
+							</span>
 						</div>
 						<div class="projetContent">
 							<h1><?php echo $projet->titre_projet() ?></h1>
@@ -87,7 +93,7 @@
 									<p>Ajouter une tâche</p>
 								</li>
 								<li class="projetDiscussion" data-id-projet="<?php echo $projet->id_projet(); ?>"><div></div><p>Discussion</p></li>
-								<li><div></div><p>Briefing</p></li>
+								<li><div></div><p><a href="<?php echo $projet->briefing_projet(); ?>" target="_blank">Briefing</a></p></li>
 								<li><div></div><p>Collaborateurs</p></li>
 								<li class="projetmodifedit"><div><p>Modifier</p></div></li>
 							</ul>
