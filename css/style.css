@@ -184,6 +184,11 @@ body, html {
   background: none !important;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 #menuLateral {
   background: #282828;
   height: 100%;
