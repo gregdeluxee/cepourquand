@@ -970,7 +970,7 @@ body, html {
 #addProjet form fieldset input {
   width: 50%;
   float: left;
-  height: 40px;
+  height: 50px;
   padding: 0;
   text-align: left;
   color: #fff;
@@ -981,13 +981,14 @@ body, html {
   text-indent: 41px;
   background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
   background-size: 13%;
+  padding-top: 5px;
 }
 #addProjet form fieldset select {
   border-radius: 0;
   border: 0;
   width: 50%;
   float: left;
-  height: 40px;
+  height: 50px;
   padding: 0;
   text-align: center;
   color: #fff;
@@ -998,11 +999,12 @@ body, html {
   text-indent: 41px;
   background: url(../img/courprof.png) no-repeat 6% 50% #1d1d1e;
   background-size: 18%;
+  padding-top: 5px;
 }
 #addProjet form fieldset .addCollaboProjet {
   width: 50%;
   float: left;
-  height: 40px;
+  height: 50px;
   color: #fff;
   font-size: 16px;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
@@ -1010,14 +1012,16 @@ body, html {
   text-indent: 41px;
   background: url(../img/collabo.png) no-repeat 6% 50% #212121;
   background-size: 18%;
+  padding-top: 5px;
 }
 #addProjet form fieldset .addProjetAddTache {
   width: 50%;
   float: left;
-  height: 40px;
+  height: 50px;
   padding: 0;
   text-align: center;
   color: #fff;
+  padding-top: 5px;
   font-size: 14px;
   box-shadow: none;
   background: #d7403f;
@@ -1444,7 +1448,8 @@ body, html {
   display: block;
   background: none;
   height: 46px;
-  width: 42px;
+  width: 47px;
+  text-align: center;
   float: left;
   margin: 0;
   font-family: "SourceSansPro-Light", Helvetica, sans-serif;
@@ -1503,7 +1508,7 @@ body, html {
   background: #bcbcbc;
 }
 #projets ul li .projetContainer .projetsOpen nav {
-  height: 132px;
+  height: 152px;
   width: 100%;
   float: left;
   opacity: 1;
@@ -1511,13 +1516,14 @@ body, html {
 #projets ul li .projetContainer .projetsOpen nav ul li {
   width: 50%;
   float: left;
-  height: 40px;
+  height: 50px;
   padding: 0;
   text-align: center;
   color: #fff;
   font-size: 14px;
   line-height: 2.8;
   box-shadow: none;
+  padding-top: 5px;
 }
 #projets ul li .projetContainer .projetsOpen nav ul li div {
   height: 40px;
@@ -1575,7 +1581,7 @@ body, html {
   width: 100%;
 }
 #projets ul li .projetContainer .projetsOpen nav ul li:nth-child(5) div {
-  height: 52px;
+  height: 42px;
   width: 98px;
   background: url(../img/modifier.png) no-repeat left center;
   background-size: 30%;
@@ -1586,6 +1592,7 @@ body, html {
   margin: 0;
   padding: 0;
   text-indent: 35px;
+  line-height: 3;
 }
 
 #login {
