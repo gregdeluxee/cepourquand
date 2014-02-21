@@ -982,7 +982,6 @@ body{
 				text-indent: 41px;
 				background: url(../img/breif.png) no-repeat 6% 50% #1d1d1d;
 				background-size: 13%;
-				padding-top: 5px;
 			}
 			select{
 				border-radius: 0;
@@ -1001,7 +1000,6 @@ body{
 				text-indent: 41px;
 				background: url(../img/courprof.png) no-repeat 6% 50% #1D1D1E;
 				background-size: 18%;
-				padding-top: 5px;
 			}
 			.addCollaboProjet{
 				width: 50%;
@@ -1014,7 +1012,6 @@ body{
 				text-indent: 41px;
 				background: url(../img/collabo.png) no-repeat 6% 50% #212121;
 				background-size: 18%;
-				padding-top: 5px;
 			}
 			.addProjetAddTache{
 				width: 50%;
@@ -1216,7 +1213,7 @@ body{
 			input{
 				width: 50%;
 				float: left;
-				height: 40px;
+				height: 50px;
 				padding: 0;
 				text-align: left;
 				color: #fff;
@@ -1233,7 +1230,7 @@ body{
 				border:0;
 				width: 50%;
 				float: left;
-				height: 40px;
+				height: 50px;
 				padding: 0;
 				text-align: center;
 				color: #fff;
@@ -1249,7 +1246,7 @@ body{
 			.addCollaboProjet{
 				width: 50%;
 				float: left;
-				height: 40px;
+				height: 50px;
 				color: #fff;
 				font-size: 16px;
 				font-family: $SourceSansProLight;
@@ -1261,13 +1258,14 @@ body{
 			.addProjetAddTache{
 				width: 50%;
 				float: left;
-				height: 40px;
+				height: 50px;
 				padding: 0;
 				text-align: center;
 				color: #fff;
 				font-size: 14px;
 				box-shadow: none;
 				background: $redMenu;
+				padding-top: 5px;
 				p{
 					float: left;
 					font-family: $SourceSansProLight;
