@@ -742,6 +742,7 @@ body{
 			.liContentTache{
 				background: darken($liBaseColorDark, 27%);
 				position: relative;
+				height: 60px;
 				.joursTache{
 						font-family: $latolight;
 						font-size: 25px;
