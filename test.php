@@ -65,15 +65,6 @@
     <body>
 
 
-<?php
-    //$tacheManager = new TacheManager($db);
-    //$tache = $tacheManager->getTacheByProjetId("1");
-    //print_r($tache);
-
-    //$projetManager = new ProjetManager($db);
-    //$projets = $projetManager->getProjetByUserId("1");
-    //print_r($projets);
-?>
 
         <!-- NAV -->
         <div id="mainNav">

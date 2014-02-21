@@ -1,10 +1,10 @@
 <?php 
-include($_SERVER['DOCUMENT_ROOT'].'/pages/login.php');
-include($_SERVER['DOCUMENT_ROOT'].'/pages/projet.php');
-include($_SERVER['DOCUMENT_ROOT'].'/pages/tache.php');
-include($_SERVER['DOCUMENT_ROOT'].'/pages/filtre.php');
-include($_SERVER['DOCUMENT_ROOT'].'/pages/chat.php');
-include($_SERVER['DOCUMENT_ROOT'].'/pages/addProjet.php');
-include($_SERVER['DOCUMENT_ROOT'].'/pages/modifProjet.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/login.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/projet.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/tache.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/filtre.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/chat.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/addProjet.php');
+include($_SERVER['DOCUMENT_ROOT'].'/app/pages/modifProjet.php');
 
  ?>
