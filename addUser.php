@@ -42,8 +42,7 @@
        <!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     </head>
-    <body>
-        <p>TEST</p>
+    <body style="background:#fff;">
 
 
 
@@ -60,10 +59,12 @@ if (isset($_POST['prenom']) AND isset($_POST['nom'])) {
       'url_img_user' => 'img/users/'.$prenom.'.'.$nom.'.jpg'
     ));
     $user->setLogin_user("test");
+    $login = $user->login_user();
+    $user->setUrl_img_user('img/users/'.$login.'.jpg');
     $user->passwordHash($user->password_user());
     $manager = new UserManager($db);  
     $manager->add($user);
-    echo $prenom.$nom.' AJOUTE !';
+    echo $prenom.'  '.$nom.' AJOUTE !';
 }
 
 ?>
@@ -75,6 +76,7 @@ if (isset($_POST['prenom']) AND isset($_POST['nom'])) {
             <input type="text" name="nom">
             <label>classe</label>
             <input type="text" name="classe">
+            <input type="submit">
        </form>
 
         <script src="js/vendor/zepto.min.js"></script>
