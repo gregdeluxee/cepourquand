@@ -785,8 +785,8 @@ body, html {
 }
 #taches ul li .liContentTache .joursTache span .projet_cheked {
   background: url(../img/projet_checked.png) no-repeat center;
-  height: 45px;
-  width: 33px;
+  height: 33px;
+  width: 45px;
   display: block;
 }
 #taches ul li .liContentTache div {
@@ -1386,7 +1386,7 @@ body, html {
 }
 #projets ul li .projetContainer .projetsClose .jours span .projet_cheked {
   background: url(../img/projet_checked.png) no-repeat center;
-  height: 62px;
+  height: 33px;
   width: 45px;
 }
 #projets ul li .projetContainer .projetsClose .projetContent {
