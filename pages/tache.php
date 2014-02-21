@@ -41,7 +41,7 @@
 				<li>
 					<div class="projetValide displayNone"></div>
    					<div class="projetSup displayNone"></div>
-   					<div class="liContentTache">
+   					<div class="liContentTache" data-id-tache="<?php echo $tache->id_tache(); ?>">
 						<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php if (strlen($tache->jourRestant())>3) {echo "999";}else{echo $tache->jourRestant();};?></span>j</span>
 						<div>
 							<p><?php echo $tache->titre_tache(); ?></p>

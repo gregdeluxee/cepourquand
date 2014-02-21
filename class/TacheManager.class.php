@@ -68,6 +68,24 @@ class TacheManager{
     return $projet->titre_projet();
   }//End function titreProjet
 
+    public function updateChekedTache($auteur_tache, $id_projet){
+      $sql = 'UPDATE tache SET checked_tache = "1" WHERE id_tache = :id_tache AND auteur_tache = :auteur_tache';
+      $q = $this->_db->prepare($sql);
+      $q->bindValue(':id_tache', $id_tache);
+      $q->bindValue(':auteur_tache', $auteur_tache);
+      $q->execute() or die(print_r($q->errorInfo()));
+      $q->closeCursor();
+    }
+
+    public function updateHiddenTache($auteur_tache, $id_tache){
+      $sql = 'UPDATE tache SET hidden_tache = "1" WHERE id_tache = :id_tache AND auteur_tache = :auteur_tache';
+      $q = $this->_db->prepare($sql);
+      $q->bindValue(':id_tache', $id_projet);
+      $q->bindValue(':auteur_tache', $auteur_tache);
+      $q->execute() or die(print_r($q->errorInfo()));
+      $q->closeCursor();
+    }
+
     public function exists($info){
         return (bool) $this->_db->query('SELECT COUNT(*) FROM tache WHERE auteur_tache = '.$info)->fetchColumn();
     }
