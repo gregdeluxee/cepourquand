@@ -42,7 +42,7 @@
 					<div class="projetsClose" data-id-projet="<?php echo $projet->id_projet(); ?>">
 						<div class="jours">
 							<!-- AJOUTER ICI TACHE CHECKED OU PAS -->
-							<span><span class="nbr_jours"><?php echo $projet->jourRestant(); ?></span>j</span>
+							<span><span class="nbr_jours"><?php if (strlen($projet->jourRestant())>3) {echo "999";}else{echo $projet->jourRestant();};?></span>j</span>
 						</div>
 						<div class="projetContent">
 							<h1><?php echo $projet->titre_projet() ?></h1>
@@ -57,7 +57,7 @@
 									if ($tache->id_projet_tache() == $projet->id_projet()) {
 										?>
 											<li>
-												<span class="projetJoursTache" ><span class="nbr_jours_tache"><?php echo $tache->jourRestant();?></span>j</span>
+												<span class="projetJoursTache" ><span class="nbr_jours_tache"><?php if (strlen($tache->jourRestant())>3) {echo "999";}else{echo $tache->jourRestant();};?></span>j</span>
 												<p><?php echo $tache->titre_tache(); ?></p>
 											</li>
 										<?php

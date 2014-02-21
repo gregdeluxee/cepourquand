@@ -42,7 +42,7 @@
 					<div class="projetValide"></div>
    					<div class="projetSup"></div>
    					<div class="liContentTache">
-						<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php echo $tache->jourRestant();?></span>j</span>
+						<span class="joursTache" ><span class="nbr_jours_tache_tache"><?php if (strlen($tache->jourRestant())>3) {echo "999";}else{echo $tache->jourRestant();};?></span>j</span>
 						<div>
 							<p><?php echo $tache->titre_tache(); ?></p>
 							<span class="tacheProjectName">
