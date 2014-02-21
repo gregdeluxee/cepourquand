@@ -755,6 +755,7 @@ body, html {
 }
 #taches ul li .liContentTache {
   background: #aaaaaa;
+  position: relative;
 }
 #taches ul li .liContentTache .joursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
