@@ -132,7 +132,7 @@ body{
 	color: #fff;
 	font-family: $SourceSansProExtraLight;
 	font-size: 23px;
-	padding: 10px 0 0 10px;
+	padding: 30px 0 0 10px;
 	.menuLateralTop{
 		float: left;
 		width: 100%;
@@ -201,7 +201,8 @@ body{
 }
 
 #menuTache{
-	height: 60px;
+	height: 80px;
+	padding-top: 20px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -266,7 +267,8 @@ body{
 }
 
 #menuAddTache{
-	height: 60px;
+	height: 80px;
+	padding-top: 20px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -314,7 +316,8 @@ body{
 	}
 }
 #menuAddProjet, #menuModifrojet{
-	height: 60px;
+	height: 80px;
+	padding-top: 20px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -363,7 +366,8 @@ body{
 }
 
 #menu{
-	height: 60px;
+	height: 80px;
+	padding-top: 20px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -430,7 +434,8 @@ body{
 
 
 #menuFiltres{
-	height: 60px;
+	height: 80px;
+	padding-top: 20px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -485,7 +490,8 @@ body{
 }
 
 #menuChat{
-	height: 60px;
+	height: 80px;
+	padding-top: 20px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -532,7 +538,7 @@ body{
 
 
 #chat{
-	padding-top: 60px;
+	padding-top: 80px;
 	background: #282828;
 	.contentChat{
 		float: left;
@@ -643,7 +649,7 @@ body{
 #filtre{
 	-webkit-transition:.3s all ease-in-out ;
 	transition: .3s all ease-in-out ;
-	padding-top: 60px;
+	padding-top: 80px;
 	ul{
 		li{
 			width: 100%;
@@ -690,8 +696,7 @@ body{
 #taches{
 	-webkit-transition:.3s all ease-in-out ;
 	transition: .3s all ease-in-out ;
-	padding-top: 60px;
-
+	padding-top: 80px;
 	#addTaches{
 		background: $liBaseColorDark;
 		float: left;
@@ -837,7 +842,7 @@ body{
 
 
 #addProjet{
-	padding-top: 38px;
+	padding-top: 58px;
 	background: lighten($liBaseColor, 0);
 	form{
 		fieldset{
@@ -1079,7 +1084,7 @@ body{
 	}
 }
 #projetModif{
-	padding-top: 38px;
+	padding-top: 58px;
 	background: lighten($liBaseColor, 0);
 	form{
 		fieldset{
@@ -1327,7 +1332,7 @@ body{
 
 
 #projets{
-	padding-top: 60px;
+	padding-top: 80px;
 	background: lighten($liBaseColor, 0);
 	-webkit-transition:.3s all ease-in-out ;
 	transition: .3s all ease-in-out ;

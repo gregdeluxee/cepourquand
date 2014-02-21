@@ -193,7 +193,7 @@ body, html {
   color: #fff;
   font-family: "SourceSansPro-ExtraLight", Helvetica, sans-serif;
   font-size: 23px;
-  padding: 10px 0 0 10px;
+  padding: 30px 0 0 10px;
 }
 #menuLateral .menuLateralTop {
   float: left;
@@ -254,7 +254,8 @@ body, html {
 }
 
 #menuTache {
-  height: 60px;
+  height: 80px;
+  padding-top: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -313,7 +314,8 @@ body, html {
 }
 
 #menuAddTache {
-  height: 60px;
+  height: 80px;
+  padding-top: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -358,7 +360,8 @@ body, html {
 }
 
 #menuAddProjet, #menuModifrojet {
-  height: 60px;
+  height: 80px;
+  padding-top: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -403,7 +406,8 @@ body, html {
 }
 
 #menu {
-  height: 60px;
+  height: 80px;
+  padding-top: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -462,7 +466,8 @@ body, html {
 }
 
 #menuFiltres {
-  height: 60px;
+  height: 80px;
+  padding-top: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -511,7 +516,8 @@ body, html {
 }
 
 #menuChat {
-  height: 60px;
+  height: 80px;
+  padding-top: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -551,7 +557,7 @@ body, html {
 }
 
 #chat {
-  padding-top: 60px;
+  padding-top: 80px;
   background: #282828;
 }
 #chat .contentChat {
@@ -652,7 +658,7 @@ body, html {
 #filtre {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 #filtre ul li {
   width: 100%;
@@ -696,7 +702,7 @@ body, html {
 #taches {
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 #taches #addTaches {
   background: #efefef;
@@ -839,7 +845,7 @@ body, html {
 }
 
 #addProjet {
-  padding-top: 38px;
+  padding-top: 58px;
   background: #1a1a1a;
 }
 #addProjet form fieldset {
@@ -1068,7 +1074,7 @@ body, html {
 }
 
 #projetModif {
-  padding-top: 38px;
+  padding-top: 58px;
   background: #1a1a1a;
 }
 #projetModif form fieldset {
@@ -1297,7 +1303,7 @@ body, html {
 }
 
 #projets {
-  padding-top: 60px;
+  padding-top: 80px;
   background: #1a1a1a;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
