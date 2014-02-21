@@ -28,11 +28,15 @@
 
 	<ul>
 		<li class="displayNone" id="xxTachePull">
-			<span class="joursTache" ><span class="nbr_jours_tache_tache"></span></span>
-			<div>
-				<p>Tâche ajoutée. Tirer vers le bas pour rafraichir !</p>
-				<span class="tacheProjectName"></span>
-			</div>
+			<div class="projetValide displayNone"></div>
+   			<div class="projetSup displayNone"></div>
+   			<div class="liContentTache">
+				<span class="joursTache" ><span class="nbr_jours_tache_tache"></span></span>
+				<div>
+					<p>Tâche ajoutée. Tirer vers le bas pour rafraichir !</p>
+					<span class="tacheProjectName"></span>
+				</div>
+			</div>	
 		</li>
 		<?php 
 		if ($tacheManager->exists($_SESSION['id_user'])) {
@@ -62,10 +66,14 @@
 		}else{
 			?>
 			<li>
-				<span class="joursTache" ><span class="nbr_jours_tache_tache">1</span>j</span>
-				<div>
-					<p>Appuie sur + pour ajouter une tâche ;)</p>
-					<span class="tacheProjectName"></span>
+				<div class="projetValide displayNone"></div>
+   				<div class="projetSup displayNone"></div>
+   				<div class="liContentTache">
+					<span class="joursTache" ><span class="nbr_jours_tache_tache">1</span>j</span>
+					<div>
+						<p>Appuie sur + pour ajouter une tâche ;)</p>
+						<span class="tacheProjectName"></span>
+					</div>
 				</div>
 			</li>
 			<?php

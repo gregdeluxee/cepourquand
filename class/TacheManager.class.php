@@ -21,7 +21,7 @@ class TacheManager{
         date_remise_tache = :date_remise_tache,
         auteur_tache = :auteur_tache, 
         checked_tache = :checked_tache,
-        deleted_tache = :deleted_tache';
+        hidden_tache = :hidden_tache';
 
   		$q = $this->_db->prepare($sql);
     	$q->bindValue(':id_projet_tache', $tache->id_projet_tache());
@@ -29,7 +29,7 @@ class TacheManager{
       	$q->bindValue(':date_remise_tache', $tache->date_remise_tache());
       	$q->bindValue(':auteur_tache', $tache->auteur_tache());
     	$q->bindValue(':checked_tache', $tache->checked_tache());
-    	$q->bindValue(':deleted_tache', $tache->deleted_tache());
+    	$q->bindValue(':hidden_tache', $tache->hidden_tache());
 
     	$q->execute() or die(print_r($q->errorInfo()));
       	$q->closeCursor();

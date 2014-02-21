@@ -76,6 +76,7 @@
 ?>
 
         <!-- NAV -->
+        <div id="mainNav">
         <?php include('inc/menu.php'); ?>
         <?php include('inc/menuLateral.php'); ?>
         <?php include('inc/menuTache.php'); ?>
@@ -84,6 +85,7 @@
         <?php include('inc/menuChat.php'); ?>
         <?php include('inc/menuAddProjet.php'); ?>
         <?php include('inc/menuModifProjet.php'); ?>
+        </div>
         <!-- END NAV -->
 
         <!-- CONTENT  -->

@@ -7,7 +7,7 @@ class Tache{
 	private $_date_remise_tache;
 	private $_auteur_tache;
 	private $_checked_tache;
-	private $_deleted_tache;
+	private $_hidden_tache;
 
 	public function __construct(array $donnees){
 		$this->hydrate($donnees);
@@ -32,7 +32,7 @@ class Tache{
 	public function date_remise_tache(){ return $this->_date_remise_tache; }
 	public function auteur_tache(){ return $this->_auteur_tache; }
 	public function checked_tache(){ return $this->_checked_tache; }
-	public function deleted_tache(){ return $this->_deleted_tache; }
+	public function hidden_tache(){ return $this->_hidden_tache; }
 	//SETTERS
 	public function setId_tache($id_tache){
 		$id_tache = (int) $id_tache;
@@ -65,9 +65,9 @@ class Tache{
 			$this->_checked_tache = $checked_tache;
 		}
 	}
-	public function setDeleted_tache($deleted_tache){
-		if (is_string($deleted_tache)){
-			$this->_deleted_tache = $deleted_tache;
+	public function sethidden_tache($hidden_tache){
+		if (is_string($hidden_tache)){
+			$this->_hidden_tache = $hidden_tache;
 		}
 	}
 
