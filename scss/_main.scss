@@ -559,6 +559,13 @@ body{
 						position: relative;
 						left: 50%;
 						margin-left: -20px;
+
+				// vertical-align: middle;
+				// border-radius: 31px;
+				// overflow: hidden;
+				// border: 1px rgb(159, 159, 159) solid;
+				// width: 41px;
+				// height: 41px;
 					}
 					span{
 						width: 100%;
@@ -1394,6 +1401,11 @@ body{
 								font-smoothing: antialiased;
 								line-height: 1;
 								margin-top: 0px;
+							}
+							.projet_cheked{
+								background: url(../img/projet_checked.png) no-repeat center;
+								height: 62px;
+								width: 45px;
 							}
 						}
 					}
