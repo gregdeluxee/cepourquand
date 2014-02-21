@@ -2,7 +2,7 @@
 
 <div id="menuLateral" class="displayNone">
 	<div class="menuLateralTop">
-		<div><img class="profil_image" height="41" width="41" src="<?php echo $_SESSION['url_img_user']; ?>" alt="profil image"></div>
+		<div><img class="profil_image" src="<?php echo $_SESSION['url_img_user']; ?>" alt="profil image"></div>
 		<h1 class="profilName"><?php echo $_SESSION['prenom_user'].' '.$_SESSION['nom_user']; ?></h1>
 	</div>
 
