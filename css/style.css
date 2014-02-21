@@ -783,7 +783,7 @@ body, html {
 #taches ul li .liContentTache .joursTache .nbr_jours_tache_tache {
   font-size: 36px;
 }
-#taches ul li .liContentTache .joursTache span .projet_cheked {
+#taches ul li .liContentTache .joursTache .projet_cheked {
   background: url(../img/projet_checked.png) no-repeat center;
   height: 33px;
   width: 45px;
