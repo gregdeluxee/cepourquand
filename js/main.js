@@ -545,8 +545,6 @@ $(function(){
 						data: donnees,
 						dataType : 'text',
 						success : function(answer, statut){
-							console.log(answer);
-							console.log(donnees);
 							if (answer == "success") {
 								console.log(tache);
 								tache.css("-webkit-transform","translateX(-100%)");
@@ -619,7 +617,8 @@ $(function(){
 								$("#menuAddProjet").remove();
 								$("#menuModifrojet").remove();
 								$("#mainNav").append(answer);
-								$("body").append('<script src="js/main.js"></script>');						
+								$("body").append('<script src="js/main.js"></script>');	
+								$("#content").css("-webkit-transform","");					
 							},
 						    error : function(resultat, statut, erreur){
 						    	console.log("error");

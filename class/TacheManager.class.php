@@ -51,7 +51,7 @@ class TacheManager{
     public function getTacheByUserId($id_user){
       $sql = 'SELECT * 
       FROM tache 
-      WHERE auteur_tache= :id_user
+      WHERE auteur_tache= :id_user AND hidden_tache ="0"
       ORDER BY checked_tache, date_remise_tache';
       $q = $this->_db->prepare($sql);
       $q->execute(array(':id_user' => $id_user));
@@ -68,7 +68,7 @@ class TacheManager{
     return $projet->titre_projet();
   }//End function titreProjet
 
-    public function updateChekedTache($auteur_tache, $id_tache){
+    public function updateCheckedTache($auteur_tache, $id_tache){
       $sql = 'UPDATE tache SET checked_tache = "1" WHERE id_tache = :id_tache AND auteur_tache = :auteur_tache';
       $q = $this->_db->prepare($sql);
       $q->bindValue(':id_tache', $id_tache);
@@ -87,7 +87,7 @@ class TacheManager{
     }
 
     public function exists($info){
-        return (bool) $this->_db->query('SELECT COUNT(*) FROM tache WHERE auteur_tache = '.$info)->fetchColumn();
+        return (bool) $this->_db->query('SELECT COUNT(*) FROM tache WHERE hidden_tache = 0 AND auteur_tache = '.$info)->fetchColumn();
     }
 
 } //End class TacheManager
