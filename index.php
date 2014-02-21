@@ -30,7 +30,6 @@
 
 
         <link rel="apple-touch-startup-image" href="img/startup/apple-touch-startup-image.png">
-        <link rel="apple-touch-startup-image" href="img/startup/apple-touch-startup-image.png">
         <link rel="apple-touch-startup-image" sizes="640x960" href="img/startup/apple-touch-startup-image-retina.png" />
         <link rel="apple-touch-startup-image" sizes="960x640" href="img/startup/apple-touch-startup-image-landscape-retina.png" />
         <link rel="apple-touch-startup-image" sizes="640x1136" href="img/startup/apple-touch-startup-image-4in.png" />
