@@ -765,6 +765,7 @@ body, html {
   background: #aaaaaa;
   position: relative;
   height: 60px;
+  box-shadow: inset 0px 0px 1px 0px #d5d5d5;
 }
 #taches ul li .liContentTache .joursTache {
   font-family: "latolight", Arial, Helvetica, sans-serif;
@@ -1355,6 +1356,7 @@ body, html {
   position: relative;
   overflow: hidden;
   background: #292929;
+  box-shadow: inset 0px 0px 1px 0px #1a1a1a;
 }
 #projets ul li .projetContainer .projetsClose {
   width: 100%;
