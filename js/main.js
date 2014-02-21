@@ -482,6 +482,116 @@ $(function(){
 		}
 	});
 
+// TACHE SWIPE CHECK OR HIDE
+	$(".liContentTache").swipe({
+		//excludedElements: "button, input, select, textarea, .noSwipe",
+		allowPageScroll: "vertical",
+		threshold:0,
+		triggerOnTouchLeave:true,
+		fingers:'all',
+		swipeStatus:function(event, phase, direction, distance, duration, fingerCount){
+			console.log(phase);
+			console.log(duration);
+			var tache = $(this);
+			//On start
+			if(phase == "start"){
+
+			};
+			//Finger animation
+			if(phase == "move"){
+				if(direction == "right"){
+					tache.prevAll(".projetValide").removeClass("displayNone");
+					tache.prevAll(".projetSup").addClass("displayNone");
+					tache.css("-webkit-transform","translateX(+"+distance+"px)");
+				}
+				else if(direction == "left"){
+					tache.prevAll(".projetSup").removeClass("displayNone");
+					tache.prevAll(".projetValide").addClass("displayNone");
+					tache.css("-webkit-transform","translateX(-"+distance+"px)");
+				}
+			};
+			//Redirect when click/tap a link
+			if(phase == "end" && duration < 300 && distance <20 ){
+				if ($(this).hasClass("xxOpen")) {
+					tache.addClass("displayNone");
+					$(this).removeClass("xxOpen");
+				}else{
+					tache.addClass("displayNone");
+					var projetsOpen = $(this).next(".projetsOpen");
+					projetsOpen.toggleClass("displayNone");
+					$(this).parent(".projetContainer").parent("li").toggleClass("projetsOppenClass");
+					$(".projetsClose").removeClass("xxOpen");
+					$(this).addClass("xxOpen");
+				}
+			};
+			//Swipe animation
+			if(phase == "end" && duration > 100 && distance >80){
+				$idProjet = $(this).data("id-projet");
+				var donnees = 'id-projet='+$idProjet;
+				if(direction == "right"){
+/*
+					$.ajax({
+						type: "POST",
+						url: urlLink+'/traitementAjax/traitementChekedProjet.php',
+						data: donnees,
+						dataType : 'text',
+						success : function(answer, statut){
+							console.log(answer);
+							console.log(donnees);
+							if (answer == "success") {
+								console.log("success");
+								projet.parent().css("-webkit-transform","translateX(100%)");
+								setTimeout(function(){	projet.parent().addClass("displayNone");},1000);
+							}else if (answer == "failed") {
+								console.log("failed");
+			           		};
+						},
+					    error : function(resultat, statut, erreur){
+					    	console.log("error");
+					    },
+					    complete : function(resultat, statut){
+
+					    }
+					});// END PROJET TREATMENT AJAX
+*/
+				}
+				else if(direction == "left"){
+/*
+					$.ajax({
+						type: "POST",
+						url: urlLink+'/traitementAjax/traitementHiddenProjet.php',
+						data: donnees,
+						dataType : 'text',
+						success : function(answer, statut){
+							console.log(answer);
+							console.log(donnees);
+							if (answer == "success") {
+								console.log(projet);
+								projet.parent().css("-webkit-transform","translateX(-100%)");
+								setTimeout(function(){	projet.addClass("displayNone");},1000);
+							}else if (answer == "failed") {
+								console.log("failed");
+			           		};
+						},
+					    error : function(resultat, statut, erreur){
+					    	console.log("error");
+					    },
+					    complete : function(resultat, statut){
+
+					    }
+					});// END PROJET TREATMENT AJAX
+*/
+				}
+			}else if (phase == "end" && duration < 100 || distance < 80) {
+				tache.css("-webkit-transform","translateX(0)");
+			};
+			if(phase == "cancel"){
+				//nothing happen. Normaly impossible to get this phase.
+				//alert(phase);
+			};
+		}
+	});
+
 
 // BODY SWIPE UP TO REFRESH ALL
 	$("#xxProjetPull .projetsClose").swipe("destroy");
