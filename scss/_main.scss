@@ -774,6 +774,12 @@ body{
 					.nbr_jours_tache_tache{
 						font-size: 36px
 					}
+					span .projet_cheked{
+						background: url(../img/projet_checked.png) no-repeat center;
+						height: 45px;
+						width: 33px;
+						display: block;
+					}
 				}
 				div{
 					float: right;
