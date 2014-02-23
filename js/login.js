@@ -79,32 +79,7 @@ $(function(){
 									$("#menuAddProjet").remove();
 									$("#menuModifrojet").remove();
 									$("#mainNav").append(answer);
-									//$("body").append('<script src="js/main.js"></script>');		
-									$.ajax({
-										type: "POST",
-										url: urlLink+'/inc/menuAll.php',
-										dataType : 'html',
-										success : function(answer, statut){
-											console.log("SUCESS");
-											$("#menu").remove();
-											$("#menuLateral").remove();
-											$("#menuTache").remove();
-											$("#menuAddTache").remove();
-											$("#menuFiltres").remove();
-											$("#menuChat").remove();
-											$("#menuAddProjet").remove();
-											$("#menuModifrojet").remove();
-											$("#mainNav").append(answer);
-											$("body").append('<script src="js/main.js"></script>');	
-											$("#content").css("-webkit-transform","");					
-										},
-									    error : function(resultat, statut, erreur){
-									    	console.log("error");
-									    },
-									    complete : function(resultat, statut){
-
-									    }
-									});// END PROJET TREATMENT AJAX					
+									$("body").append('<script src="js/main.js"></script>');						
 								},
 							    error : function(resultat, statut, erreur){
 							    	console.log("error");

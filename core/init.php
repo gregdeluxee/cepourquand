@@ -11,5 +11,18 @@
 
 	spl_autoload_register('chargerClasse'); // On enregistre la fonction en autoload pour qu'elle soit appelée dès qu'on instanciera une classe non déclarée.
 
-
+	if (isset($_COOKIE['login'])) {
+        $_SESSION['login'] = $_COOKIE['login'];
+    }
+    if (isset($_COOKIE['login']) AND strlen($_COOKIE['login'])>0) {
+        $login = $_COOKIE['login'];
+        $userInfos = new UserManager($db);
+        if ($userInfos->exists($login)) {
+            $user = $userInfos->get($login);
+            $_SESSION['id_user'] = $user->id_user();
+            $_SESSION['prenom_user'] = $user->prenom_user();
+            $_SESSION['nom_user'] = $user->nom_user();
+            $_SESSION['url_img_user'] = $user->url_img_user();
+        }
+    }
 ?>
