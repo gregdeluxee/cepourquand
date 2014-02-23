@@ -28,14 +28,6 @@
 <!--         <meta name="viewport" content="width=device-width, initial-scale=1">
  -->        <meta http-equiv="cleartype" content="on">
 
-
-       <!--  <link rel="apple-touch-startup-image" href="img/startup/apple-touch-startup-image.png">
-        <link rel="apple-touch-startup-image" sizes="640x960" href="img/startup/apple-touch-startup-image-retina.png" />
-        <link rel="apple-touch-startup-image" sizes="960x640" href="img/startup/apple-touch-startup-image-landscape-retina.png" />
-        <link rel="apple-touch-startup-image" sizes="640x1136" href="img/startup/apple-touch-startup-image-4in.png" />
-        <link rel="apple-touch-startup-image" sizes="1136x640" href="img/startup/apple-touch-startup-image-landscape-4in.png" />
-        -->
-
         <!-- iPhone 5 -->
         <link href="img/startup/apple-touch-startup-image-640x1096.png"
               media="(device-width: 320px) and (device-height: 568px)
@@ -51,8 +43,6 @@
               media="(device-width: 320px) and (device-height: 480px)
                  and (-webkit-device-pixel-ratio: 1)"
               rel="apple-touch-startup-image">
-
-
 
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
